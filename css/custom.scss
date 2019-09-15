@@ -110,7 +110,8 @@ hr {
 /** Globals*/
 body {
   font-family: 'Roboto', sans-serif;
-  color: $grey;}
+  color: $grey;
+  }
 
 
 /* Links */
@@ -126,7 +127,7 @@ a:hover {
 
 html,
 body {
-  height: 100%;
+  
   background-color: $blue;
   overflow-x: hidden;
 }
