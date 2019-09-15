@@ -31,60 +31,57 @@
   
  <body>
 
-<div class="cover-container w-100 h-100 mx-auto ">
+<div class="cover-container w-100 mx-auto">
 
   <main role="main" class="inner cover px-0" id="">
 	<!---Page Heading --->
-	<div class="container-fluid pt-3 bg-blue">
+	<div class="container-fluid pt-3 bg-blue pg-heading">
 		<div class="d-flex flex-row">
 			<div class="col-1 p-0 font-green">
 				<i class="fas fa-chevron-left fa-1x"></i>
 			</div>
 			<div class="col-11 pl-2 align-items-center">
-				<p class="text-uppercase font-weight-light font-white">Tall Ship Directory</p>
+				<p class="text-uppercase  font-white title">Tall Ship Directory</p>
 			</div>
 		</div>
 	</div>
 
-	<div class="container-fluid bg-light py-4 px-2">
+
+
+
+	<div class="container-fluid bg-light py-4 px-2 mb-3">
 		<!----Section Headings---->
-		<div class="col-12 pl-2 pr-0 py-0">
-			<p class="font-blue mb-1 title text-uppercase">Featured Tall Ship</p>
-		</div>
 	
 		<!----Start of Carousel Slider---->
 		<div id="listing-carousel">
 			<!--- Feature Listing 1 --->
 			<div class="pl-2">	
-				<div class="card bg-dark text-white">
+				<div class="card text-white">
 					<img src="https://dummyimage.com/300x200/eee/fff" class="card-img" alt="...">
 					<div class="card-img-overlay">
 						<p class="card-title font-weight-bold m-0">Bagheera</p>
 						<p class="card-text font-weight-light mb-2">Portland Schooner Company</p>
-						<p class="card-text">More Info</p>
 					</div>
 				</div>
 			</div>
 			<!--- Feature Listing 2 --->
 			<div class="pl-2">	
-				<div class="card bg-dark text-white">
+				<div class="card    text-white">
 					<img src="https://dummyimage.com/300x200/eee/fff" class="card-img" alt="...">
 					<div class="card-img-overlay">
-						<p class="card-title font-weight-bold m-0">Schooner Timberwind</p>
+						<p class="card-title font-weight-bold m-0">Timberwind</p>
 						<p class="card-text font-weight-light mb-2  ">Portland Schooner Company</p>
-						<p class="card-text">More Info</p>
 					</div>
 				</div>
 			</div>
 
 			<!--- Feature Listing 3 --->
 			<div class="pl-2">	
-				<div class="card bg-dark text-white">
+				<div class="card    text-white">
 					<img src="https://dummyimage.com/300x200/eee/fff" class="card-img" alt="...">
 					<div class="card-img-overlay">
-						<p class="card-title font-weight-bold m-0">Wedameen</p>
+						<p class="card-title font-weight-bold m-0">Wendameen</p>
 						<p class="card-text font-weight-light mb-2">Portland Schooner Company</p>
-						<p class="card-text">More Info</p>
 					</div>
 				</div>
 			</div>
@@ -92,16 +89,22 @@
 		</div>
 	</div><!---End of Featured Listings Container-->
 
-	<!--- Start of Search Fields --->
-	<div class="container-fluid bg-blue pt-4 pb-5 px-2">
-		<h6 class="font-white mb-1 title text-uppercase">Search Tall Ships</h6>
+<!--- Start of Search Fields --->
+		<div class="container-fluid bg-light pt-4 pb-5 mb-3">
+		<h6 class="font-blue mb-1 font-weight-light">Search All Tall Ships</h6>
 		<form>
 			<div class="form-row mb-3">
 				<div class="col">
-				<input type="text" class="form-control" placeholder="Name">
+				<input type="text" class="form-control" placeholder="Title/description">
+				</div>
+				<div class="col">
+				<input type="text" class="form-control" placeholder="Position">
 				</div>
 			</div>
 			<div class="form-row">
+				<div class="col">
+				<input type="text" class="form-control" placeholder="Seasonality">
+				</div>
 				<div class="col">
 				<input type="text" class="form-control" placeholder="Region">
 				</div>
@@ -109,26 +112,26 @@
 		</form>
 	</div>
 
-	<div class="container-fluid bg-light py-3 px-0 mb-5">
+	<div class="container-fluid bg-light px-0 pt-3 results-container">
 		<!----Section Heading: Search Results ---->
-		<div class="col-12 pl-2 pr-0 py-0">
-			<p class="font-blue mb-1 title text-uppercase">Browse All Tall Ships</p>
+		<div class="col-12 py-0">
+			<p class="font-blue mb-1 text-left font-weight-light">Tall Ship Directory</p>
 		</div>
 	
 		<!----Start of Search Results Cards ---->
 		
 		<!---Search Card 1 --->
-		<div class="col-12 p-0">
-			<div class="card">
+		<div class="col-12 mb-3">
+			<div class="card py-3 shadow">
 				<div class="row no-gutters">
-					<div class="col-4">
+					<div class="col-6">
 					<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid" alt="...">
 					</div>
-					<div class="col-8 pl-2">
+					<div class="col-6 pl-2">
 					
 						<p class="mb-0 mt-1 font-green">Bagheera</p>
-						<p class="mb-2 font-weight-light">Portland Schooner Co.</p>
-						<p class="mb-0">More Info</p>
+						<p class="mb-2 font-weight-light">Portland Schooner Company</p>
+						<a href="tallships.html" class="btn-link">More Info</a>
 					
 					</div>
 				</div>
@@ -136,17 +139,17 @@
 		</div>
 
 			<!---Search Card 2 --->
-			<div class="col-12 p-0">
-				<div class="card">
+			<div class="col-12 mb-3">
+				<div class="card py-3 shadow">
 					<div class="row no-gutters">
-						<div class="col-4">
+						<div class="col-6">
 						<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid" alt="...">
 						</div>
-						<div class="col-8 pl-2">
+						<div class="col-6 pl-2">
 						
 							<p class="mb-0 mt-1 font-green">Schooner Timberwind</p>
-							<p class="mb-2 font-weight-light">Portland Schooner Co.</p>
-							<p class="mb-0">More Info</p>
+							<p class="mb-2 font-weight-light">Portland Schooner Company</p>
+							<a href="tallships.html" class="btn-link">More Info</a>
 						
 						</div>
 					</div>
@@ -154,17 +157,17 @@
 			</div>
 
 				<!---Search Card 3 --->
-				<div class="col-12 p-0">
-					<div class="card" >
+				<div class="col-12 mb-3">
+					<div class="card py-3 shadow">
 						<div class="row no-gutters">
-							<div class="col-4">
+							<div class="col-6">
 							<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid" alt="...">
 							</div>
-							<div class="col-8 pl-2">
+							<div class="col-6 pl-2">
 							
 								<p class="mb-0 mt-1 font-green">Wendameen</p>
-								<p class="mb-2 font-weight-light">Portland Schooner Co. </p>
-								<p class="mb-0">More Info</p>
+								<p class="mb-2 font-weight-light">Portland Schooner Company</p>
+								<a href="tallships.html" class="btn-link">More Info</a>
 							
 							</div>
 						</div>

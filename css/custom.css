@@ -117,8 +117,15 @@ body {
 
 /* * Cover **/
 .cover {
-  padding: 0 1.5rem;
   min-width: 20rem;
+}
+
+#form-width {
+  max-width: 75%;
+}
+
+.results-container {
+  padding-bottom: 10rem;
 }
 
 .mastfoot i {
