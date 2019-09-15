@@ -100,7 +100,6 @@ a:hover {
 /** Base structure **/
 html,
 body {
-  height: 100%;
   background-color: #154360;
   overflow-x: hidden;
 }
