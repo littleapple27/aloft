@@ -121,6 +121,21 @@
 	
 		<!----Start of Search Results Cards ---->
 		
+<script>
+			$.getJSON('json/description.json', function(data) {
+		var img_template = "<h1>{{firstName}} {{lastName}}</h1>Blog: {{blogURL}}";
+		
+		
+		
+		
+		
+		var html = Mustache.to_html(template, data);
+		$('#sampleArea').html(html);
+	});
+</script>
+
+
+
 		<!---Search Card 1 --->
 		<div class="mb-3">
 			

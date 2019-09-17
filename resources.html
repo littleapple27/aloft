@@ -29,105 +29,112 @@
 
   
   
- <body>
+<body>
+<div class="container p-0" id="pg-info-loads-here">
 
-<div class="cover-container w-100 h-100 mx-auto ">
 
-  <main role="main" class="inner cover px-0" id="">
-	<!---Page Heading --->
-	<div class="container-fluid pt-3  bg-blue">
-		<div class="d-flex flex-row">
+<!---Page Heading --->
+		<div class="d-flex flex-row align-items-center px-3 py-1">
 			<div class="col-1 p-0 font-green">
-				<i class="fas fa-chevron-left fa-1x"></i>
+				<i class="fas fa-chevron-left fa-2x"></i>
 			</div>
-			<div class="col-11 pl-2 align-items-center">
-				<p class="text-uppercase title font-white">Sailing Resources</p>
+			<div class="col-10 pl-2">
+				<h6 class="text-uppercase font-white title">Sailing Resources</h6>
+			</div>
+			<div class="col-1 p-0">
+				<a href="#" class="nav-link disable"><i class="fas fa-cog fa-2x"></i></a>
 			</div>
 		</div>
-	</div>
 
-	<div class="container-fluid bg-light py-4 px-2">
+<div class="bg-white supporting-pg-content">
 		<!----Section Headings---->
-		<div class="col-12 pl-2 pr-0 py-0">
+		<div class="px-3 py-2">
 			<h4 class="font-green mb-1 text-uppercase">Featured Advertiser</h4>
 			<p class="font-weight-light">Traditional marine hardware and supplies, boatbuilders discount, sailors, pleasure boaters, commercial fishermen, lobster trap supplies.</p>
 			<p class="font-blue p-2"><i class="fas fa-globe-americas"></i>&nbsp;&nbsp;&nbsp;&nbsp;www.hamiltonmarine.com</p>
 		</div>
 	
 		<!----Start of Carousel Slider---->
-		<div id="listing-carousel">
+		<div class="pt-1 pb-4" id="listing-carousel">
 			<!--- Feature Listing 1 --->
 			<div class="pl-2">	
-				<div class="card     text-white">
+				<div class="card    text-white">
 					<img src="https://dummyimage.com/300x200/eee/fff" class="card-img" alt="...">
 					<div class="card-img-overlay">
-						<p class="card-title font-weight-bold m-0">Bagheera</p>
+						<p class="card-title font-weight-bold m-0">Deckhands</p>
 						<p class="card-text font-weight-light mb-2">Portland Schooner Company</p>
+						<p class="card-text">More Info</p>
 					</div>
 				</div>
 			</div>
 			<!--- Feature Listing 2 --->
 			<div class="pl-2">	
-				<div class="card     text-white">
+				<div class="card    text-white">
 					<img src="https://dummyimage.com/300x200/eee/fff" class="card-img" alt="...">
 					<div class="card-img-overlay">
-						<p class="card-title font-weight-bold m-0">Schooner Timberwind</p>
+						<p class="card-title font-weight-bold m-0">Deckhands</p>
 						<p class="card-text font-weight-light mb-2  ">Portland Schooner Company</p>
+						<p class="card-text">More Info</p>
 					</div>
 				</div>
 			</div>
 
 			<!--- Feature Listing 3 --->
 			<div class="pl-2">	
-				<div class="card     text-white">
+				<div class="card    text-white">
 					<img src="https://dummyimage.com/300x200/eee/fff" class="card-img" alt="...">
 					<div class="card-img-overlay">
-						<p class="card-title font-weight-bold m-0">Wedameen</p>
+						<p class="card-title font-weight-bold m-0">Deckhands</p>
 						<p class="card-text font-weight-light mb-2">Portland Schooner Company</p>
+						<p class="card-text">More Info</p>
 					</div>
 				</div>
 			</div>
 
 		</div>
-	</div><!---End of Featured Listings Container-->
 
-	<!--- Start of Search Fields --->
-	<div class="container-fluid bg-blue pt-4 pb-5 px-2">
-		<h6 class="font-white mb-1 font-weight-light">Search Sailing Resources</h6>
-		<form>
-			<div class="form-row mb-3">
-				<div class="col">
-				<input type="text" class="form-control" placeholder="Name">
-				</div>
-			</div>
-			<div class="form-row">
-				<div class="col">
-				<input type="text" class="form-control" placeholder="Region">
-				</div>
-			</div>
-		</form>
-	</div>
 
-	<div class="container-fluid bg-light pt-3 px-0 mb-5 results-container">
-		<!----Section Heading: Search Results ---->
-		<div class="col-12 pl-2 pr-0 py-0">
-			<p class="font-blue mb-1  font-weight-light">Browse All Resources</p>
+		<!--- Start of Search Fields --->
+		
+		<!----Section Headings---->
+		<div class="px-3 py-4 bg-light">
+			<h5 class="font-blue font-weight-bold">Search All Resources</h5>
+			<form>
+				<div class="form-row mb-3">
+					<div class="col">
+					<input type="text" class="form-control" placeholder="Resource Type">
+					</div>
+					
+				</div>
+				<div class="form-row">
+					<div class="col">
+					<input type="text" class="form-control" placeholder="Company">
+					</div>
+				</div>
+			</form>
 		</div>
+
+
+	
+<!----Section Heading: Search Results ---->
+		<div class="px-3 py-4">
+			<h5 class="font-blue font-weight-bold">Browse All Resources</h5>
 	
 		<!----Start of Search Results Cards ---->
 		
 		<!---Search Card 1 --->
-		<div class="col-12 mb-3">
+		<div class="mb-3">
+			
 			<div class="card py-3 shadow">
 				<div class="row no-gutters">
-					<div class="col-4">
-					<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid" alt="...">
+					<div class="col-6">
+					<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid lazy" alt="...">
 					</div>
-					<div class="col-8 pl-2">
+					<div class="col-6 pl-2">
 					
-						<p class="mb-0 mt-1 font-green">Advertiser 1</p>
-						<p class="mb-2 font-weight-light"><i class="fas fa-globe-americas"></i>&nbsp;&nbsp;&nbsp;&nbsp;www.website.com</p>
-						<p class="mb-0">More Info</p>
+						<h3 class="mb-0 mt-1 font-green">Bagheera</h3>
+							<h6 class="mb-2 font-weight-light">Portland Schooner Company</h6>
+						<a class="btn-link" href="description.html"mb-0">More Info</a>
 					
 					</div>
 				</div>
@@ -135,17 +142,17 @@
 		</div>
 
 			<!---Search Card 2 --->
-			<div class="col-12 mb-3">
+			<div class="mb-3">
 				<div class="card py-3 shadow">
 					<div class="row no-gutters">
-						<div class="col-4">
-						<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid" alt="...">
+						<div class="col-6">
+						<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid lazy" alt="...">
 						</div>
-						<div class="col-8 pl-2">
+						<div class="col-6 pl-2">
 						
-							<p class="mb-0 mt-1 font-green">Advertiser 2</p>
-							<p class="mb-2 font-weight-light"><i class="fas fa-globe-americas"></i>&nbsp;&nbsp;&nbsp;&nbsp;www.website.com</p>
-							<p class="mb-0">More Info</p>
+							<h3 class="mb-0 mt-1 font-green">Schooner Timberwind</h3>
+							<h6 class="mb-2 font-weight-light">Portland Schooner Company</h6>
+							<a class="btn-link" href="description.html"mb-0">More Info</a>
 						
 						</div>
 					</div>
@@ -153,34 +160,30 @@
 			</div>
 
 				<!---Search Card 3 --->
-				<div class="col-12 mb-3">
+				<div class="mb-3">
 					<div class="card py-3 shadow">
 						<div class="row no-gutters">
-							<div class="col-4">
-							<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid" alt="...">
+							<div class="col-6">
+							<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid lazy" alt="...">
 							</div>
-							<div class="col-8 pl-2">
+							<div class="col-6 pl-2">
 							
-								<p class="mb-0 mt-1 font-green">Advertiser 3
-								</p>
-								<p class="mb-2 font-weight-light"><i class="fas fa-globe-americas"></i>&nbsp;&nbsp;&nbsp;&nbsp;www.website.com </p>
-								<p class="mb-0">More Info</p>
+								<h3 class="mb-0 mt-1 font-green">Wendameen</h3>
+								<h6 class="mb-2 font-weight-light">Portland Schooner Company</h6>
+								<a class="btn-link" href="description.html"mb-0">More Info</a>
 							
 							</div>
 						</div>
 					</div>
 				</div>
-	
-	</div><!---End of Search Results  Container-->
-	
-  </main>
+			</div><!---End of Search Results--->
+	</div>
+</div><!----End of Overall main page container---->
 
 <!--- Start of Footer Navigation --->
-  <footer class="mastfoot mt-auto fixed-bottom py-3">
+  <footer class="fixed-bottom py-5">
     
 		    <nav class="navbar fixed-bottom navbar-dark bg-blue" id="menu">
-
-				
 				<!--- Bottom Hamburger Toggle Icon --->
 				<button class="navbar-toggler border-0" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
 					<span><i class="fas fa-bars"></i></span>
@@ -225,18 +228,21 @@
 				</div>
     </nav>
   </footer>
-</div>	<!--- End of cover-container --->
+
 	
 	<!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+	integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo="
+	crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+	
 	<!-- Plug-ins -->
 	<script src="js/slick.min.js"></script>
+
 	<!-- Custom JS-->
 	<script src="js/custom.js"></script>
-
 
   </body>
 </html>

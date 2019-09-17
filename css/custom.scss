@@ -1,5 +1,4 @@
 
-
 /////Color Variables/////
 $blue: #154360;
 $red: #943126;
@@ -108,10 +107,7 @@ hr {
 
 
 /** Globals*/
-body {
-  font-family: 'Roboto', sans-serif;
-  color: $grey;
-  }
+
 
 
 /* Links */
@@ -124,37 +120,34 @@ a:hover {
 
 
 /** Base structure **/
-
-html,
 body {
-  
   background-color: $blue;
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  color: $grey;
+  width: 100%;
 }
 
-body {
-  display: -ms-flexbox;
-  display: flex;
+#index-main-row {
+  max-width: 15rem;
+  margin: 10rem auto 0;
+  padding-bottom: 75px;
 }
 
-.cover-container {
-  max-width: 42em;
-  position: relative; 
+#signin-main-row {
+  max-width: 15rem;
+  margin: 3rem auto 0;
+  padding-bottom: 75px;
 }
 
-
-/* * Cover **/
-.cover {
-  min-width: 20rem;
+.supporting-pg-content {
+  padding-bottom: 75px;
 }
 
-#form-width {
-  max-width: 75%;
+.container-z-waves {
+  position: relative
 }
 
-.results-container {
-  padding-bottom: 10rem;
-}
 
 ///// Footer Icons /////
 .mastfoot i {
@@ -164,6 +157,13 @@ body {
 .mastfoot i:hover {
   color: rgba(255, 255, 255, .75);
 }
+
+
+
+
+
+
+
 
 
 //// Index & Sign In Waves background ////
@@ -182,7 +182,7 @@ body {
   margin-left: -150px;
   margin-top: -150px;
   border-radius: 43%;
-  z-index: -5;
+  z-index: -9999;
 }
 
 @keyframes rotate {
@@ -209,5 +209,3 @@ body {
   background-color: #77daff;
   opacity: .1;
 } */
-
-

@@ -1,0 +1,9 @@
+{
+  
+  "jobs": [
+      {"title": "Deckhand", "company": "Portland Schooner Company", "link": true, "url": "#psc-deckhand", "image1":"img/psc1.png", "image2":"img/psc2.png", "image3":"img/psc3.png"},
+      {"title": "Captain", "company": "Liberty Fleet of Tallships", "link": true, "url": "#liberty-captain", "image1":"img/lib1.png", "image2":"img/lib2.png", "image3":"img/lib3.png"},
+      {"title": "First Mate", "company": "Sebago Watersports", "link": true, "url": "#sebago-firstmate", "image1":"img/seb1.png", "image2":"img/seb2.png", "image3":"img/seb3.png", "information":"Portland Schooner Co. www.portlandschooner.com based in Portland, Maine, operates BAGHEERA, WENDAMEEN, and TIMBERWIND and invites applications for the post of Deckhand. Portland Schooner Company seeks deckhands to serve aboard its historic, Maine-built schooners. Portland Schooner Company conducts a variety of shipboard programs, including public daysails, private charters, overnights, as well as educational and sail training sessions. Enthusiasm for sailing and working with the public is essential. Competitive compensation. Commitment is May – October. Previous sailing experience a plus. This post is Seasonal."}
+  ],
+  "empty": false
+}

@@ -1,6 +1,9 @@
 $(function() {
+
+ 
+		  
   
-	    // Slick Carousel
+	// Slick Carousel
     $('#listing-carousel').slick({
         autoplay: true, 
         autoplaySpeed: 4000,
@@ -19,6 +22,12 @@ $(function() {
         }]
 
     });//End Slick Carousel
+
+    // Lazy Loading
+    $('#lazy-container .lazy').lazyload();
+      
+    
+
 
 
 

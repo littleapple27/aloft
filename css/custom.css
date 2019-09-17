@@ -85,11 +85,6 @@ hr {
 }
 
 /** Globals*/
-body {
-  font-family: 'Roboto', sans-serif;
-  color: #666666;
-}
-
 /* Links */
 a,
 a:focus,
@@ -98,33 +93,32 @@ a:hover {
 }
 
 /** Base structure **/
-html,
 body {
   background-color: #154360;
   overflow-x: hidden;
+  font-family: 'Roboto', sans-serif;
+  color: #666666;
+  width: 100%;
 }
 
-body {
-  display: -ms-flexbox;
-  display: flex;
+#index-main-row {
+  max-width: 15rem;
+  margin: 10rem auto 0;
+  padding-bottom: 75px;
 }
 
-.cover-container {
-  max-width: 42em;
+#signin-main-row {
+  max-width: 15rem;
+  margin: 3rem auto 0;
+  padding-bottom: 75px;
+}
+
+.supporting-pg-content {
+  padding-bottom: 75px;
+}
+
+.container-z-waves {
   position: relative;
-}
-
-/* * Cover **/
-.cover {
-  min-width: 20rem;
-}
-
-#form-width {
-  max-width: 75%;
-}
-
-.results-container {
-  padding-bottom: 10rem;
 }
 
 .mastfoot i {
@@ -150,7 +144,7 @@ body {
   margin-left: -150px;
   margin-top: -150px;
   border-radius: 43%;
-  z-index: -5;
+  z-index: -9999;
 }
 
 @keyframes rotate {
