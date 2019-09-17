@@ -1,3 +1,109 @@
+// Resetting from the mobile up!
+// 
+// Dropping the root* element font size to 14px is something
+// I do on almost all projects, a 16px font size on mobiles
+// is not normally needed. --> Only my opinion of course!
+//
+// At mobile size I used the scale "Major Second" from 
+// type-cale.com to set out the heading sizes as well as the
+// "Major Third" scale for the .display-* classes however my
+// technique was to begin the scale from the h1's front size.
+// To do this simply do the h1 font size * scale size. So in 
+// in this example it was 1.602 * 1.250 = 2.0025 I went with 
+// 2em to keep it simple.
+//
+//------------------------------------------------------------//
+html,
+body {
+	font-size: 14px !important;
+}
+h1 {
+	font-size: 1.602em;
+}
+h2 {
+	font-size: 1.424em;
+}
+h3 {
+	font-size: 1.266em;
+}
+h4 {
+	font-size: 1.125em;
+}
+h5 {
+	font-size: 0.889em;
+}
+h6 {
+	font-size: 0.79em;
+}
+.display-1 {
+	font-size: 3.906em;
+}
+.display-2 {
+	font-size: 3.125em;
+}
+.display-3 {
+	font-size: 2.5em;
+}
+.display-4 {
+	font-size: 2em;
+}
+
+// Medium devices (tablets, 48em and up)
+// 
+// At this point you have overridden Bootstraps rem's and are
+// into module based font sizes should you require it. 
+//
+// I took a while over this change because I felt that there
+// is no reason why I cant use a modified scale on another 
+// device size. So I did, the headings have now taken on
+// "Perfect Fourth" and the dislpay-* has been put to the
+// Bootstrap defaults.
+//
+//------------------------------------------------------------//
+@media (min-width: 48em) {
+	h1 {
+	  font-size: 2.441em;
+	}
+	h2 {
+		font-size: 1.953em;
+	}
+	h3 {
+		font-size: 1.563em;
+	}
+	h4 {
+		font-size: 1.25em;
+	}
+	.display-1 {
+		font-size: 6em;
+	}
+	.display-2 {
+		font-size: 5.5em;
+	}
+	.display-3 {
+		font-size: 4.5em;
+	}
+	.display-4 {
+		font-size: 3.5em;
+	}
+}
+
+// Large devices (desktops, 62em and up)
+@media (min-width: 62em) {
+	html,
+	body {
+		font-size: 16px !important;
+	}
+}
+
+// Extra large devices (large desktops, 75em and up)
+@media (min-width: 75em) {
+	html,
+	body {
+		font-size: 18px !important;
+	}
+}
+
+
 
 /////Color Variables/////
 $blue: #154360;
@@ -29,6 +135,11 @@ $lt-white: rgba(255, 255, 255, .5);
   color: $lt-white; 
 }
 
+/////Text Sizing/////
+.font-xs {
+  font-size: .75rem!important;
+}
+
 
 /////Background-Colors/////
 .bg-white {
@@ -55,7 +166,6 @@ $lt-white: rgba(255, 255, 255, .5);
   background-color: $lt-white;
   color: $white; 
   border: 1px solid $lt-white; 
-  font-size: 14px;
 }
 
 .btn-outline-secondary:focus, .btn-outline-secondary:hover {
@@ -68,10 +178,10 @@ $lt-white: rgba(255, 255, 255, .5);
   background-color: $green!important;
   color: $white!important; 
   border: 1px solid $lt-white!important;
-  font-size: 14px;
+ 
 }
 
-.btn-secondary:hover, .btn-secondary:focus,  {
+.btn-secondary:hover, .btn-secondary:focus  {
   background-color: rgba(69,179,157, 0.7)!important;
 }
 
@@ -81,7 +191,7 @@ $lt-white: rgba(255, 255, 255, .5);
   background-color: #3b5998;
   color: $white!important; 
   border: 1px solid $lt-white!important;
-  font-size: 14px;
+  
 }
 
 /////Alert Buttons////
@@ -112,26 +222,59 @@ hr {
 
 /* Links */
 a,
-a:focus,
-a:hover {
+a:focus {
   color: $lt-white;
+  text-decoration: none; 
+}
+
+a:hover {
+  color:  rgba(255, 255, 255, .7);
+  text-decoration: none; 
+}
+
+.paragraph-link,
+.paragraph-link:focus {
+  color: $green;
+  text-decoration: none; 
+}
+
+.paragraph-link:hover {
+  color:  rgba(69, 179, 157, .7);
+  text-decoration: none; 
+}
+
+.card-link-text,
+.card-link-text:focus
+ {
+  color: $grey;
+  text-decoration: none; 
+}
+
+.card-link-text:hover {
+  color: $grey;
+  text-decoration: none; 
+  background-color: #f8f9fa ;
+    -webkit-transition: background-color 1000ms linear;
+    -ms-transition: background-color 1000ms linear;
+    transition: background-color 1000ms linear;
 }
 
 
 
 /** Base structure **/
 body {
-  background-color: $blue;
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
   color: $grey;
   width: 100%;
 }
 
-#index-main-row {
-  max-width: 15rem;
-  margin: 10rem auto 0;
-  padding-bottom: 75px;
+.container-z-waves {
+  position: relative;
+}
+
+#index-main-box {
+  min-width: 20rem;
 }
 
 #signin-main-row {
@@ -140,13 +283,16 @@ body {
   padding-bottom: 75px;
 }
 
-.supporting-pg-content {
+.main-page-container {
+  padding-top: 125px; 
+}
+
+
+.results-container {
   padding-bottom: 75px;
 }
 
-.container-z-waves {
-  position: relative
-}
+
 
 
 ///// Footer Icons /////
@@ -158,9 +304,26 @@ body {
   color: rgba(255, 255, 255, .75);
 }
 
+.has-search .form-control {
+    padding-left: 2.375rem;
+}
+
+.has-search .form-control-feedback {
+    position: absolute;
+    z-index: 2;
+    display: block;
+    width: 2.375rem;
+    height: 2.375rem;
+    line-height: 2.375rem;
+    text-align: center;
+    pointer-events: none;
+    color: #aaa;
+}
 
 
-
+.carousel-height {
+  max-height: 25%; 
+}
 
 
 
