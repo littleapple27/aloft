@@ -30,157 +30,151 @@
   
   
 <body>
-<div class="container p-0" id="pg-info-loads-here">
 
-
-
-	<!---Page Heading --->
-		<div class="d-flex flex-row align-items-center px-3 py-1">
-			<div class="col-1 p-0 font-green">
-				<i class="fas fa-chevron-left fa-2x"></i>
+<!---Page Heading --->
+		<div class="fixed-top">
+		<div class="d-flex flex-row align-items-center justify-content-between px-3 py-1 bg-blue">
+			<div class="font-green d-flex flex-row">
+				<i class="fas fa-chevron-left fa-1x"></i>
+				<h6 class="text-uppercase font-white title ml-4">Job Listings</h6>
 			</div>
-			<div class="col-10 pl-2">
-				<h6 class="text-uppercase font-white title">Job Listings</h6>
-			</div>
-			<div class="col-1 p-0">
-				<a href="#" class="nav-link disable"><i class="fas fa-cog fa-2x"></i></a>
+			
+			
+			
+			<div class="">
+				<a href="#" class="nav-link disable"><i class="fas fa-cog fa-1x"></i></a>
 			</div>
 		</div>
-	
 
-<div class="bg-white supporting-pg-content">
-		<!----Start of Carousel Slider---->
-		<div class="py-4" id="listing-carousel">
-			<!--- Feature Listing 1 --->
-			<div class="pl-2">	
-				<div class="card    text-white">
-					<img src="https://dummyimage.com/300x200/eee/fff" class="card-img" alt="...">
-					<div class="card-img-overlay">
-						<p class="card-title font-weight-bold m-0">Deckhands</p>
-						<p class="card-text font-weight-light mb-2">Portland Schooner Company</p>
-						<p class="card-text">More Info</p>
-					</div>
-				</div>
-			</div>
-			<!--- Feature Listing 2 --->
-			<div class="pl-2">	
-				<div class="card    text-white">
-					<img src="https://dummyimage.com/300x200/eee/fff" class="card-img" alt="...">
-					<div class="card-img-overlay">
-						<p class="card-title font-weight-bold m-0">Deckhands</p>
-						<p class="card-text font-weight-light mb-2  ">Portland Schooner Company</p>
-						<p class="card-text">More Info</p>
-					</div>
-				</div>
-			</div>
 
-			<!--- Feature Listing 3 --->
-			<div class="pl-2">	
-				<div class="card    text-white">
-					<img src="https://dummyimage.com/300x200/eee/fff" class="card-img" alt="...">
-					<div class="card-img-overlay">
-						<p class="card-title font-weight-bold m-0">Deckhands</p>
-						<p class="card-text font-weight-light mb-2">Portland Schooner Company</p>
-						<p class="card-text">More Info</p>
-					</div>
-				</div>
+	<div class="container-fluid bg-green shadow search-container">
+				<!----Section Headings---->
+		<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
+			<p class="font-lt-white font-weight-light mb-0 font-xs">Search All Job Listings</p>
+			<div class="form-group has-search rounded">
+				<span class="fa fa-search form-control-feedback"></span>
+				<input type="text" class="form-control" placeholder="Search">
 			</div>
-
 		</div>
+	</div>
+</div><!--- End of Search Container --->
 
+	<!----Top Page Jumbotron---->
+	<div class="container-fluid main-page-container bg-light px-0" id="pg-info-loads-here">
+		<div class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2">
+			<h1 class="display-4"><span class="font-weight-light font-lt-white mr-n3">go</span><span class="text-blue logo">ALOFT</span></h1>
+			<p class="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+		</div>
+	</div>
+
+		<!----Featured Company---->
+		<div class="container-fluid bg-blue shadow py-3">
+			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
+				<h1 class="display-4 font-white">Now Hiring Deckhands</h1>
+				<p class="lead font-white">Portland Schooner Co. is now hiring deckhands for the 2020 sailing season. <a class="paragraph-link" href="#" role="button">Learn more...</a></p>
+			</div>
+		</div>
+		
+
+
+	<div class="supporting-pg-content">
+
+	<div class="container-fluid bg-light shadow search-container py-3">
+				<!----Section Headings---->
+		<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
+			<p class="font-blue font-weight-light mb-0 font-xs">Refine Search Results</p>
+			
+			<div class="row">
+				<div class="col-md-6 col-sm-12 mb-2 has-search rounded">
+					<span class="fa fa-search form-control-feedback"></span>
+					<input type="text" class="form-control" placeholder="Company Name">
+				</div>
+				<div class="col-md-6 col-sm-12 mb-2 has-search rounded">
+					<span class="fa fa-search form-control-feedback"></span>
+					<input type="text" class="form-control" placeholder="Position">
+				</div>
+			</div>
+
+			<div class="row">
+				<div class="col-md-6 col-sm-12 mb-2 has-search rounded">
+					<span class="fa fa-sun form-control-feedback"></span>
+					<input type="text" class="form-control" placeholder="Seasonality">
+				</div>
+				<div class="col-md-6 col-sm-12 mb-2 has-search rounded">
+					<span class="fa fa-map form-control-feedback"></span>
+					<input type="text" class="form-control" placeholder="Region">
+				</div>
+			</div>
+		
+		</div>
+	</div>
 	<!--- Start of Search Fields --->
 		
-		<!----Section Headings---->
-		<div class="px-3 py-4 bg-light">
-			<h5 class="font-blue font-weight-bold">Search All Job Listings</h5>
-			<form>
-				<div class="form-row mb-3">
-					<div class="col">
-					<input type="text" class="form-control" placeholder="Title/description">
-					</div>
-					<div class="col">
-					<input type="text" class="form-control" placeholder="Position">
-					</div>
-				</div>
-				<div class="form-row">
-					<div class="col">
-					<input type="text" class="form-control" placeholder="Seasonality">
-					</div>
-					<div class="col">
-					<input type="text" class="form-control" placeholder="Region">
-					</div>
-				</div>
-			</form>
-		</div>
-	
+
 
 	
+
+	<div class="container-fluid shadow results-container pt-2">
 		<!----Section Heading: Search Results ---->
-		<div class="px-3 py-4">
-			<h5 class="font-blue font-weight-bold">All Job Listings</h5>
+		<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 p-0">
+			<p class="font-blue font-weight-light px-3 mb-0 font-xs">All Job Listings</p>
 	
 		<!----Start of Search Results Cards ---->
 		
 		<!---Search Card 1 --->
-		<div class="mb-3">
+		<div class="px-3 mb-2">
 			
-			<div class="card py-3 shadow">
-				<div class="row no-gutters">
-					<div class="col-6">
-					<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid lazy" alt="...">
+			<div class="card p-0  ">
+				<a href="description.html" class="card-link-text"><div class="row no-gutters">
+					<div class="col-4">
+					<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid lazy" alt="placeholder img">
 					</div>
-					<div class="col-6 pl-2">
-					
-						<h3 class="mb-0 mt-1 font-green">Deckhands</h3>
-						<h6 class="mb-2 font-weight-light">Portland Schooner Company</h6>
-						<a class="btn-link" href="description.html"mb-0">More Info</a>
-					
+					<div class="col-8 pl-2">
+						<p class="mb-0 mt-1 font-blue">Deckhands</p>
+						<h6 class="mb-2 font-weight-light">Portland Schooner Co.</h6>
 					</div>
-				</div>
+				</div></a>
 			</div>
 		</div>
 
 			<!---Search Card 2 --->
-			<div class="mb-3">
-				<div class="card py-3 shadow">
-					<div class="row no-gutters">
-						<div class="col-6">
-						<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid lazy" alt="...">
-						</div>
-						<div class="col-6 pl-2">
-						
-							<h3 class="mb-0 mt-1 font-green">Captain</h3>
-							<h6 class="mb-2 font-weight-light">Liberty Fleet of Tallships</h6>
-							<a class="btn-link" href="description.html"mb-0">More Info</a>
-						
-						</div>
+			<div class="px-3 mb-2">
+			
+			<div class="card p-0  ">
+				<a href="description.html" class="card-link-text"><div class="row no-gutters">
+					<div class="col-4">
+					<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid lazy" alt="placeholder img">
 					</div>
-				</div>
+					<div class="col-8 pl-2">
+						<p class="mb-0 mt-1 font-blue">Deckhands</p>
+						<h6 class="mb-2 font-weight-light">Portland Schooner Company</h6>
+					</div>
+				</div></a>
 			</div>
+		</div>
 
 				<!---Search Card 3 --->
-				<div class="mb-3">
-					<div class="card py-3 shadow">
-						<div class="row no-gutters">
-							<div class="col-6">
-							<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid lazy" alt="...">
-							</div>
-							<div class="col-6 pl-2">
-							
-								<h3 class="mb-0 mt-1 font-green">First Mate</h3>
-								<h6 class="mb-2 font-weight-light">Liberty Fleet of Tallships</h6>
-								<a class="btn-link" href="description.html"mb-0">More Info</a>
-							
-							</div>
+				<div class="px-3 mb-2">
+			
+				<div class="card p-0  ">
+					<a href="description.html" class="card-link-text"><div class="row no-gutters">
+						<div class="col-4">
+						<img src="https://dummyimage.com/300x200/eee/fff" class="img-fluid lazy" alt="placeholder img">
 						</div>
-					</div>
+						<div class="col-8 pl-2">
+							<p class="mb-0 mt-1 font-blue">Deckhands</p>
+							<h6 class="mb-2 font-weight-light">Portland Schooner Company</h6>
+						</div>
+					</div></a>
 				</div>
+			</div>
 			</div><!---End of Search Results--->
 
-</div><!----End of Overall main page container---->
+	</div><!----End of Overall main page container---->
+</div>	
 
 <!--- Start of Footer Navigation --->
-  <footer class="fixed-bottom py-5">
+  <footer class="">
     
 		    <nav class="navbar fixed-bottom navbar-dark bg-blue" id="menu">
 				<!--- Bottom Hamburger Toggle Icon --->
