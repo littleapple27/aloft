@@ -268,6 +268,35 @@ body {
   max-height: 25%;
 }
 
+.slick-slide {
+  height: 150px;
+  width: 100px;
+}
+
+#feature-tallship {
+  background-image: -moz-linear-gradient(45deg, rgba(21, 67, 96, 0.6) 25%, rgba(21, 67, 96, 0.6) 100%), url("../img/appledoreII-16x9.png");
+  background-image: -webkit-linear-gradient(45deg, rgba(21, 67, 96, 0.6) 25%, rgba(21, 67, 96, 0.6) 100%), url("../img/appledoreII-16x9.png");
+  background-image: linear-gradient(45deg, rgba(21, 67, 96, 0.6) 25%, rgba(21, 67, 96, 0.96) 100%), url("../img/appledoreII-16x9.png");
+  background-position: bottom center;
+  background-size: cover;
+}
+
+#feature-listing {
+  background-image: -moz-linear-gradient(45deg, rgba(21, 67, 96, 0.6) 25%, rgba(21, 67, 96, 0.6) 100%), url("../img/timberwind-16x9.png");
+  background-image: -webkit-linear-gradient(45deg, rgba(21, 67, 96, 0.6) 25%, rgba(21, 67, 96, 0.6) 100%), url("../img/timberwind-16x9.png");
+  background-image: linear-gradient(45deg, rgba(21, 67, 96, 0.6) 25%, rgba(21, 67, 96, 0.96) 100%), url("../img/timberwind-16x9.png");
+  background-position: bottom center;
+  background-size: cover;
+}
+
+#feature-resource {
+  background-image: -moz-linear-gradient(45deg, rgba(21, 67, 96, 0.6) 25%, rgba(21, 67, 96, 0.6) 100%), url("../img/appledoreII-16x9.png");
+  background-image: -webkit-linear-gradient(45deg, rgba(21, 67, 96, 0.6) 25%, rgba(21, 67, 96, 0.6) 100%), url("../img/appledoreII-16x9.png");
+  background-image: linear-gradient(45deg, rgba(21, 67, 96, 0.6) 25%, rgba(21, 67, 96, 0.96) 100%), url("../img/appledoreII-16x9.png");
+  background-position: bottom center;
+  background-size: cover;
+}
+
 .box {
   position: fixed;
   top: 0;
