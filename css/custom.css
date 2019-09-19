@@ -121,7 +121,13 @@ h6 {
 }
 
 .btn-primary {
-  background-color: #943126 !important;
+  background-color: #154360 !important;
+  color: #f9f9f9 !important;
+  border: none;
+}
+
+.btn-primary:focus, .btn-primary:hover {
+  background-color: rgba(21, 67, 96, 0.8) !important;
   color: #f9f9f9 !important;
   border: none;
 }
@@ -254,7 +260,7 @@ body {
 
 .has-search .form-control-feedback {
   position: absolute;
-  z-index: 2;
+  z-index: 10;
   display: block;
   width: 2.375rem;
   height: 2.375rem;
@@ -262,10 +268,6 @@ body {
   text-align: center;
   pointer-events: none;
   color: #aaa;
-}
-
-.carousel-height {
-  max-height: 25%;
 }
 
 .slick-slide {
@@ -312,7 +314,7 @@ body {
   margin-left: -150px;
   margin-top: -150px;
   border-radius: 43%;
-  z-index: -9999;
+  z-index: 3;
 }
 
 @keyframes rotate {
@@ -341,3 +343,40 @@ body {
   background-color: #77daff;
   opacity: .1;
 } */
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+  display: none;
+  background-color: #45b39d;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 0;
+  will-change: transform;
+  min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}

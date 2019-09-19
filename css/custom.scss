@@ -157,7 +157,13 @@ $lt-white: rgba(255, 255, 255, .5);
 
 /////Button-Colors/////
 .btn-primary {
-	background-color: $red!important; 
+	background-color: $blue!important; 
+	color: $white!important; 
+  border: none;
+}
+
+.btn-primary:focus, .btn-primary:hover {
+	background-color: rgba(21,67,96,.8)!important; 
 	color: $white!important; 
   border: none;
 }
@@ -311,7 +317,7 @@ body {
 
 .has-search .form-control-feedback {
     position: absolute;
-    z-index: 2;
+    z-index: 10;
     display: block;
     width: 2.375rem;
     height: 2.375rem;
@@ -322,19 +328,12 @@ body {
 }
 
 
-.carousel-height {
-  max-height: 25%; 
-}
-
 .slick-slide {
    height:150px;
    width: 100px;
 }
 
-.slick-slide img {
-   //height:300px;
-  //width: 200px;
-}
+
 
 
 ////Background Images////
@@ -379,7 +378,7 @@ body {
   margin-left: -150px;
   margin-top: -150px;
   border-radius: 43%;
-  z-index: -9999;
+  z-index: 3;
 }
 
 @keyframes rotate {
@@ -406,3 +405,46 @@ body {
   background-color: #77daff;
   opacity: .1;
 } */
+
+
+
+
+
+.slideout-menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  width: 256px;
+  min-height: 100vh;
+  overflow-y: scroll;
+  -webkit-overflow-scrolling: touch;
+  z-index: 1;
+  display: none;
+  background-color: $green;
+}
+
+.slideout-menu-left {
+  left: 0;
+}
+
+.slideout-menu-right {
+  right: 0;
+}
+
+.slideout-panel {
+  position: relative;
+  z-index: 0;
+  will-change: transform;
+  //background-color: #FFF; /* A background-color is required */
+  min-height: 100vh;
+}
+
+.slideout-open,
+.slideout-open body,
+.slideout-open .slideout-panel {
+  overflow: hidden;
+}
+
+.slideout-open .slideout-menu {
+  display: block;
+}

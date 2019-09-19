@@ -23,6 +23,23 @@ $(function() {
 
     });//End Slick Carousel
 
+    //slideout
+    // Config Options
+var slideout = new Slideout({
+  'panel': document.getElementById('main'),
+  'menu': document.getElementById('navbar-main'),
+  'padding': 230,
+  'tolerance': 70
+    });
+
+
+
+// Toggle button
+document.querySelector('.toggle-button').addEventListener('click', function() {
+  slideout.toggle();
+});
+
+
     // Lazy Loading
     $('#lazy-container .lazy').lazyload();
       
