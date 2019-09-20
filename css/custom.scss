@@ -202,7 +202,6 @@ $lt-white: rgba(255, 255, 255, .6);
   background-color: #3b5998;
   color: $white!important; 
   border: 1px solid $lt-white!important;
-  
 }
 
 /////Alert Buttons////
@@ -228,8 +227,10 @@ hr {
 
 
 /** Globals*/
-
-
+body {
+  width:100%;
+  height: 100%;
+}
 
 /* Links */
 a,
@@ -422,7 +423,7 @@ body {
   bottom: 0;
   width: 275px;
   min-height: 100vh;
-  //overflow-y: none;
+  //overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
   z-index: 0;
   display: none;
@@ -454,6 +455,11 @@ body {
 
 .slideout-open .slideout-menu {
   display: block;
+}
+
+///Navbar padding///
+.navbar-padding {
+  padding: 5rem 0;
 }
 
 ///Top shadow for bottom fixed navbar

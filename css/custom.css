@@ -183,6 +183,11 @@ hr {
 }
 
 /** Globals*/
+body {
+  width: 100%;
+  height: 100%;
+}
+
 /* Links */
 a,
 a:focus {
@@ -386,6 +391,10 @@ body {
 
 .slideout-open .slideout-menu {
   display: block;
+}
+
+.navbar-padding {
+  padding: 5rem 0;
 }
 
 .top-shadow {
