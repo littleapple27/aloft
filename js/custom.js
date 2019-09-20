@@ -25,20 +25,19 @@ $(function() {
 
     //slideout
     // Config Options
-var slideout = new Slideout({
+    var slideout = new Slideout({
   'panel': document.getElementById('main'),
   'menu': document.getElementById('navbar-main'),
-  'padding': 230,
+  'padding': 275,
   'tolerance': 70
     });
 
+    // Toggle button
+    document.querySelector('.toggle-button').addEventListener('click', function() {
+    slideout.toggle();
+    });
 
-
-// Toggle button
-document.querySelector('.toggle-button').addEventListener('click', function() {
-  slideout.toggle();
-});
-
+    
 
     // Lazy Loading
     $('#lazy-container .lazy').lazyload();

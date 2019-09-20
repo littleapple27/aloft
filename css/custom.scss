@@ -198,6 +198,13 @@ $lt-white: rgba(255, 255, 255, .6);
 
 
 
+.nav-hover:hover {
+   background-color: $blue!important;
+   color: $white!important; 
+}
+
+
+
 .btn-fb {
   background-color: #3b5998;
   color: $white!important; 
@@ -412,6 +419,7 @@ body {
   opacity: .1;
 } */
 
+///// Fixed Footer  Nav for Slide Out ///////
 
 
 
@@ -423,7 +431,7 @@ body {
   bottom: 0;
   width: 275px;
   min-height: 100vh;
-  //overflow-y: scroll;
+  overflow-y: hidden;
   -webkit-overflow-scrolling: touch;
   z-index: 0;
   display: none;
