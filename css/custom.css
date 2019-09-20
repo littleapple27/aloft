@@ -101,7 +101,7 @@ h6 {
 }
 
 .font-lt-white {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
 }
 
 .font-xs {
@@ -123,40 +123,45 @@ h6 {
 .btn-primary {
   background-color: #154360 !important;
   color: #f9f9f9 !important;
-  border: none;
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
 }
 
 .btn-primary:focus, .btn-primary:hover {
   background-color: rgba(21, 67, 96, 0.8) !important;
   color: #f9f9f9 !important;
-  border: none;
+  text-transform: uppercase;
 }
 
 .btn-outline-secondary {
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.6);
   color: #f9f9f9;
-  border: 1px solid rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
 }
 
 .btn-outline-secondary:focus, .btn-outline-secondary:hover {
   background-color: rgba(255, 255, 255, 0.3) !important;
-  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  text-transform: uppercase;
 }
 
 .btn-secondary {
   background-color: #45b39d !important;
   color: #f9f9f9 !important;
-  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
+  text-transform: uppercase;
 }
 
 .btn-secondary:hover, .btn-secondary:focus {
   background-color: rgba(69, 179, 157, 0.7) !important;
+  text-transform: uppercase;
 }
 
 .btn-fb {
   background-color: #3b5998;
   color: #f9f9f9 !important;
-  border: 1px solid rgba(255, 255, 255, 0.5) !important;
+  border: 1px solid rgba(255, 255, 255, 0.6) !important;
 }
 
 .alert-primary {
@@ -181,7 +186,7 @@ hr {
 /* Links */
 a,
 a:focus {
-  color: rgba(255, 255, 255, 0.5);
+  color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
 }
 
@@ -311,7 +316,7 @@ body {
   opacity: .4;
   width: 1700px;
   height: 1500px;
-  margin-left: -150px;
+  margin-right: -150px;
   margin-top: -150px;
   border-radius: 43%;
   z-index: 3;
@@ -345,15 +350,15 @@ body {
 } */
 .slideout-menu {
   position: fixed;
+  background-color: #45b39d;
   top: 0;
   bottom: 0;
-  width: 256px;
+  width: 275px;
   min-height: 100vh;
-  overflow-y: scroll;
   -webkit-overflow-scrolling: touch;
-  z-index: 1;
+  z-index: 0;
   display: none;
-  background-color: #45b39d;
+  margin-right: 0;
 }
 
 .slideout-menu-left {
@@ -366,8 +371,10 @@ body {
 
 .slideout-panel {
   position: relative;
-  z-index: 0;
+  z-index: 5;
   will-change: transform;
+  background-color: #FFF;
+  /* A background-color is required */
   min-height: 100vh;
 }
 
@@ -379,4 +386,16 @@ body {
 
 .slideout-open .slideout-menu {
   display: block;
+}
+
+.top-shadow {
+  box-shadow: 0px 0 1rem rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 0 1rem rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+.side-shadow {
+  box-shadow: -10px 0px 1rem rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: -10px 0px 1rem rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: -10px 0px 1rem rgba(0, 0, 0, 0.3);
 }

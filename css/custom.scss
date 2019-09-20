@@ -111,7 +111,7 @@ $red: #943126;
 $green: #45b39d;
 $white: #f9f9f9; 
 $grey: rgb(102, 102, 102);
-$lt-white: rgba(255, 255, 255, .5);
+$lt-white: rgba(255, 255, 255, .6);
 
 
 /////Font-Color Classes//////
@@ -159,24 +159,27 @@ $lt-white: rgba(255, 255, 255, .5);
 .btn-primary {
 	background-color: $blue!important; 
 	color: $white!important; 
-  border: none;
+  border: 1px solid $lt-white; 
+  text-transform: uppercase;
 }
 
 .btn-primary:focus, .btn-primary:hover {
 	background-color: rgba(21,67,96,.8)!important; 
 	color: $white!important; 
-  border: none;
+  text-transform: uppercase;
 }
 
 .btn-outline-secondary {
   background-color: $lt-white;
   color: $white; 
   border: 1px solid $lt-white; 
+  text-transform: uppercase;
 }
 
 .btn-outline-secondary:focus, .btn-outline-secondary:hover {
   background-color:  rgba(255, 255, 255, .3)!important;
   border: 1px solid $lt-white!important;
+  text-transform: uppercase;
 }
 
 
@@ -184,11 +187,13 @@ $lt-white: rgba(255, 255, 255, .5);
   background-color: $green!important;
   color: $white!important; 
   border: 1px solid $lt-white!important;
+  text-transform: uppercase;
  
 }
 
 .btn-secondary:hover, .btn-secondary:focus  {
   background-color: rgba(69,179,157, 0.7)!important;
+  text-transform: uppercase;
 }
 
 
@@ -375,7 +380,7 @@ body {
   opacity: .4;
   width: 1700px;
   height: 1500px;
-  margin-left: -150px;
+  margin-right: -150px;
   margin-top: -150px;
   border-radius: 43%;
   z-index: 3;
@@ -409,19 +414,21 @@ body {
 
 
 
-
+/////////////////slideout.js css///////////////////
 .slideout-menu {
   position: fixed;
+  background-color: $green;
   top: 0;
   bottom: 0;
-  width: 256px;
+  width: 275px;
   min-height: 100vh;
-  overflow-y: scroll;
+  //overflow-y: none;
   -webkit-overflow-scrolling: touch;
-  z-index: 1;
+  z-index: 0;
   display: none;
-  background-color: $green;
+  margin-right: 0;
 }
+
 
 .slideout-menu-left {
   left: 0;
@@ -433,9 +440,9 @@ body {
 
 .slideout-panel {
   position: relative;
-  z-index: 0;
+  z-index: 5;
   will-change: transform;
-  //background-color: #FFF; /* A background-color is required */
+  background-color: #FFF; /* A background-color is required */
   min-height: 100vh;
 }
 
@@ -447,4 +454,17 @@ body {
 
 .slideout-open .slideout-menu {
   display: block;
+}
+
+///Top shadow for bottom fixed navbar
+.top-shadow {
+  box-shadow: 0px 0 1rem rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow:0px 0 1rem rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:0px 0 1rem rgba(0, 0, 0, 0.3);
+}
+
+.side-shadow {
+  box-shadow: -10px 0px 1rem rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow:-10px 0px 1rem rgba(0, 0, 0, 0.3);
+	-moz-box-shadow:-10px 0px 1rem rgba(0, 0, 0, 0.3);
 }
