@@ -247,10 +247,8 @@ body {
   min-width: 20rem;
 }
 
-#signin-main-row {
-  max-width: 15rem;
-  margin: 3rem auto 0;
-  padding-bottom: 75px;
+#signin-main-box {
+  padding-top: 3rem;
 }
 
 .top-page-jumbo {
@@ -258,7 +256,11 @@ body {
 }
 
 .results-container {
-  padding-bottom: 75px;
+  margin-bottom: 5rem;
+}
+
+#signin-container {
+  margin-bottom: 5rem;
 }
 
 .mastfoot i {
@@ -384,7 +386,7 @@ body {
   position: relative;
   z-index: 5;
   will-change: transform;
-  background-color: #FFF;
+  background-color: #154360;
   /* A background-color is required */
   min-height: 100vh;
 }
@@ -397,10 +399,6 @@ body {
 
 .slideout-open .slideout-menu {
   display: block;
-}
-
-.navbar-padding {
-  padding: 5rem 0;
 }
 
 .top-shadow {
