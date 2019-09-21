@@ -3,7 +3,7 @@
   "name": "go ALOFT",
   "icons": [
     {
-      "src": "/images/icon192x192.png",
+      "src": "/img/icon192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
