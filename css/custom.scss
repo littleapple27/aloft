@@ -1,21 +1,7 @@
-// Resetting from the mobile up!
-// 
-// Dropping the root* element font size to 14px is something
-// I do on almost all projects, a 16px font size on mobiles
-// is not normally needed. --> Only my opinion of course!
-//
-// At mobile size I used the scale "Major Second" from 
-// type-cale.com to set out the heading sizes as well as the
-// "Major Third" scale for the .display-* classes however my
-// technique was to begin the scale from the h1's front size.
-// To do this simply do the h1 font size * scale size. So in 
-// in this example it was 1.602 * 1.250 = 2.0025 I went with 
-// 2em to keep it simple.
-//
-//------------------------------------------------------------//
+
 html,
 body {
-	font-size: 14px !important;
+	font-size: 12px !important;
 }
 h1 {
 	font-size: 1.602em;
@@ -48,60 +34,7 @@ h6 {
 	font-size: 2em;
 }
 
-// Medium devices (tablets, 48em and up)
-// 
-// At this point you have overridden Bootstraps rem's and are
-// into module based font sizes should you require it. 
-//
-// I took a while over this change because I felt that there
-// is no reason why I cant use a modified scale on another 
-// device size. So I did, the headings have now taken on
-// "Perfect Fourth" and the dislpay-* has been put to the
-// Bootstrap defaults.
-//
-//------------------------------------------------------------//
-@media (min-width: 48em) {
-	h1 {
-	  font-size: 2.441em;
-	}
-	h2 {
-		font-size: 1.953em;
-	}
-	h3 {
-		font-size: 1.563em;
-	}
-	h4 {
-		font-size: 1.25em;
-	}
-	.display-1 {
-		font-size: 6em;
-	}
-	.display-2 {
-		font-size: 5.5em;
-	}
-	.display-3 {
-		font-size: 4.5em;
-	}
-	.display-4 {
-		font-size: 3.5em;
-	}
-}
 
-// Large devices (desktops, 62em and up)
-@media (min-width: 62em) {
-	html,
-	body {
-		font-size: 16px !important;
-	}
-}
-
-// Extra large devices (large desktops, 75em and up)
-@media (min-width: 75em) {
-	html,
-	body {
-		font-size: 18px !important;
-	}
-}
 
 
 
@@ -306,7 +239,7 @@ body {
 
 
 .results-container {
-  margin-bottom: 5rem;
+  padding-bottom: 5rem;
 }
 
 #signin-container {
@@ -422,13 +355,23 @@ body {
 } */
 
 ///// Fixed Footer  Nav for Slide Out ///////
-
+.fixed-footer {
+  position: fixed!important;
+  width: 100%!important;
+  backface-visibility: hidden!important;
+  z-index: 2!important;
+  background-color: $blue!important;
+}
 
 
 /////////////////slideout.js css///////////////////
 .slideout-menu {
   position: fixed;
-  background-color: $green;
+  background-image: -moz-linear-gradient(45deg, rgba(69,179,157,.9) 25%, rgba(69,179,157,.9) 100%), url("../img/appledoreII-16x9.png");
+    background-image: -webkit-linear-gradient(45deg,rgba(69,179,157,.6) 25%,rgba(69,179,157,.9) 100%), url("../img/appledoreII-16x9.png");
+    background-image: linear-gradient(45deg, rgba(69,179,157,.9) 25%,rgba(69,179,157,.9) 100%), url("../img/appledoreII-16x9.png");
+    background-position: bottom center;
+    background-size: cover;
   top: 0;
   bottom: 0;
   width: 275px;
@@ -469,7 +412,7 @@ body {
 
 ///Navbar padding///
 .navbar-padding {
-  //padding: 5rem 0;
+  padding: 0 0 10rem;
 }
 
 ///Top shadow for bottom fixed navbar
@@ -483,4 +426,56 @@ body {
   box-shadow: -10px 0px 1rem rgba(0, 0, 0, 0.3);
   -webkit-box-shadow:-10px 0px 1rem rgba(0, 0, 0, 0.3);
 	-moz-box-shadow:-10px 0px 1rem rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+//Media Queries
+//------------------------------------------------------------//
+@media only screen and (min-width: 48em) {
+	h1 {
+	  font-size: 2.441em;
+	}
+	h2 {
+		font-size: 1.953em;
+	}
+	h3 {
+		font-size: 1.563em;
+	}
+	h4 {
+		font-size: 1.25em;
+	}
+	.display-1 {
+		font-size: 6em;
+	}
+	.display-2 {
+		font-size: 5.5em;
+	}
+	.display-3 {
+		font-size: 4.5em;
+	}
+	.display-4 {
+		font-size: 3.5em;
+	}
+
+  .navbar-padding {
+  padding: 5rem 0;
+}
+}
+
+// Large devices (desktops, 62em and up)
+@media only screen and (min-width: 768px) {
+	html,
+	body {
+		font-size: 16px !important;
+	}
+}
+
+// Extra large devices (large desktops, 75em and up)
+@media (min-width: 75em) {
+	html,
+	body {
+		font-size: 18px !important;
+	}
 }
