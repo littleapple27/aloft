@@ -3,17 +3,17 @@
   "name": "go ALOFT",
   "icons": [
     {
-      "src": "/img/icon192x192.png",
+      "src": "/aloft/img/icon192x192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/img/icon512x512.png",
+      "src": "/aloft/img/icon512x512.png",
       "type": "img/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "/index.html",
+  "start_url": "/aloft/index.html",
   "background_color": "#154360",
   "orientation": "portrait",
   "display": "minimal-ui",
