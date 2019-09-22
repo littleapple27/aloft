@@ -39,7 +39,7 @@ $(function() {
 
 
 
-var fixed = document.querySelector('#main');
+/* var fixed = document.querySelector('#menu');
 
 slideout.on('translate', function(translated) {
   fixed.style.transform = 'translateX(' + translated + 'px)';
@@ -61,9 +61,12 @@ slideout.on('open', function () {
 
 slideout.on('close', function () {
   fixed.style.transition = '';
-});
+}); */
 
-    // Lazy Loading
+
+
+
+  // Lazy Loading
     $('#lazy-container .lazy').lazyload();
       
 
