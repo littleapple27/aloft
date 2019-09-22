@@ -16,6 +16,6 @@
   "start_url": "/aloft/index.html",
   "background_color": "#154360",
   "orientation": "portrait",
-  "display": "minimal-ui",
+  "display": "fullscreen",
   "theme_color": "#154360"
 }
