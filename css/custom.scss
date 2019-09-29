@@ -34,9 +34,6 @@ h6 {
 }
 
 
-
-
-
 /////Color Variables/////
 $blue: #154360;
 $red: #943126;
@@ -309,97 +306,8 @@ body {
 }
 
 
-//// Index & Sign In Waves background ////
-.box {
-  position: fixed;
-  top: 0;
-  transform: rotate(80deg); 
-  left: 0;
-}
-
-.wave {
-  position: absolute;
-  opacity: .4;
-  width: 1700px;
-  height: 1500px;
-  margin-right: -150px;
-  margin-top: -150px;
-  border-radius: 43%;
-  z-index: 3;
-}
-
-@keyframes rotate {
-  from { transform: rotate(0deg); }
-  from { transform: rotate(360deg); }
-}
-
-.wave.-one {
-  animation: rotate 30000ms infinite linear;
-  opacity: .1;
-  background: #0af;
-  
-}
-
-.wave.-two {
-  animation: rotate 25000ms infinite linear;
-  opacity: .1;
-  background: black;
-  
-}
-
-/*.wave.-three {
-  animation: rotate 28000ms infinite linear;
-  background-color: #77daff;
-  opacity: .1;
-} */
 
 
-
-/////////////////slideout.js css///////////////////
-.slideout-menu {
-  position: fixed;
-  background-image: -moz-linear-gradient(45deg, rgba(69,179,157,.9) 25%, rgba(69,179,157,.9) 100%), url("../img/appledoreII-16x9.png");
-    background-image: -webkit-linear-gradient(45deg,rgba(69,179,157,.6) 25%,rgba(69,179,157,.9) 100%), url("../img/appledoreII-16x9.png");
-    background-image: linear-gradient(45deg, rgba(69,179,157,.9) 25%,rgba(69,179,157,.9) 100%), url("../img/appledoreII-16x9.png");
-    background-position: bottom center;
-    background-size: cover;
-  top: 0;
-  bottom: 0;
-  width: 275px;
-  min-height: 100vh;
-  overflow-y: hidden;
-  -webkit-overflow-scrolling: touch;
-  z-index: 0;
-  display: none;
-  margin-right: 0;
-}
-
-
-.slideout-menu-left {
-  left: 0;
-}
-
-.slideout-menu-right {
-  right: 0;
-}
-
-.slideout-panel {
-  position: relative;
-  z-index: 5;
-  will-change: transform;
-  background-color: $blue; /* A background-color is required */
-  min-height: 100vh;
-}
-
-.slideout-open,
-.slideout-open body,
-.slideout-open .slideout-panel {
-  overflow: hidden;
-}
-
-.slideout-open .slideout-menu {
-  display: block;
-}
 
 
 

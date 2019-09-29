@@ -25,12 +25,12 @@ $(function() {
 
     //slideout
     // Config Options
-        var slideout = new Slideout({
-        'panel': document.getElementById('main'),
-        'menu': document.getElementById('navbar-main'),
-        'padding': 275,
-        'tolerance': 70
-        });
+        // var slideout = new Slideout({
+        // 'panel': document.getElementById('main'),
+        // 'menu': document.getElementById('navbar-main'),
+        // 'padding': 275,
+        // 'tolerance': 70
+        //});
 
     // Toggle button
     document.querySelector('.toggle-button').addEventListener('click', function() {
@@ -38,30 +38,16 @@ $(function() {
     });
 
 
+    var controller = new slidebars();
+    controller.init();
+    $( '.toggle-button' ).on( 'click', function ( event ) {
+    // Stop default action and bubbling
+        event.stopPropagation();
+        event.preventDefault();
 
-/* var fixed = document.querySelector('#menu');
-
-slideout.on('translate', function(translated) {
-  fixed.style.transform = 'translateX(' + translated + 'px)';
-});
-
-slideout.on('beforeclose', function () {
-  fixed.style.transition = 'transform 300ms ease';
-  fixed.style.transform = 'translateX(275px)';
-});
-
-slideout.on('beforeopen', function () {
-  fixed.style.transition = 'transform 300ms ease';
-  fixed.style.transform = 'translateX(0px)';
-});
-
-slideout.on('open', function () {
-  fixed.style.transition = '';
-});
-
-slideout.on('close', function () {
-  fixed.style.transition = '';
-}); */
+        // Toggle the Slidebar with id 'id-1'
+        controller.toggle( 'left-nav' );
+        } );
 
 
 
