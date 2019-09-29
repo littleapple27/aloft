@@ -172,17 +172,20 @@
 <!--- Fixed Header and Search Container ***Moved to the bottom of the page and both footer and header maintain fixed position*** --->
 		<!---Page Heading --->
 		<div class="fixed-top" canvas="">
-		<div class="d-flex flex-row align-items-center justify-content-between px-3 py-1 bg-blue">
+		<div class="d-flex flex-row align-items-center px-3 py-1 bg-blue">
 			<div class="font-green d-flex flex-row">
-				<i class="fas fa-chevron-left fa-1x"></i>
-				<h6 class="text-uppercase font-white title ml-4">Job Listings</h6>
+				<button class="btn btn-history font-weight-light font-small" type="button" onclick="history.back();"><i class="fas fa-chevron-left fa-1x"></i>&nbsp;Previous</button>
 			</div>
 			
+			<div>
+				<h5 class="text-uppercase font-white title pt-2 ml-4">Job Listings</h5>
+			</div>	
 			
-			
-			<div class="">
+
+			<div class="ml-auto">
 				<a href="#" class="nav-link disable"><i class="fas fa-cog fa-1x"></i></a>
 			</div>
+			
 		</div>
 
 
