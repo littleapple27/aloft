@@ -48,7 +48,7 @@
 		<div class="container-fluid top-page-jumbo bg-light px-0 " id="">
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2">
 				<h1 class="mb-0"><span class="font-weight-light font-green mr-n2">go</span><span
-						class="text-blue logo">ALOFT</span></h1>
+						class="font-blue logo">ALOFT</span></h1>
 				<p class="mb-0 font-xs font-weight-light">A comprehensive resource for tall ship sailors.</p>
 			</div>
 		</div>
@@ -108,18 +108,21 @@
 	<div class="fixed-top" canvas="">
 		<div class="d-flex flex-row align-items-center px-3 py-1 bg-blue">
 			<div class="font-green d-flex flex-row">
-				<button class="btn btn-history font-weight-light font-small" type="button" onclick="history.back();"><i
-						class="fas fa-chevron-left fa-1x"></i>&nbsp;Previous</button>
+				<button class="btn btn-history font-weight-light font-small" type="button" onclick="history.back(-1);"><i
+						class="fas fa-arrow-left fa-1x"></i></button>
 			</div>
 
 			<div class="ml-auto">
-				<a href="profile.html" class="nav-link disable"><i class="fas fa-user-circle fa-2x"></i></a>
+				<a href="profile.html" class="nav-link"><i class="fas fa-user-circle fa-2x"></i></a>
 			</div>
 
 			<div class="">
-				<a href="settings.html" class="nav-link disable"><i class="fas fa-cog fa-2x"></i></a>
+				<a href="settings.html" class="nav-link"><i class="fas fa-cog fa-2x"></i></a>
 			</div>
 
+			<div class="font-green d-flex flex-row">
+				<button class="btn btn-history font-weight-light font-small" type="button" onclick="history.forward(1);"><i class="fas fa-arrow-right fa-1x"></i></button>
+			</div>
 		</div>
 
 
@@ -135,13 +138,13 @@
 	<!------ Fixed Footer Menu --------->
 	<footer class="navbar fixed-bottom navbar-dark bg-blue top-shadow" id="menu" canvas="">
 		<!--- Bottom Hamburger Toggle Icon --->
-		<button type="button" class="toggle-button btn btn-lg text-white" data-toggle="button" aria-pressed="false"
+		<button type="button" class="toggle-button btn btn-lg font-white" data-toggle="button" aria-pressed="false"
 			autocomplete="off">☰</button>
 
 		<!--- Bottom Navbar Icons --->
 		<a href="index.html" class="navlink"><i class="fas fa-home fa-2x"></i></a>
 		<div class=""><span class="font-weight-light font-lt-white mr-n1">go</span><span
-				class="text-white logo">ALOFT</span></div>
+				class="font-white logo">ALOFT</span></div>
 		<a href="#" class="btm-nb-i"><i class="fas fa-bell fa-2x"></i></a>
 		<a href="signin.html" class="btm-nb-i"><i class="fas fa-sign-in-alt fa-2x"></i></a>
 	</footer>
@@ -168,7 +171,7 @@
 					<a class="nav-link disabled" href="#"><span
 							class="font-weight-light mr-2 text-uppercase">About</span><span
 							class="font-weight-light font-lt-white mr-n1">go</span><span
-							class="text-white logo">ALOFT</span></a>
+							class="font-white logo">ALOFT</span></a>
 				</div>
 
 				<div class="nav-hover pl-3 border-bottom d-flex align-items-center h-100 nav-item text-uppercase">

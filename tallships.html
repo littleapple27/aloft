@@ -7,11 +7,6 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--- Manifest --->
 	<link rel="manifest" href="manifest.json">
-	<!-- include PWACompat _after_ your manifest -->
-	<script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.9/pwacompat.min.js"
-    integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc"
-    crossorigin="anonymous"></script>
-
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -50,7 +45,7 @@
 		<div class="container-fluid top-page-jumbo bg-light px-0" id="pg-info-loads-here">
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2">
 				<h1 class="mb-0"><span class="font-weight-light font-green mr-n2">go</span><span
-						class="text-blue logo">ALOFT</span></h1>
+						class="font-blue logo">ALOFT</span></h1>
 				<p class="mb-0 font-xs font-weight-light">A comprehensive resource for tall ship sailors.</p>
 			</div>
 		</div>
@@ -68,7 +63,7 @@
 
 
 
-		<div class="container-fluid bg-light shadow search-container px-0">
+		<div class="container-fluid bg-light shadow search-container py-3">
 
 			<!----Section Headings---->
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto px-0">
@@ -129,7 +124,14 @@
 			<!----Section Heading: Search Results ---->
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 p-0">
 				<div class="px-3 py-2">
+					
+					<div class="mb-3 d-flex flex-row justify-content-between align-items-center">
 					<h3 class="font-blue">Timberwind of Portland Schooner Co.</h3>
+					<button class="btn btn-md btn-primary">
+							<i class="fas fa-bell"></i> &nbsp;&nbsp;Now Hiring
+						</button>
+					</div>
+					
 					<p class="font-weight-light">
 						The schooner Timberwind is a historic former pilot boat, now berthed in Portland, Maine. Built
 						in 1931, she served as a pilot boat (named Portland Pilot) in Portland Harbor until 1969, and
@@ -166,8 +168,8 @@
 	<div class="fixed-top" canvas="">
 		<div class="d-flex flex-row align-items-center px-3 py-1 bg-blue">
 			<div class="font-green d-flex flex-row">
-				<button class="btn btn-history font-weight-light font-small" type="button" onclick="history.back();"><i
-						class="fas fa-chevron-left fa-1x"></i>&nbsp;Previous</button>
+				<button class="btn btn-history font-weight-light font-small" type="button" onclick="history.back(-1);"><i
+						class="fas fa-arrow-left fa-1x"></i></button>
 			</div>
 
 			<div class="ml-auto">
@@ -178,6 +180,9 @@
 				<a href="settings.html" class="nav-link"><i class="fas fa-cog fa-2x"></i></a>
 			</div>
 
+			<div class="font-green d-flex flex-row">
+				<button class="btn btn-history font-weight-light font-small" type="button" onclick="history.forward(1);"><i class="fas fa-arrow-right fa-1x"></i></button>
+			</div>
 		</div>
 
 
@@ -197,13 +202,13 @@
 	<!------ Fixed Footer Menu --------->
 	<footer class="navbar fixed-bottom navbar-dark bg-blue top-shadow" id="menu" canvas="">
 		<!--- Bottom Hamburger Toggle Icon --->
-		<button type="button" class="toggle-button btn btn-lg text-white" data-toggle="button" aria-pressed="false"
+		<button type="button" class="toggle-button btn btn-lg font-white" data-toggle="button" aria-pressed="false"
 			autocomplete="off">☰</button>
 
 		<!--- Bottom Navbar Icons --->
 		<a href="index.html" class="navlink"><i class="fas fa-home fa-2x"></i></a>
 		<div class=""><span class="font-weight-light font-lt-white mr-n1">go</span><span
-				class="text-white logo">ALOFT</span></div>
+				class="font-white logo">ALOFT</span></div>
 		<a href="#" class="btm-nb-i"><i class="fas fa-bell fa-2x"></i></a>
 		<a href="signin.html" class="btm-nb-i"><i class="fas fa-sign-in-alt fa-2x"></i></a>
 	</footer>
@@ -219,7 +224,7 @@
 							class="font-weight-light">Settings</span><span class="sr-only">(current)</span></a>
 				</div>
 				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase active ">
-					<a class="nav-link disabled " href="profile.html"><i class="fas fa-user-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+					<a class="nav-link" href="profile.html"><i class="fas fa-user-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
 							class="font-weight-light">Profile</span><span class="sr-only">(current)</span></a>
 				</div>
 				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase">
@@ -230,7 +235,7 @@
 					<a class="nav-link disabled" href="#"><span
 							class="font-weight-light mr-2 text-uppercase">About</span><span
 							class="font-weight-light font-lt-white mr-n1">go</span><span
-							class="text-white logo">ALOFT</span></a>
+							class="font-white logo">ALOFT</span></a>
 				</div>
 
 				<div class="nav-hover pl-3 border-bottom d-flex align-items-center h-100 nav-item text-uppercase">

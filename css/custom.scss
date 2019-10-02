@@ -183,7 +183,7 @@ body {
 /* Links */
 a,
 a:focus {
-  color: $lt-white;
+  color: $white;
   text-decoration: none; 
 }
 
@@ -246,6 +246,8 @@ body {
 }
 
 
+
+
 .results-container {
   padding-bottom: 5rem;
 }
@@ -298,25 +300,25 @@ body {
 
 ////Background Images////
 #feature-tallship {
-    background-image: -moz-linear-gradient(45deg, rgba(21,67,96,.6) 25%, rgba(21,67,96,.6) 100%), url("../img/appledoreII-16x9.png");
-    background-image: -webkit-linear-gradient(45deg,rgba(21,67,96,.6) 25%,rgba(21,67,96,.6) 100%), url("../img/appledoreII-16x9.png");
-    background-image: linear-gradient(45deg, rgba(21,67,96,.6) 25%,rgba(21,67,96,.96) 100%), url("../img/appledoreII-16x9.png");
+    background-image: -moz-linear-gradient(45deg, rgba(21,67,96,.8) 25%, rgba(21,67,96,.8) 100%), url("../img/appledoreII-16x9.png");
+    background-image: -webkit-linear-gradient(45deg,rgba(21,67,96,.8) 25%,rgba(21,67,96,.8) 100%), url("../img/appledoreII-16x9.png");
+    background-image: linear-gradient(45deg, rgba(21,67,96,.8) 25%,rgba(21,67,96,.8) 100%), url("../img/appledoreII-16x9.png");
     background-position: bottom center;
     background-size: cover;
 }
 
 #feature-listing {
-    background-image: -moz-linear-gradient(45deg, rgba(21,67,96,.6) 25%, rgba(21,67,96,.6) 100%), url("../img/timberwind-16x9.png");
-    background-image: -webkit-linear-gradient(45deg,rgba(21,67,96,.6) 25%,rgba(21,67,96,.6) 100%), url("../img/timberwind-16x9.png");
-    background-image: linear-gradient(45deg, rgba(21,67,96,.6) 25%,rgba(21,67,96,.96) 100%), url("../img/timberwind-16x9.png");
+    background-image: -moz-linear-gradient(45deg, rgba(21,67,96,.8) 25%, rgba(21,67,96,.8) 100%), url("../img/timberwind-16x9.png");
+    background-image: -webkit-linear-gradient(45deg,rgba(21,67,96,.8) 25%,rgba(21,67,96,.8) 100%), url("../img/timberwind-16x9.png");
+    background-image: linear-gradient(45deg, rgba(21,67,96,.8) 25%,rgba(21,67,96,.8) 100%), url("../img/timberwind-16x9.png");
     background-position: bottom center;
     background-size: cover;
 }
 
 #feature-resource {
-    background-image: -moz-linear-gradient(45deg, rgba(21,67,96,.6) 25%, rgba(21,67,96,.6) 100%), url("../img/appledoreII-16x9.png");
-    background-image: -webkit-linear-gradient(45deg,rgba(21,67,96,.6) 25%,rgba(21,67,96,.6) 100%), url("../img/appledoreII-16x9.png");
-    background-image: linear-gradient(45deg, rgba(21,67,96,.6) 25%,rgba(21,67,96,.96) 100%), url("../img/appledoreII-16x9.png");
+    background-image: -moz-linear-gradient(45deg, rgba(21,67,96,.8) 25%, rgba(21,67,96,.8) 100%), url("../img/appledoreII-16x9.png");
+    background-image: -webkit-linear-gradient(45deg,rgba(21,67,96,.8) 25%,rgba(21,67,96,.8) 100%), url("../img/appledoreII-16x9.png");
+    background-image: linear-gradient(45deg, rgba(21,67,96,.8) 25%,rgba(21,67,96,.96) 100%), url("../img/appledoreII-16x9.png");
     background-position: bottom center;
     background-size: cover;
 }
