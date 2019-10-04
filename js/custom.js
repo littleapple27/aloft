@@ -2,41 +2,12 @@ $(function() {
 
  
 		  
-  
-	// Slick Carousel
-    $('#listing-carousel').slick({
-        autoplay: true, 
-        autoplaySpeed: 4000,
-		centerMode: true,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-		arrows: false,  
-        dots: false,
-        responsive: [
-            {
-            breakpoint: 768,
-            settings: {
-                arrows: false, 
-                dots: false
-            }
-        }]
 
-    });//End Slick Carousel
-
-    //slideout
-    // Config Options
-        // var slideout = new Slideout({
-        // 'panel': document.getElementById('main'),
-        // 'menu': document.getElementById('navbar-main'),
-        // 'padding': 275,
-        // 'tolerance': 70
-        //});
-
+    ///Slidebars Navigation Slide out
     // Toggle button
     document.querySelector('.toggle-button').addEventListener('click', function() {
     slideout.toggle();
     });
-
 
     var controller = new slidebars();
     controller.init();
@@ -50,11 +21,24 @@ $(function() {
         } );
 
 
+    // Lazy Loading
+    // Bottom image does not always load -- Need to troubleshoot more
+    $('.results-container .lazy').lazy({
+        appendScroll: $('.results-container'),
 
-
-  // Lazy Loading
-    $('#lazy-container .lazy').lazyload();
+        beforeLoad: function(element) {
+                var imageSrc = element.data('src');
+                console.log('image "' + imageSrc + '" is about to be loaded');
+            },
+            
+            // called after an element was successfully handled
+            afterLoad: function(element) {
+                var imageSrc = element.data('src');
+                console.log('image "' + imageSrc + '" was loaded successfully');
+            }   
+        });//End lazy 
+   
       
 
-});
+});//End doc ready
 
