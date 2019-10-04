@@ -87,24 +87,45 @@
 				<p class="font-blue font-weight-light mb-0 font-xs">Refine Search Results</p>
 
 				<div class="row">
-					<div class="col-md-6 col-sm-12 mb-2 has-search rounded">
-						<span class="fa fa-search form-control-feedback"></span>
-						<input type="text" class="form-control" placeholder="Name">
+					<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
+						<span class="fa fa-anchor mx-3 font-green"></span>
+						<input type="text" class="form-control" placeholder="Vessel Name">
 					</div>
-					<div class="col-md-6 col-sm-12 mb-2 has-search rounded">
-						<span class="fa fa-search form-control-feedback"></span>
-						<input type="text" class="form-control" placeholder="Vessel Type">
+
+						<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
+						<span class="fa fa-dharmachakra mx-3 font-green"></span>
+						<select class="form-control" id="">
+							<option value="" disabled selected>Vessel Type</option>
+							<option>Schooner</option>
+							<option>Square Rig</option>
+						</select>
 					</div>
 				</div>
 
 				<div class="row">
-					<div class="col-md-6 col-sm-12 mb-2 has-search rounded">
-						<span class="fa fa-sun form-control-feedback"></span>
-						<input type="text" class="form-control" placeholder="Hull Material">
+					<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
+						<span class="fa fa-ship mx-3 font-green"></span>
+						<select class=" form-control" id="">
+							<option value="" disabled selected>Hull Material</option>
+							<option>Wood</option>
+							<option>Fiberglass</option>
+							<option>Steel</option>
+							
+						</select>
 					</div>
-					<div class="col-md-6 col-sm-12 mb-2 has-search rounded">
-						<span class="fa fa-map form-control-feedback"></span>
-						<input type="text" class="form-control" placeholder="Sailing Region">
+					<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
+						<span class="fa fa-map mx-3 font-green"></span>
+						<select class="form-control" id="">
+							<option value="" disabled selected>Select Region</option>
+							<option>New England</option>
+							<option>Great Lakes</option>
+							<option>Mid-Atlantic</option>
+							<option>Florida - Atlantic</option>
+							<option>Florida - Gulf</option>
+							<option>Gulf of Mexico</option>
+							<option>West Coast / Pacific</option>
+							<option>Southern Carribean Islands</option>
+							</select>
 					</div>
 				</div>
 
@@ -228,9 +249,9 @@
 			<!----Section Headings---->
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
 				<p class="font-lt-white font-weight-light mb-0 font-xs">Search All Tall Ships</p>
-				<div class="form-group has-search rounded">
-					<span class="fa fa-search form-control-feedback"></span>
-					<input type="text" class="form-control" placeholder="Search">
+				<div class="form-group rounded d-flex flex-row">
+					<input type="text" class="form-control" placeholder="enter search terms">
+					<button class="btn btn-md btn-primary-search font-weight-light font-xs"><i class="fa fa-search"></i></button>
 				</div>
 			</div>
 		</div>

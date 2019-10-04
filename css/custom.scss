@@ -41,7 +41,8 @@ $green: #45b39d;
 $white: #f9f9f9; 
 $grey: rgb(102, 102, 102);
 $lt-white: rgba(255, 255, 255, .6);
-
+$lt-blue: rgba(21,67,96,.6);
+$lt-green: rgba(69,179,157, 0.3);
 
 /////Font-Color Classes//////
 .font-blue {
@@ -95,6 +96,21 @@ $lt-white: rgba(255, 255, 255, .6);
 	background-color: rgba(21,67,96,.8)!important; 
 	color: $white!important; 
   text-transform: uppercase;
+}
+
+.btn-primary-search {
+	background-color: $blue!important; 
+	color: $white!important; 
+  
+  text-transform: uppercase;
+  border-radius: 0;
+}
+
+.btn-primary-search:focus, .btn-primary:hover {
+	background-color: rgba(21,67,96,.8)!important; 
+	color: $white!important; 
+  text-transform: uppercase;
+  border-radius: 0;
 }
 
 .btn-outline-secondary {
@@ -246,8 +262,6 @@ body {
 }
 
 
-
-
 .results-container {
   padding-bottom: 8rem;
 }
@@ -260,43 +274,58 @@ body {
   margin-bottom: 5rem;
 }
 
-/////Icons//////
 
-
-
-///// Footer Icons /////
-.mastfoot i {
-  color: rgba(255, 255, 255, .5);
+////////Form Control Style////////
+.form-control {
+  color: $lt-blue!important;
+  font-weight: 300;
+  border-bottom: 1px solid $blue!important;
+  border-radius: 0!important;
+  -webkit-appearance: none;
+  border-top: none!important; 
+  border-right: none!important; 
+  border-left: none!important;
+  background-color: $lt-white!important;
 }
 
-.mastfoot i:hover {
-  color: rgba(255, 255, 255, .75);
+input.form-control {
+  padding: 8px 16px 8px 8px;
 }
 
-.has-search .form-control {
-    padding-left: 2.375rem;
+select:not([multiple]) {
+  -webkit-appearance: none;
+    -moz-appearance: none;
+    background-position: 97% center;
+    background-repeat: no-repeat;
+    background-image: url('../img/angle-double-down-solid.svg');
+    background-size: 7px;
+    padding: .5em;
+    padding-right: 1.5em
 }
 
-.has-search .form-control-feedback {
-    position: absolute;
-    z-index: 10;
-    display: block;
-    width: 2.375rem;
-    height: 2.375rem;
-    line-height: 2.375rem;
-    text-align: center;
-    pointer-events: none;
-    color: #aaa;
+input::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+  color: $lt-blue!important;
+}
+input::-moz-placeholder { /* Firefox 19+ */
+  color: $lt-blue!important;
+}
+input::-ms-input-placeholder { /* IE 10+ */
+  color: $lt-blue!important;
+}
+input:-moz-placeholder { /* Firefox 18- */
+  color: $lt-blue!important;
 }
 
-
-.slick-slide {
-   height:150px;
-   width: 100px;
+///// Nav pills /////// 
+.active-pills {
+  color: $white;
+  border-bottom: 1px solid $white; 
+  padding: 0 0 3px 0;
 }
 
-
-
+.inactive-pills {
+  color: $lt-white;
+}
 
 ////Background Images////
 #feature-tallship {
@@ -306,6 +335,10 @@ body {
     background-position: bottom center;
     background-size: cover;
 }
+
+
+
+
 
 #feature-listing {
     background-image: -moz-linear-gradient(45deg, rgba(21,67,96,.8) 25%, rgba(21,67,96,.8) 100%), url("../img/timberwind-16x9.png");

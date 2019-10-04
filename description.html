@@ -47,24 +47,24 @@
 	<div class="side-shadow" canvas="container">
 
 		<!----Top Page Jumbotron---->
-		<div class="container-fluid top-page-jumbo bg-light px-0" id="pg-info-loads-here">
+		<div class="container-fluid top-page-jumbo bg-blue pb-2" id="feature-listing">
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2">
-				<h1 class="mb-0"><span class="font-weight-light font-green mr-n2">go</span><span
-						class="font-bluef logo">ALOFT</span></h1>
-				<p class="mb-0 font-xs font-weight-light">A comprehensive resource for tall ship sailors.</p>
+				<h1 class="display-4 font-white">Portland Schooner Co. <br /> <span class="font-lt-white">Portland, Maine</span></h1>
+				<p class="lead font-white">Portland Schooner Co. is now hiring deckhands for the 2020 sailing season. <a
+						class="paragraph-link" href="#jobdescription" role="button">Learn more...</a></p>
 			</div>
 		</div>
 
 
 
 		<!----Featured Company---->
-		<div class="container-fluid bg-blue shadow py-5" id="feature-listing">
+	<!-- 	<div class="container-fluid bg-blue shadow py-5" id="feature-listing">
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
 				<h1 class="display-4 font-white">Portland Schooner Co. <br /> <span class="font-lt-white">Portland, Maine</span></h1>
 				<p class="lead font-white">Portland Schooner Co. is now hiring deckhands for the 2020 sailing season. <a
 						class="paragraph-link" href="#jobdescription" role="button">Learn more...</a></p>
 			</div>
-		</div>
+		</div> -->
 
 
 
@@ -96,7 +96,7 @@
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img class="d-block w-100" src="img/appledoreII-3x2.png" alt="Second slide">
+							<img class="d-block w-100" src="img/appledore2.png" alt="Second slide">
 							<div class="carousel-caption d-none d-md-block">
 								<h4>Schooner Bagheera</h4>
 							</div>
@@ -196,6 +196,19 @@
 				<button class="btn btn-history font-weight-light font-small" type="button" onclick="history.back(-1);"><i
 						class="fas fa-arrow-left fa-1x"></i></button>
 			</div>
+			<div class="d-flex flex-row ml-3">
+				<ul class="nav nav-pills">
+					<li class="font-xs font-weight-light mr-3">
+						<a class="inactive-pills" href="listings.html">Job Listing</a>
+					</li>
+					<li class="font-xs font-weight-light mr-3">
+						<span class="font-lt-white">/</span>
+					</li>
+					<li class="font-xs font-weight-light">
+						<a class="active-pills" href="description.html">Description</a>
+					</li>
+				</ul>
+			</div>
 
 			<div class="ml-auto">
 				<a href="profile.html" class="nav-link"><i class="fas fa-user-circle fa-2x"></i></a>
@@ -215,9 +228,9 @@
 			<!----Section Headings---->
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
 				<p class="font-lt-white font-weight-light mb-0 font-xs">Search All Job Listings</p>
-				<div class="form-group has-search rounded">
-					<span class="fa fa-search form-control-feedback"></span>
-					<input type="text" class="form-control" placeholder="Search">
+				<div class="form-group rounded d-flex flex-row">
+					<input type="text" class="form-control" placeholder="enter search terms">
+					<button class="btn btn-md btn-primary-search font-weight-light font-xs"><i class="fa fa-search"></i></button>
 				</div>
 			</div>
 		</div>
