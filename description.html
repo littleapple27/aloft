@@ -47,7 +47,7 @@
 	<div class="side-shadow" canvas="container">
 
 		<!----Top Page Jumbotron---->
-		<div class="container-fluid top-page-jumbo bg-blue pb-2" id="feature-listing">
+		<div class="container-fluid top-page-jumbo-alt bg-blue pb-2" id="feature-listing">
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2">
 				<h1 class="display-4 font-white">Portland Schooner Co. <br /> <span class="font-lt-white">Portland, Maine</span></h1>
 				<p class="lead font-white">Portland Schooner Co. is now hiring deckhands for the 2020 sailing season. <a
@@ -130,7 +130,19 @@
 		<div class="container-fluid shadow results-container pt-2" id="jobdescription">
 			<!----Section Heading: Search Results ---->
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 p-0">
-				<p class="font-blue font-weight-light px-3 mb-0 font-xs">Job Listing / Description</p>
+				<div class="d-flex flex-row ml-3">
+					<ul class="nav nav-pills pb-2">
+						<li class="font-xs font-weight-light mr-3">
+							<a class="inactive-pills" href="listings.html">Listings</a>
+						</li>
+						<li class="font-xs font-weight-light mr-3">
+							<span class="font-lt-green">/</span>
+						</li>
+						<li class="font-xs font-weight-light">
+							<a class="active-pills" href="description.html">Description</a>
+						</li>
+					</ul>
+				</div>
 
 				<!----Start of Job Description ---->
 
@@ -196,19 +208,6 @@
 				<button class="btn btn-history font-weight-light font-small" type="button" onclick="history.back(-1);"><i
 						class="fas fa-arrow-left fa-1x"></i></button>
 			</div>
-			<div class="d-flex flex-row ml-3">
-				<ul class="nav nav-pills">
-					<li class="font-xs font-weight-light mr-3">
-						<a class="inactive-pills" href="listings.html">Job Listing</a>
-					</li>
-					<li class="font-xs font-weight-light mr-3">
-						<span class="font-lt-white">/</span>
-					</li>
-					<li class="font-xs font-weight-light">
-						<a class="active-pills" href="description.html">Description</a>
-					</li>
-				</ul>
-			</div>
 
 			<div class="ml-auto">
 				<a href="profile.html" class="nav-link"><i class="fas fa-user-circle fa-2x"></i></a>
@@ -226,10 +225,11 @@
 
 		<div class="container-fluid bg-green shadow search-container">
 			<!----Section Headings---->
-			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
-				<p class="font-lt-white font-weight-light mb-0 font-xs">Search All Job Listings</p>
+			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 pb-1">
+		
+				<!-- <p class="font-lt-white font-weight-light mb-0 font-xs">Search All Job Listings</p> -->
 				<div class="form-group rounded d-flex flex-row">
-					<input type="text" class="form-control" placeholder="enter search terms">
+					<input type="text" class="form-control" placeholder="Search All Job Listings">
 					<button class="btn btn-md btn-primary-search font-weight-light font-xs"><i class="fa fa-search"></i></button>
 				</div>
 			</div>

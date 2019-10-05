@@ -84,6 +84,10 @@ $lt-green: rgba(69,179,157, 0.3);
 	background-color: $green;
 }
 
+.bg-red {
+  background-color: $red; 
+}
+
 /////Button-Colors/////
 .btn-primary {
 	background-color: $blue!important; 
@@ -261,6 +265,9 @@ body {
   padding-top: 8.5rem; 
 }
 
+.top-page-jumbo-alt {
+  padding-top: 10rem; 
+}
 
 .results-container {
   padding-bottom: 8rem;
@@ -318,13 +325,13 @@ input:-moz-placeholder { /* Firefox 18- */
 
 ///// Nav pills /////// 
 .active-pills {
-  color: $white;
-  border-bottom: 1px solid $white; 
+  color: $blue;
+  border-bottom: 1px solid $blue; 
   padding: 0 0 3px 0;
 }
 
 .inactive-pills {
-  color: $lt-white;
+  color: $lt-blue;
 }
 
 ////Background Images////

@@ -79,6 +79,10 @@ h6 {
   background-color: #45b39d;
 }
 
+.bg-red {
+  background-color: #943126;
+}
+
 .btn-primary {
   background-color: #154360 !important;
   color: #f9f9f9 !important;
@@ -236,6 +240,10 @@ body {
   padding-top: 8.5rem;
 }
 
+.top-page-jumbo-alt {
+  padding-top: 10rem;
+}
+
 .results-container {
   padding-bottom: 8rem;
 }
@@ -296,13 +304,13 @@ input:-moz-placeholder {
 }
 
 .active-pills {
-  color: #f9f9f9;
-  border-bottom: 1px solid #f9f9f9;
+  color: #154360;
+  border-bottom: 1px solid #154360;
   padding: 0 0 3px 0;
 }
 
 .inactive-pills {
-  color: rgba(255, 255, 255, 0.6);
+  color: rgba(21, 67, 96, 0.6);
 }
 
 #feature-tallship {

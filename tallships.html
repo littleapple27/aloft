@@ -42,22 +42,22 @@
 	<div class="side-shadow" canvas="container">
 
 		<!----Top Page Jumbotron---->
-		<div class="container-fluid top-page-jumbo bg-light px-0" id="pg-info-loads-here">
+		<div class="container-fluid top-page-jumbo-alt bg-blue pb-2" id="feature-listing">
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2">
-				<h1 class="mb-0"><span class="font-weight-light font-green mr-n2">go</span><span
-						class="font-blue logo">ALOFT</span></h1>
-				<p class="mb-0 font-xs font-weight-light">A comprehensive resource for tall ship sailors.</p>
+				<h1 class="display-4 font-white">Timberwind</h1>
+				<p class="lead font-white">The schooner Timberwind is a historic former pilot boat, now berthed in Portland, Maine. <a class="paragraph-link" href="#full-tallship"
+						role="button">Learn more...</a></p>
 			</div>
 		</div>
 
 		<!----Featured Company---->
-		<div class="container-fluid bg-blue shadow py-5" id="feature-listing">
+	<!-- 	<div class="container-fluid bg-blue shadow py-5" id="feature-listing">
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
 				<h1 class="display-4 font-white">Timberwind</h1>
 				<p class="lead font-white">Schooner - Built in 1931 <a class="paragraph-link" href="#full-tallship"
 						role="button">Learn more...</a></p>
 			</div>
-		</div>
+		</div> -->
 
 
 
@@ -87,7 +87,7 @@
 							</div>
 						</div>
 						<div class="carousel-item">
-							<img class="d-block w-100" src="img/appledoreII-3x2.png" alt="Second slide">
+							<img class="d-block w-100" src="img/appledore2.png" alt="Second slide">
 							<div class="carousel-caption d-none d-md-block">
 								<h4>Schooner Timberwind</h4>
 							</div>
@@ -123,10 +123,26 @@
 		<div class="container-fluid shadow results-container pt-2" id="full-tallship">
 			<!----Section Heading: Search Results ---->
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 p-0">
+				<!--- Nav Pills --->
+				<div class="d-flex flex-row ml-3">
+					<ul class="nav nav-pills pb-2">
+						<li class="font-xs font-weight-light mr-3">
+							<a class="inactive-pills" href="directory.html">Directory</a>
+						</li>
+						<li class="font-xs font-weight-light mr-3">
+							<span class="font-lt-green">/</span>
+						</li>
+						<li class="font-xs font-weight-light">
+							<a class="active-pills" href="tallships.html">Tall Ship</a>
+						</li>
+					</ul>
+				</div>
 				<div class="px-3 py-2">
 					
-					<div class="mb-3 d-flex flex-row justify-content-between align-items-center">
-					<h3 class="font-blue">Timberwind of Portland Schooner Co.</h3>
+					<div class="mb-3 d-flex flex-row  align-items-center font-blue">
+					<h3 class="font-blue text">Timberwind</h3>
+					<i class="far fa-star fa-2x ml-auto pr-3"></i>
+						<i class="fas fa-share-alt fa-2x pr-3"></i>
 					<button class="btn btn-md btn-primary">
 							<i class="fas fa-bell"></i> &nbsp;&nbsp;Now Hiring
 						</button>
@@ -188,10 +204,11 @@
 
 		<div class="container-fluid bg-green shadow search-container">
 			<!----Section Headings---->
-			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
-				<p class="font-lt-white font-weight-light mb-0 font-xs">Search All Tall Ships</p>
+			<!----Section Headings---->
+			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 pb-1">
+				<!-- <p class="font-lt-white font-weight-light mb-0 font-xs">Search All Tall Ships</p> -->
 				<div class="form-group rounded d-flex flex-row">
-					<input type="text" class="form-control" placeholder="enter search terms">
+					<input type="text" class="form-control" placeholder="Search Tall Ship Directory">
 					<button class="btn btn-md btn-primary-search font-weight-light font-xs"><i class="fa fa-search"></i></button>
 				</div>
 			</div>
