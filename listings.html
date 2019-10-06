@@ -124,9 +124,10 @@
 			<!----Section Heading: Search Results ---->
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 p-0">
 				<!--- Nav Pills --->
+				<nav aria-label="breadcrumb">
 				<ul class="nav nav-pills pb-2 mb-2">
 						<li class="font-xs font-weight-light mr-3">
-							<a class="inactive-pills" href="index.html">Index</a>
+							<a class="inactive-pills" href="index.html">Home</a>
 						</li>
 						<li class="font-xs font-weight-light mr-3">
 							<span class="font-lt-green">/</span>
@@ -136,6 +137,7 @@
 							<a class="active-pills" href="listings.html">Listings - All</a>
 						</li>
 					</ul>
+					</nav>
 
 				<!----Start of Search Results Cards ---->
 
@@ -145,16 +147,17 @@
 					<div class="card p-0">
 						<a href="description.html" class="card-link-text">
 							<div class="row no-gutters">
-								<div class="col-sm-4 d-flex align-items-center ">
+								<div class="col-4 d-flex align-items-center ">
 									<img data-src="img/timberwind.png" class="img-fluid lazy"
 										alt="schooner timberwind with portland schooner company">
 								</div>
-								<div class="col-sm-8 pl-2">
-									<h3 class="mb-0 mt-1 font-blue">Deckhands</h3>
+								<div class="col-8 pl-2 d-flex flex-column justify-content-center">
+										<div class="pr-4 d-flex justify-content-between align-items-center">
+									<h3 class="mb-0 mt-1 font-blue">Deckhands</h3><span class="font-weight-light font-blue "><i
+											class="fas fa-map-marker-alt px-2"></i>Portland, ME</span>
+									</div>
 									<h5 class="mb-2 font-weight-bold text-uppercase font-green">Portland Schooner Co.
 										</h6>
-										<p class="font-weight-light font-blue font-xs"><i
-												class="fas fa-map-marker-alt px-2"></i>Portland, ME</p>
 										<p class="font-weight-light">Portland Schooner Co. is now hiring deckhands for
 											the 2020 sailing season.</p>
 								</div>
@@ -169,16 +172,17 @@
 					<div class="card p-0">
 						<a href="description.html" class="card-link-text">
 							<div class="row no-gutters">
-								<div class="col-sm-4">
+								<div class="col-4 d-flex align-items-center ">
 									<img data-src="img/libertyclipper.png" class="img-fluid lazy"
 										alt="schooner liberty clipper with liberty fleet of tall ships">
 								</div>
-								<div class="col-sm-8 pl-2">
-									<h3 class="mb-0 mt-1 font-blue">Captain</h3>
+								<div class="col-8 pl-2 d-flex flex-column justify-content-center"">
+										<div class="pr-4 d-flex justify-content-between align-items-center">
+									<h3 class="mb-0 mt-1 font-blue">Captain</h3><span class="font-weight-light font-blue "><i
+											class="fas fa-map-marker-alt px-2"></i>Boston, MA</span>
+									</div>
 									<h5 class="mb-2 font-weight-bold text-uppercase font-green">Liberty Fleet of Tall
 										Ships</h6>
-										<p class="font-weight-light font-blue font-xs"><i
-												class="fas fa-map-marker-alt px-2"></i>Boston, ME</p>
 										<p class="font-weight-light ">Liberty Fleet of Tallships is now hiring a captain
 											for the 2019-2020 Bahamas sailing season.</p>
 								</div>
@@ -193,15 +197,17 @@
 					<div class="card p-0  ">
 						<a href="description.html" class="card-link-text">
 							<div class="row no-gutters">
-								<div class="col-sm-4">
+								<div class="col-4 d-flex align-items-center ">
 									<img data-src="img/appledore2.png" class="img-fluid lazy"
 										alt="schooner appledore II with sebago watersports">
 								</div>
-								<div class="col-sm-8 pl-2">
-									<h3 class="mb-0 mt-1 font-blue">First Mate</h3>
-									<h5 class="mb-2 font-weight-light text-uppercase font-green">Sebago Watersports</h5>
-									<p class="font-weight-light font-blue font-xs"><i
-											class="fas fa-map-marker-alt px-2"></i>Key West, FL</p>
+								<div class="col-8 pl-2 d-flex flex-column justify-content-center"">
+									<div class="pr-4 d-flex justify-content-between align-items-center">
+									<h3 class="mb-0 mt-1 font-blue">First Mate</h3><span class="font-weight-light font-blue "><i
+											class="fas fa-map-marker-alt px-2"></i>Key West, FL</span>
+									</div>
+									
+									<h5 class="mb-2 font-weight-bold text-uppercase font-green">Sebago Watersports</h5>
 									<p class="font-weight-light ">Sebago Watersports is now hiring a first mate aboard
 										the Appledore II.</p>
 								</div>
@@ -244,10 +250,9 @@
 
 		<div class="container-fluid bg-green shadow search-container">
 			<!----Section Headings---->
-			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
-				<p class="font-lt-white font-weight-light mb-0 font-xs">Search All Job Listings</p>
+			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 pb-1">
 				<div class="form-group rounded d-flex flex-row">
-					<input type="text" class="form-control" placeholder="enter search terms">
+					<input type="text" class="form-control" placeholder="Search all job listings">
 					<button class="btn btn-md btn-primary-search font-weight-light font-xs"><i class="fa fa-search"></i></button>
 				</div>
 			</div>
