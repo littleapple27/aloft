@@ -270,7 +270,7 @@ body {
 }
 
 .results-container {
-  padding-bottom: 8rem;
+  padding-bottom: 10rem;
 }
 
 .notification-container {
@@ -286,12 +286,12 @@ body {
 .form-control {
   color: $lt-blue!important;
   font-weight: 300;
-  border-bottom: 1px solid $blue!important;
+  border: 1px solid $blue!important;
   border-radius: 0!important;
   -webkit-appearance: none;
-  border-top: none!important; 
-  border-right: none!important; 
-  border-left: none!important;
+  //border-top: none!important; 
+  //border-right: none!important; 
+  //border-left: none!important;
   background-color: $lt-white!important;
 }
 
@@ -306,7 +306,6 @@ select:not([multiple]) {
     background-repeat: no-repeat;
     background-image: url('../img/angle-double-down-solid.svg');
     background-size: 7px;
-    padding: .5em;
     padding-right: 1.5em
 }
 
