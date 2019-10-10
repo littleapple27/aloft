@@ -149,14 +149,16 @@
 				<!----Start of Job Description ---->
 
 				<div class="px-3 py-2">
-					<h3 class="bg-green text-white p-2">Deckhands</h3>
+					<h2 class="bg-green text-white p-2">Deckhands</h2>
 					<div class="d-flex flex-row py-3 font-blue">
-						<button class="btn btn-md btn-primary mr-auto">
+						<button class="btn btn-md btn-primary mr-auto" data-toggle="modal" data-target="#profileModal">
 							<i class="fas fa-file-upload"></i> &nbsp;&nbsp;Apply Now
 						</button>
 						<i class="far fa-star fa-2x mx-2"></i>
 						<i class="fas fa-share-alt fa-2x mx-2"></i>
-					</div>
+				</div>
+
+
 					<p class="font-weight-bold">
 						Seasonal <br />
 						Posted by: Portland Schooner Co. on May 15, 2019<br />
@@ -201,6 +203,23 @@
 		</div><!---End of nice scroll container-->
 	</div>
 	<!--------- End of Main Page Content Canvas ------>
+
+	<!--- *****Submit Profile Modal must be outside of content canvas box(slideout menu) for it to display properly*****  --->
+					<div class="modal fade bg-lt-blue-2" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModal" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content font-white p-3" id="">
+								<button type="button" class="close text-right" data-dismiss="modal" aria-label="Close">
+								<span aria-hidden="true">&times;</span>
+								</button>
+								<h3 class="font-weight-light font-blue text-center py-3">Submit <span class="font-weight-light font-green mr-n1">go</span><span
+								class="font-blue logo">ALOFT</span>&nbsp; profile?</h3>
+							<div class="text-right">
+								<button type="button" class="btn btn-secondary" data-dismiss="modal">No</button>
+								<button type="button" class="btn btn-primary">Yes</button>
+							</div>
+							</div>
+						</div>
+					</div>
 
 
 	<!--- Fixed Header and Search Container ***Moved to the bottom of the page and both footer and header maintain fixed position*** --->
