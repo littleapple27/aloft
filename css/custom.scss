@@ -343,9 +343,6 @@ input:-moz-placeholder { /* Firefox 18- */
 }
 
 
-
-
-
 #feature-listing {
     background-image: -moz-linear-gradient(45deg, rgba(21,67,96,.8) 25%, rgba(21,67,96,.8) 100%), url("../img/timberwind-16x9.png");
     background-image: -webkit-linear-gradient(45deg,rgba(21,67,96,.8) 25%,rgba(21,67,96,.8) 100%), url("../img/timberwind-16x9.png");
@@ -361,6 +358,14 @@ input:-moz-placeholder { /* Firefox 18- */
     background-position: bottom center;
     background-size: cover;
 }
+
+
+/////Lazy Img Load/////
+img.lazy {
+  max-width: 100%!important;
+  height: auto!important;
+}
+
 
 
 ///Top shadow for bottom fixed navbar

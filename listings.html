@@ -39,8 +39,9 @@
 
 <body class="bg-white">
 
-	<div class="side-shadow" canvas="container">
+	<div class="side-shadow scroll-container" canvas="container">
 
+		<div class="nice-scroll">	
 		<!----Top Page Jumbotron---->
 		<div class="container-fluid top-page-jumbo bg-light px-0" id="pg-info-loads-here">
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2">
@@ -148,7 +149,7 @@
 						<a href="description.html" class="card-link-text">
 							<div class="row no-gutters">
 								<div class="col-4 d-flex align-items-center ">
-									<img data-src="img/timberwind.png" class="img-fluid lazy"
+									<img src="img/timberwind.png" data-src="img/timberwind.png" class="img-fluid lazyload"
 										alt="schooner timberwind with portland schooner company">
 								</div>
 								<div class="col-8 pl-2 d-flex flex-column justify-content-center">
@@ -172,7 +173,7 @@
 						<a href="description.html" class="card-link-text">
 							<div class="row no-gutters">
 								<div class="col-4 d-flex align-items-center ">
-									<img data-src="img/libertyclipper.png" class="img-fluid lazy"
+									<img src="img/libertyclipper.png" data-src="img/libertyclipper.png" class="img-fluid lazyload"
 										alt="schooner liberty clipper with liberty fleet of tall ships">
 								</div>
 								<div class="col-8 pl-2 d-flex flex-column justify-content-center"">
@@ -197,7 +198,7 @@
 						<a href="description.html" class="card-link-text">
 							<div class="row no-gutters">
 								<div class="col-4 d-flex align-items-center">
-									<img data-src="img/appledore2.png" class="img-fluid lazy"
+									<img src="img/appledore2.png" data-src="img/appledore2.png" class="img-fluid lazyload"
 										alt="schooner appledore II with sebago watersports">
 								</div>
 								<div class="col-8 pl-2 d-flex flex-column justify-content-center"">
@@ -216,13 +217,13 @@
 
 
 				<!---Search Card 1 --->
-				<div class="mb-2 ">
+				<div class="mb-2">
 
 					<div class="card p-0">
 						<a href="description.html" class="card-link-text">
 							<div class="row no-gutters">
 								<div class="col-4 d-flex align-items-center ">
-									<img data-src="img/timberwind.png" class="img-fluid lazy"
+									<img src="img/timberwind.png" data-src="img/timberwind.png" class="img-fluid lazyload"
 										alt="schooner timberwind with portland schooner company">
 								</div>
 								<div class="col-8 pl-2 d-flex flex-column justify-content-center">
@@ -246,7 +247,7 @@
 						<a href="description.html" class="card-link-text">
 							<div class="row no-gutters">
 								<div class="col-4 d-flex align-items-center ">
-									<img data-src="img/libertyclipper.png" class="img-fluid lazy"
+									<img src="img/libertyclipper.png" data-src="img/libertyclipper.png" class="img-fluid lazyload"
 										alt="schooner liberty clipper with liberty fleet of tall ships">
 								</div>
 								<div class="col-8 pl-2 d-flex flex-column justify-content-center"">
@@ -271,7 +272,7 @@
 						<a href="description.html" class="card-link-text">
 							<div class="row no-gutters">
 								<div class="col-4 d-flex align-items-center">
-									<img data-src="img/appledore2.png" class="img-fluid lazy"
+									<img src="img/appledore2.png" data-src="img/appledore2.png" class="img-fluid lazyload"
 										alt="schooner appledore II with sebago watersports">
 								</div>
 								<div class="col-8 pl-2 d-flex flex-column justify-content-center"">
@@ -293,6 +294,7 @@
 
 		</div>
 
+</div><!---End of nice scroll container-->
 	</div>
 	<!--------- End of Main Page Content Canvas ------>
 
@@ -419,7 +421,8 @@
 
 	<!-- Plug-ins -->
 	<script src="js/slidebars.min.js"></script>
-	<script src="js/jquery.lazy.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
+	<script src="js/jquery.nicescroll.min.js"></script>
 	<script src="js/slideout.min.js"></script>
 
 	<!-- Custom JS-->

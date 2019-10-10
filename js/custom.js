@@ -20,24 +20,25 @@ $(function() {
         controller.toggle( 'left-nav' );
         } );
 
-
     // Lazy Loading
-    // Bottom image does not always load -- Need to troubleshoot more
-    $('.results-container .lazy').lazy({
-        appendScroll: $('.results-container'),
+    $("img.lazyload").lazyload({
+        effect : "fadeIn"
+     },
+        console.log('success')
+    );
 
-        beforeLoad: function(element) {
-                var imageSrc = element.data('src');
-                console.log('image "' + imageSrc + '" is about to be loaded');
-            },
-            
-            // called after an element was successfully handled
-            afterLoad: function(element) {
-                var imageSrc = element.data('src');
-                console.log('image "' + imageSrc + '" was loaded successfully');
-            }   
-        });//End lazy 
-   
+//nicescroll
+$(".scroll-container").niceScroll(".nice-scroll", {
+  cursorcolor:"#45b39d",
+  cursorborder: "1px solid rgba(69,179,157, 0.3)",
+  cursorwidth:"8px",
+  zindex: "auto",
+  autohidemode: true,
+  background: "#f8f9fa",
+  
+});
+
+
       
 
 });//End doc ready
