@@ -350,6 +350,13 @@ img.lazy {
   height: auto !important;
 }
 
+#map {
+  height: 400px;
+  /* The height is 400 pixels */
+  width: 100%;
+  /* The width is the width of the web page */
+}
+
 .top-shadow {
   box-shadow: 0px 0 1rem rgba(0, 0, 0, 0.3);
   -webkit-box-shadow: 0px 0 1rem rgba(0, 0, 0, 0.3);

@@ -6,7 +6,18 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!--- Manifest --->
-	<link rel="manifest" href="manifest.json">
+	<link rel="manifest" href="manifest.webmanifest">
+	<!-- include PWACompat _after_ your manifest -->
+	<script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.9/pwacompat.min.js"
+    integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc"
+    crossorigin="anonymous"></script>
+
+		<!-- Turbolinks -->
+	<script src="js/turbolinks.js"></script>
+	<script>
+			var Turbolinks = require("turbolinks")
+			Turbolinks.start()
+	</script>
 
 	<!-- Bootstrap CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -73,7 +84,7 @@
 				<!-- <h3 class="font-blue">Timberwind</h3> -->
 
 				<!----Start of Carousel Slider---->
-				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<div id="carouselExampleIndicators carousel-fullscreen" class="carousel slide" data-ride="carousel">
 					<ol class="carousel-indicators">
 						<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
 						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -111,9 +122,6 @@
 						<span class="sr-only">Next</span>
 					</a>
 				</div>
-
-
-
 			</div>
 		</div>
 		<!--- Start of Search Fields --->
@@ -311,10 +319,10 @@
 	<script src="js/slidebars.min.js"></script>
 	<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 	<script src="js/jquery.nicescroll.min.js"></script>
-	<script src="js/slideout.min.js"></script>
 
 	<!-- Custom JS-->
 	<script src="js/custom.js"></script>
+
 
 </body>
 

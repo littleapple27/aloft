@@ -1,7 +1,5 @@
 $(function() {
 
- 
-		  
 
     ///Slidebars Navigation Slide out
     // Toggle button
@@ -38,8 +36,11 @@ $(function() {
     cursorfixedheight: 50
     });
 
+    //Turbolinks
+    var Turbolinks = require("turbolinks")
+	Turbolinks.start()
 
-      
+
 
 });//End doc ready
 
