@@ -26,7 +26,7 @@ $(function() {
 
     //nicescroll
     $(".scroll-container").niceScroll(".nice-scroll", {
-    cursorcolor:"rgba(21,67,96,.1)",
+    cursorcolor:"rgba(21,67,96,.5)",
     cursorwidth:"6px",
     zindex: "auto",
     autohidemode: true,
