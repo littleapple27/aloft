@@ -25,7 +25,7 @@ $(function() {
     );
 
     //nicescroll
-    $(".scroll-container").niceScroll(".nice-scroll", {
+/*     $(".scroll-container").niceScroll(".nice-scroll", {
     cursorcolor:"#45b39d",
     cursorborder: "1px solid rgba(69,179,157, 0.3)",
     cursorwidth:"8px",
@@ -34,7 +34,7 @@ $(function() {
     background: "#f8f9fa",
     cursorfixedheight: 50,
     scrollspeed: 100
-    });
+    }); */
 
 });//End doc ready
 
