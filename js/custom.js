@@ -25,16 +25,13 @@ $(function() {
     );
 
     //nicescroll
-/*     $(".scroll-container").niceScroll(".nice-scroll", {
-    cursorcolor:"#45b39d",
-    cursorborder: "1px solid rgba(69,179,157, 0.3)",
-    cursorwidth:"8px",
+    $(".scroll-container").niceScroll(".nice-scroll", {
+    cursorcolor:"rgba(21,67,96,.1)",
+    cursorwidth:"6px",
     zindex: "auto",
     autohidemode: true,
-    background: "#f8f9fa",
-    cursorfixedheight: 50,
-    scrollspeed: 100
-    }); */
+    background: "#f8f9fa"
+    });
 
 });//End doc ready
 
