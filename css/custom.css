@@ -79,6 +79,10 @@ h6 {
   background-color: rgba(21, 67, 96, 0.3);
 }
 
+.bg-lt-blue-3 {
+  background-color: rgba(21, 67, 96, 0.1);
+}
+
 .bg-green {
   background-color: #45b39d;
 }
@@ -330,9 +334,9 @@ input:-moz-placeholder {
 }
 
 #feature-resource {
-  background-image: -moz-linear-gradient(45deg, rgba(21, 67, 96, 0.8) 25%, rgba(21, 67, 96, 0.8) 100%), url("../img/appledoreII-16x9.png");
-  background-image: -webkit-linear-gradient(45deg, rgba(21, 67, 96, 0.8) 25%, rgba(21, 67, 96, 0.8) 100%), url("../img/appledoreII-16x9.png");
-  background-image: linear-gradient(45deg, rgba(21, 67, 96, 0.8) 25%, rgba(21, 67, 96, 0.96) 100%), url("../img/appledoreII-16x9.png");
+  background-image: -moz-linear-gradient(45deg, rgba(21, 67, 96, 0.8) 25%, rgba(21, 67, 96, 0.8) 100%), url("../img/hamilton-marine.png");
+  background-image: -webkit-linear-gradient(45deg, rgba(21, 67, 96, 0.8) 25%, rgba(21, 67, 96, 0.8) 100%), url("../img/hamilton-marine.png");
+  background-image: linear-gradient(45deg, rgba(21, 67, 96, 0.8) 25%, rgba(21, 67, 96, 0.96) 100%), url("../img/hamilton-marine.png");
   background-position: bottom center;
   background-size: cover;
 }
@@ -348,6 +352,10 @@ input:-moz-placeholder {
 img.lazy {
   max-width: 100% !important;
   height: auto !important;
+}
+
+summary {
+  font-size: 14px;
 }
 
 #map {

@@ -1,6 +1,5 @@
 $(function() {
 
-
     ///Slidebars Navigation Slide out
     // Toggle button
     document.querySelector('.toggle-button').addEventListener('click', function() {
@@ -33,14 +32,9 @@ $(function() {
     zindex: "auto",
     autohidemode: true,
     background: "#f8f9fa",
-    cursorfixedheight: 50
+    cursorfixedheight: 50,
+    scrollspeed: 100
     });
-
-    //Turbolinks
-    var Turbolinks = require("turbolinks")
-	Turbolinks.start()
-
-
 
 });//End doc ready
 
