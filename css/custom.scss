@@ -1,6 +1,6 @@
 html,
 body {
-	font-size: 12px !important;
+	font-size: 16px !important;
 }
 h1 {
 	font-size: 1.602em;
@@ -31,6 +31,9 @@ h6 {
 }
 .display-4 {
 	font-size: 2em;
+}
+p {
+	font-size: 12px;
 }
 
 
@@ -332,6 +335,8 @@ input:-moz-placeholder { /* Firefox 18- */
   color: $lt-blue!important;
 }
 
+
+
 ///// Nav pills /////// 
 .active-pills {
   color: $blue;
@@ -519,7 +524,7 @@ input:checked + .slider:before {
 // Large devices (desktops, 62em and up)
 @media only screen and (min-width: 768px) {
 	html,
-	body {
+	body, p  {
 		font-size: 16px !important;
 	}
 }
@@ -527,7 +532,7 @@ input:checked + .slider:before {
 // Extra large devices (large desktops, 75em and up)
 @media (min-width: 75em) {
 	html,
-	body {
+	body, p  {
 		font-size: 18px !important;
 	}
 }

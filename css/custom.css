@@ -1,6 +1,6 @@
 html,
 body {
-  font-size: 12px !important;
+  font-size: 16px !important;
 }
 
 h1 {
@@ -41,6 +41,10 @@ h6 {
 
 .display-4 {
   font-size: 2em;
+}
+
+p {
+  font-size: 12px;
 }
 
 .font-blue {
@@ -476,14 +480,14 @@ input:checked + .slider:before {
 
 @media only screen and (min-width: 768px) {
   html,
-  body {
+  body, p {
     font-size: 16px !important;
   }
 }
 
 @media (min-width: 75em) {
   html,
-  body {
+  body, p {
     font-size: 18px !important;
   }
 }
