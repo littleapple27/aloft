@@ -15,8 +15,8 @@
 	<!-- Turbolinks -->
 	<script src="js/turbolinks.js"></script>
 	<script>
-			var Turbolinks = require("turbolinks")
-			Turbolinks.start()
+		var Turbolinks = require("turbolinks")
+		Turbolinks.start()
 	</script>
 
 
@@ -63,7 +63,8 @@
 				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
 					<h1 class="display-4 font-white">Now Hiring Deckhands</h1>
 					<p class="lead font-white">Portland Schooner Co. is now hiring deckhands for the 2020 sailing
-						season. <a class="paragraph-link" href="description.html" data-turbolinks-action="replace" role="button">Learn more...</a></p>
+						season. <a class="paragraph-link" href="description.html" data-turbolinks-action="replace"
+							role="button">Learn more...</a></p>
 				</div>
 			</div>
 
@@ -73,60 +74,60 @@
 				<!----Section Headings---->
 				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
 					<!-- <p class="font-blue font-weight-light mb-0 font-xs">Refine Search Results</p> -->
-				
-				<details closed class="">
-				<summary class="font-blue font-weight-light">Filter Search Results</summary>
 
-					<div class="row">
-						<div class="col-sm-6 mb-2 d-flex align-items-center">
-							<span class="fa fa-anchor pr-3 font-green"></span>
-							<input type="text" class="form-control" placeholder="Company Name">
+					<details closed class="">
+						<summary class="font-blue font-weight-light">Filter Search Results</summary>
+
+						<div class="row">
+							<div class="col-sm-6 mb-2 d-flex align-items-center">
+								<span class="fa fa-anchor pr-3 font-green"></span>
+								<input type="text" class="form-control" placeholder="Company Name">
+							</div>
+
+							<div class="col-sm-6 mb-2 d-flex align-items-center">
+								<span class="fa fa-compass mr-1 pr-3 font-green"></span>
+								<select class="form-control" id="">
+									<option value="" disabled selected>Position</option>
+									<option>Deckhand</option>
+									<option>Bosun</option>
+									<option>First Mate</option>
+									<option>Second Mate</option>
+									<option>Captain</option>
+									<option>Relief Captain</option>
+								</select>
+							</div>
 						</div>
 
-						<div class="col-sm-6 mb-2 d-flex align-items-center">
-							<span class="fa fa-compass mr-1 pr-3 font-green"></span>
-							<select class="form-control" id="">
-								<option value="" disabled selected>Position</option>
-								<option>Deckhand</option>
-								<option>Bosun</option>
-								<option>First Mate</option>
-								<option>Second Mate</option>
-								<option>Captain</option>
-								<option>Relief Captain</option>
-							</select>
+
+						<div class="row">
+							<div class="col-sm-6 mb-2  d-flex align-items-center">
+								<span class="fa fa-sun mr-1 pr-3 font-green"></span>
+								<select class=" form-control" id="">
+									<option value="" disabled selected>Seasonality</option>
+									<option>Spring start</option>
+									<option>Fall start</option>
+									<option>Spring/Summer/Fall - Northern</option>
+									<option>Fall/Winter/Spring - Southern</option>
+								</select>
+							</div>
+							<div class="col-sm-6 mb-2  d-flex align-items-center">
+								<span class="fa fa-map pr-3 font-green"></span>
+								<select class="form-control" id="">
+									<option value="" disabled selected>Select Region</option>
+									<option>New England</option>
+									<option>Great Lakes</option>
+									<option>Mid-Atlantic</option>
+									<option>Florida - Atlantic</option>
+									<option>Florida - Gulf</option>
+									<option>Gulf of Mexico</option>
+									<option>West Coast / Pacific</option>
+									<option>Southern Carribean Islands</option>
+								</select>
+							</div>
 						</div>
-					</div>
 
 
-					<div class="row">
-						<div class="col-sm-6 mb-2  d-flex align-items-center">
-							<span class="fa fa-sun mr-1 pr-3 font-green"></span>
-							<select class=" form-control" id="">
-								<option value="" disabled selected>Seasonality</option>
-								<option>Spring start</option>
-								<option>Fall start</option>
-								<option>Spring/Summer/Fall - Northern</option>
-								<option>Fall/Winter/Spring - Southern</option>
-							</select>
-						</div>
-						<div class="col-sm-6 mb-2  d-flex align-items-center">
-							<span class="fa fa-map pr-3 font-green"></span>
-							<select class="form-control" id="">
-								<option value="" disabled selected>Select Region</option>
-								<option>New England</option>
-								<option>Great Lakes</option>
-								<option>Mid-Atlantic</option>
-								<option>Florida - Atlantic</option>
-								<option>Florida - Gulf</option>
-								<option>Gulf of Mexico</option>
-								<option>West Coast / Pacific</option>
-								<option>Southern Carribean Islands</option>
-							</select>
-						</div>
-					</div>
-
-
-				</details>
+					</details>
 				</div>
 
 
@@ -137,7 +138,7 @@
 
 
 
-			<div class="container-fluid shadow results-container pt-2 px-0">
+			<div class="container-fluid pt-2 px-0">
 				<!----Section Heading: Search Results ---->
 				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 px-0">
 					<!--- Nav Pills --->
@@ -151,180 +152,191 @@
 							</li>
 
 							<li class="font-xs font-weight-light mr-3">
-								<a class="active-pills" data-turbolinks-action="replace" href="listings.html">Listings - All</a>
+								<a class="active-pills" data-turbolinks-action="replace" href="listings.html">Listings -
+									All</a>
 							</li>
 						</ul>
 					</nav>
 
 					<!----Start of Search Results Cards ---->
 
-					<!---Search Card 1 --->
-					<div class="mb-2 ">
-
-						<div class="card p-0">
-							<a href="description.html" data-turbolinks-action="replace" class="card-link-text">
-								<div class="row no-gutters">
-									<div class="col-4 d-flex align-items-center ">
-										<img src="img/timberwind.png" data-src="img/timberwind.png"
-											class="img-fluid lazyload"
-											alt="schooner timberwind with portland schooner company">
-									</div>
-									<div class="col-8 pl-2 d-flex flex-column justify-content-center">
-										<div class="pr-4 d-flex justify-content-between align-items-center">
-											<h3 class="mb-0 mt-1 font-blue">Deckhands</h3><span
-												class="font-weight-light font-blue "><i
-													class="fas fa-map-marker-alt px-1"></i>Portland, ME</span>
+					<div class="results-container" id="searchResults">
+						<!---Search Card 1 --->
+						<div class="mb-2 ">
+							<div class="card p-0 divInner">
+								<a href="description.html" data-turbolinks-action="replace" class="card-link-text">
+									<div class="row no-gutters">
+										<div class="col-4 d-flex align-items-center ">
+											<img src="img/timberwind.png" data-src="img/timberwind.png"
+												class="img-fluid lazyload"
+												alt="schooner timberwind with portland schooner company">
 										</div>
-										<h5 class="mb-2 font-weight-bold text-uppercase font-green">Portland Schooner
-											Co.
-											</h6>
-											<p class="font-weight-light mb-1">Portland Schooner Co. is now hiring
-												deckhands...</p>
+										<div class="col-8 pl-2 d-flex flex-column justify-content-center">
+											<div class="pr-4 d-flex justify-content-between align-items-center">
+												<h3 class="mb-0 mt-1 font-blue">Deckhands</h3><span
+													class="font-weight-light font-blue "><i
+														class="fas fa-map-marker-alt px-1"></i>Portland, ME</span>
+											</div>
+											<h5 class="mb-2 font-weight-bold text-uppercase font-green">Portland
+												Schooner
+												Co.
+												</h6>
+												<p class="font-weight-light mb-1">Portland Schooner Co. is now hiring
+													deckhands...</p>
+										</div>
 									</div>
-								</div>
+								</a>
+							</div>
+						</div>
+
+						<!---Search Card 2 --->
+						<div class="mb-2">
+
+							<div class="card p-0 divInner">
+								<a href="description.html" data-turbolinks-action="replace" class="card-link-text">
+									<div class="row no-gutters">
+										<div class="col-4 d-flex align-items-center ">
+											<img src="img/libertyclipper.png" data-src="img/libertyclipper.png"
+												class="img-fluid lazyload"
+												alt="schooner liberty clipper with liberty fleet of tall ships">
+										</div>
+										<div class="col-8 pl-2 d-flex flex-column justify-content-center"">
+										<div class=" pr-4 d-flex justify-content-between align-items-center">
+											<h3 class="mb-0 mt-1 font-blue">Captain</h3><span
+												class="font-weight-light font-blue "><i
+													class="fas fa-map-marker-alt px-1"></i>Boston, MA</span>
+										</div>
+										<h5 class="mb-2 font-weight-bold text-uppercase font-green">Liberty Fleet of
+											Tall
+											Ships</h6>
+
+											<p class="font-weight-light mb-1">Liberty Fleet of Tallships is now hiring a
+												captain...</p>
+									</div>
+							</div>
 							</a>
 						</div>
 					</div>
 
-					<!---Search Card 2 --->
+					<!---Search Card 3 --->
 					<div class="mb-2">
 
-						<div class="card p-0">
+						<div class="card p-0 divInner ">
 							<a href="description.html" data-turbolinks-action="replace" class="card-link-text">
 								<div class="row no-gutters">
-									<div class="col-4 d-flex align-items-center ">
-										<img src="img/libertyclipper.png" data-src="img/libertyclipper.png"
+									<div class="col-4 d-flex align-items-center">
+										<img src="img/appledore2.png" data-src="img/appledore2.png"
 											class="img-fluid lazyload"
-											alt="schooner liberty clipper with liberty fleet of tall ships">
+											alt="schooner appledore II with sebago watersports">
 									</div>
 									<div class="col-8 pl-2 d-flex flex-column justify-content-center"">
-										<div class=" pr-4 d-flex justify-content-between align-items-center">
-										<h3 class="mb-0 mt-1 font-blue">Captain</h3><span
+									<div class=" pr-4 d-flex justify-content-between align-items-center">
+										<h3 class="mb-0 mt-1 font-blue">First Mate</h3><span
 											class="font-weight-light font-blue "><i
-												class="fas fa-map-marker-alt px-1"></i>Boston, MA</span>
+												class="fas fa-map-marker-alt px-1"></i>Key West, FL</span>
 									</div>
-									<h5 class="mb-2 font-weight-bold text-uppercase font-green">Liberty Fleet of Tall
-										Ships</h6>
 
-										<p class="font-weight-light mb-1">Liberty Fleet of Tallships is now hiring a
-											captain...</p>
+									<h5 class="mb-2 font-weight-bold text-uppercase font-green">Sebago Watersports</h5>
+									<p class="font-weight-light mb-1">Sebago Watersports is now hiring a first mate...
+									</p>
 								</div>
 						</div>
 						</a>
 					</div>
 				</div>
 
-				<!---Search Card 3 --->
+
+				<!---Search Card 1 --->
 				<div class="mb-2">
 
-					<div class="card p-0  ">
+					<div class="card p-0 divInner">
 						<a href="description.html" data-turbolinks-action="replace" class="card-link-text">
 							<div class="row no-gutters">
-								<div class="col-4 d-flex align-items-center">
-									<img src="img/appledore2.png" data-src="img/appledore2.png"
-										class="img-fluid lazyload" alt="schooner appledore II with sebago watersports">
+								<div class="col-4 d-flex align-items-center ">
+									<img src="img/timberwind.png" data-src="img/timberwind.png"
+										class="img-fluid lazyload"
+										alt="schooner timberwind with portland schooner company">
+								</div>
+								<div class="col-8 pl-2 d-flex flex-column justify-content-center">
+									<div class="pr-4 d-flex justify-content-between align-items-center">
+										<h3 class="mb-0 mt-1 font-blue">Deckhands</h3><span
+											class="font-weight-light font-blue "><i
+												class="fas fa-map-marker-alt px-1"></i>Portland, ME</span>
+									</div>
+									<h5 class="mb-2 font-weight-bold text-uppercase font-green">Portland Schooner Co.
+										</h6>
+										<p class="font-weight-light mb-1">Portland Schooner Co. is now hiring
+											deckhands...
+										</p>
+								</div>
+							</div>
+						</a>
+					</div>
+				</div>
+
+				<!---Search Card 5 --->
+				<div class="mb-2">
+
+					<div class="card p-0 divInner">
+						<a href="description.html" data-turbolinks-action="replace" class="card-link-text">
+							<div class="row no-gutters">
+								<div class="col-4 d-flex align-items-center ">
+									<img src="img/libertyclipper.png" data-src="img/libertyclipper.png"
+										class="img-fluid lazyload"
+										alt="schooner liberty clipper with liberty fleet of tall ships">
 								</div>
 								<div class="col-8 pl-2 d-flex flex-column justify-content-center"">
-									<div class=" pr-4 d-flex justify-content-between align-items-center">
-									<h3 class="mb-0 mt-1 font-blue">First Mate</h3><span
+										<div class=" pr-4 d-flex justify-content-between align-items-center">
+									<h3 class="mb-0 mt-1 font-blue">Captain</h3><span
 										class="font-weight-light font-blue "><i
-											class="fas fa-map-marker-alt px-1"></i>Key West, FL</span>
+											class="fas fa-map-marker-alt px-1"></i>Boston, MA</span>
 								</div>
+								<h5 class="mb-2 font-weight-bold text-uppercase font-green">Liberty Fleet of Tall
+									Ships</h6>
 
-								<h5 class="mb-2 font-weight-bold text-uppercase font-green">Sebago Watersports</h5>
-								<p class="font-weight-light mb-1">Sebago Watersports is now hiring a first mate...</p>
+									<p class="font-weight-light mb-1">Liberty Fleet of Tallships is now hiring a
+										captain...
+									</p>
 							</div>
 					</div>
 					</a>
 				</div>
 			</div>
 
-
-			<!---Search Card 1 --->
+			<!---Search Card 6 --->
 			<div class="mb-2">
 
-				<div class="card p-0">
+				<div class="card p-0 divInner">
 					<a href="description.html" data-turbolinks-action="replace" class="card-link-text">
 						<div class="row no-gutters">
-							<div class="col-4 d-flex align-items-center ">
-								<img src="img/timberwind.png" data-src="img/timberwind.png" class="img-fluid lazyload"
-									alt="schooner timberwind with portland schooner company">
-							</div>
-							<div class="col-8 pl-2 d-flex flex-column justify-content-center">
-								<div class="pr-4 d-flex justify-content-between align-items-center">
-									<h3 class="mb-0 mt-1 font-blue">Deckhands</h3><span
-										class="font-weight-light font-blue "><i
-											class="fas fa-map-marker-alt px-1"></i>Portland, ME</span>
-								</div>
-								<h5 class="mb-2 font-weight-bold text-uppercase font-green">Portland Schooner Co.
-									</h6>
-									<p class="font-weight-light mb-1">Portland Schooner Co. is now hiring deckhands...
-									</p>
-							</div>
-						</div>
-					</a>
-				</div>
-			</div>
-
-			<!---Search Card 5 --->
-			<div class="mb-2">
-
-				<div class="card p-0">
-					<a href="description.html" data-turbolinks-action="replace" class="card-link-text">
-						<div class="row no-gutters">
-							<div class="col-4 d-flex align-items-center ">
-								<img src="img/libertyclipper.png" data-src="img/libertyclipper.png"
-									class="img-fluid lazyload"
-									alt="schooner liberty clipper with liberty fleet of tall ships">
+							<div class="col-4 d-flex align-items-center">
+								<img src="img/appledore2.png" data-src="img/appledore2.png" class="img-fluid lazyload"
+									alt="schooner appledore II with sebago watersports">
 							</div>
 							<div class="col-8 pl-2 d-flex flex-column justify-content-center"">
-										<div class=" pr-4 d-flex justify-content-between align-items-center">
-								<h3 class="mb-0 mt-1 font-blue">Captain</h3><span
-									class="font-weight-light font-blue "><i
-										class="fas fa-map-marker-alt px-1"></i>Boston, MA</span>
+									<div class=" pr-4 d-flex justify-content-between align-items-center">
+								<h3 class="mb-0 mt-1 font-blue">First Mate</h3><span
+									class="font-weight-light font-blue "><i class="fas fa-map-marker-alt px-1"></i>Key
+									West, FL</span>
 							</div>
-							<h5 class="mb-2 font-weight-bold text-uppercase font-green">Liberty Fleet of Tall
-								Ships</h6>
 
-								<p class="font-weight-light mb-1">Liberty Fleet of Tallships is now hiring a captain...
-								</p>
+							<h5 class="mb-2 font-weight-bold text-uppercase font-green">Sebago Watersports</h5>
+							<p class="font-weight-light mb-1">Sebago Watersports is now hiring a first mate...</p>
 						</div>
 				</div>
 				</a>
 			</div>
 		</div>
 
-		<!---Search Card 6 --->
-		<div class="mb-2">
-
-			<div class="card p-0  ">
-				<a href="description.html" data-turbolinks-action="replace" class="card-link-text">
-					<div class="row no-gutters">
-						<div class="col-4 d-flex align-items-center">
-							<img src="img/appledore2.png" data-src="img/appledore2.png" class="img-fluid lazyload"
-								alt="schooner appledore II with sebago watersports">
-						</div>
-						<div class="col-8 pl-2 d-flex flex-column justify-content-center"">
-									<div class=" pr-4 d-flex justify-content-between align-items-center">
-							<h3 class="mb-0 mt-1 font-blue">First Mate</h3><span class="font-weight-light font-blue "><i
-									class="fas fa-map-marker-alt px-1"></i>Key West, FL</span>
-						</div>
-
-						<h5 class="mb-2 font-weight-bold text-uppercase font-green">Sebago Watersports</h5>
-						<p class="font-weight-light mb-1">Sebago Watersports is now hiring a first mate...</p>
-					</div>
-			</div>
-			</a>
-		</div>
 	</div>
-
 	</div>
-	<!---End of Search Results--->
+	<!---End of .results-container #searchResults Div--->
 
-	</div>
+	</div><!---End of search wrapper div-->
 
 	</div>
 	<!---End of nice scroll container-->
+
 	</div>
 	<!--------- End of Main Page Content Canvas ------>
 
@@ -339,11 +351,13 @@
 			</div>
 
 			<div class="ml-auto">
-				<a href="profile.html" data-turbolinks-action="replace" class="nav-link"><i class="fas fa-user-circle fa-2x"></i></a>
+				<a href="profile.html" data-turbolinks-action="replace" class="nav-link"><i
+						class="fas fa-user-circle fa-2x"></i></a>
 			</div>
 
 			<div class="">
-				<a href="settings.html" data-turbolinks-action="replace" class="nav-link"><i class="fas fa-cog fa-2x"></i></a>
+				<a href="settings.html" data-turbolinks-action="replace" class="nav-link"><i
+						class="fas fa-cog fa-2x"></i></a>
 			</div>
 
 			<div class="font-green d-flex flex-row">
@@ -357,7 +371,8 @@
 			<!----Section Headings---->
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 pb-1">
 				<div class="form-group rounded d-flex flex-row">
-					<input type="text" class="form-control" placeholder="Search all job listings">
+					<input type="text" id="searchInput" onkeyup="searchFunction()" class="form-control"
+						placeholder="Search all job listings">
 					<button class="btn btn-md btn-primary-search font-weight-light font-xs"><i
 							class="fa fa-search"></i></button>
 				</div>
@@ -377,7 +392,8 @@
 		<div class=""><span class="font-weight-light font-lt-white mr-n1">go</span><span
 				class="font-white logo">ALOFT</span></div>
 		<a href="#" data-turbolinks-action="replace" class="btm-nb-i"><i class="fas fa-bell fa-2x"></i></a>
-		<a href="signin.html" data-turbolinks-action="replace" class="btm-nb-i"><i class="fas fa-sign-in-alt fa-2x"></i></a>
+		<a href="signin.html" data-turbolinks-action="replace" class="btm-nb-i"><i
+				class="fas fa-sign-in-alt fa-2x"></i></a>
 	</footer>
 
 
@@ -387,15 +403,18 @@
 			<div class="h-100 navbar-nav d-flex flex-column justify-content-between navbar-padding" id="">
 
 				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase active ">
-					<a class="nav-link" href="settings.html" data-turbolinks-action="replace"><i class="fas fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+					<a class="nav-link" href="settings.html" data-turbolinks-action="replace"><i
+							class="fas fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
 							class="font-weight-light">Settings</span><span class="sr-only">(current)</span></a>
 				</div>
 				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase active ">
-					<a class="nav-link" href="profile.html" data-turbolinks-action="replace"><i class="fas fa-user-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+					<a class="nav-link" href="profile.html" data-turbolinks-action="replace"><i
+							class="fas fa-user-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
 							class="font-weight-light">Profile</span><span class="sr-only">(current)</span></a>
 				</div>
 				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase">
-					<a class="nav-link disabled" href="#" data-turbolinks-action="replace"><i class="fas fa-life-ring"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+					<a class="nav-link disabled" href="#" data-turbolinks-action="replace"><i
+							class="fas fa-life-ring"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
 							class="font-weight-light">Help</span></a>
 				</div>
 				<div class="pl-3 border-bottom d-flex align-items-center h-100 nav-item">
@@ -458,6 +477,27 @@
 
 	<!-- Custom JS-->
 	<script src="js/custom.js"></script>
+
+	<script>
+		//Search Filter Function
+		function searchFunction() {
+			var input, filter, divOuter, divInner, a, i, txtValue;
+			input = document.getElementById("searchInput");
+			filter = input.value.toUpperCase();
+			divOuter = document.getElementById("searchResults");
+			divInner = divOuter.getElementsByClassName("divInner");
+			for (i = 0; i < divInner.length; i++) {
+				a = divInner[i].getElementsByTagName("a")[0];
+				txtValue = a.textContent || a.innerText;
+				if (txtValue.toUpperCase().indexOf(filter) > -1) {
+					divInner[i].style.display = "";
+				} else {
+					divInner[i].style.display = "none";
+				}
+			}
+		}
+	</script>
+
 
 </body>
 
