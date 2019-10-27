@@ -448,12 +448,10 @@ input:checked + .slider:before {
   border-radius: 50%;
 }
 
-@media screen and (-webkit-min-device-pixel-ratio: 0) {
-  select:focus,
-  textarea:focus,
-  input:focus {
-    font-size: 16px;
-  }
+select, input[type="text"],
+select:focus,
+input[type="text"]:focus {
+  font-size: 16px;
 }
 
 @media only screen and (min-width: 48em) {
@@ -488,14 +486,14 @@ input:checked + .slider:before {
 
 @media only screen and (min-width: 768px) {
   html,
-  body {
+  body, p {
     font-size: 16px !important;
   }
 }
 
 @media (min-width: 75em) {
   html,
-  body {
+  body, p {
     font-size: 18px !important;
   }
 }

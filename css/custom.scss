@@ -484,15 +484,15 @@ input:checked + .slider:before {
 }
 
 
-//-----Changes input focus to 16pt and reverts to 12pt when not in focus -----//
-@media screen and (-webkit-min-device-pixel-ratio:0) { 
+//----- Keeps input and select at 16px to prevent zoom on Mobile iOS -----//
+
+  select,input[type="text"],
   select:focus,
-  textarea:focus,
-  input:focus {
+  input[type="text"]:focus {
     font-size: 16px;
-    
   }
-}
+    
+
 
 //Media Queries
 //------------------------------------------------------------//
@@ -530,7 +530,7 @@ input:checked + .slider:before {
 // Large devices (desktops, 62em and up)
 @media only screen and (min-width: 768px) {
 	html,
-	body {
+	body, p {
 		font-size: 16px !important;
 	}
 }
@@ -538,7 +538,7 @@ input:checked + .slider:before {
 // Extra large devices (large desktops, 75em and up)
 @media (min-width: 75em) {
 	html,
-	body  {
+	body, p  {
 		font-size: 18px !important;
 	}
 }
