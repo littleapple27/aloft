@@ -15,8 +15,8 @@
 	<!-- Turbolinks -->
 	<script src="js/turbolinks.js"></script>
 	<script>
-			var Turbolinks = require("turbolinks")
-			Turbolinks.start()
+		var Turbolinks = require("turbolinks")
+		Turbolinks.start()
 	</script>
 
 	<!-- Bootstrap CSS -->
@@ -56,10 +56,11 @@
 
 			<!----Top Page Jumbotron---->
 			<div class="container-fluid top-page-jumbo bg-light px-0" id="pg-info-loads-here">
-				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2">
+				<div
+					class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2 d-flex flex-row align-items-center justify-content-between">
 					<h1 class="mb-0"><span class="font-weight-light font-green mr-n2">go</span><span
 							class="font-blue logo">ALOFT</span></h1>
-					<p class="mb-0 font-xs font-weight-light">Sailing Resources</p>
+					<p class="mb-0 font-blue font-weight-light">Sailing Resources</p>
 				</div>
 			</div>
 
@@ -82,33 +83,31 @@
 				<!----Section Headings---->
 				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
 
-				<details closed class="">
-				<summary class="font-blue font-weight-light">Filter Search Results</summary>
+					<details closed class="">
+						<summary class="font-blue font-weight-light">Filter Search Results</summary>
 
-					<p class="font-blue font-weight-light mb-0 font-xs">Refine Search Results</p>
+						<div class="row">
+							<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
+								<span class="fa fa-anchor pr-3  font-green"></span>
+								<input type="text" class="form-control" placeholder="Resource Name">
+							</div>
 
-					<div class="row">
-						<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
-							<span class="fa fa-anchor mx-3 font-green"></span>
-							<input type="text" class="form-control" placeholder="Resource Name">
+							<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
+								<span class="fa fa-map pr-3 font-green"></span>
+								<select class="form-control" id="">
+									<option value="" disabled selected>Select Region</option>
+									<option>New England</option>
+									<option>Great Lakes</option>
+									<option>Mid-Atlantic</option>
+									<option>Florida - Atlantic</option>
+									<option>Florida - Gulf</option>
+									<option>Gulf of Mexico</option>
+									<option>West Coast / Pacific</option>
+									<option>Southern Carribean Islands</option>
+								</select>
+							</div>
 						</div>
-
-						<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
-							<span class="fa fa-map mx-3 font-green"></span>
-							<select class="form-control" id="">
-								<option value="" disabled selected>Select Region</option>
-								<option>New England</option>
-								<option>Great Lakes</option>
-								<option>Mid-Atlantic</option>
-								<option>Florida - Atlantic</option>
-								<option>Florida - Gulf</option>
-								<option>Gulf of Mexico</option>
-								<option>West Coast / Pacific</option>
-								<option>Southern Carribean Islands</option>
-							</select>
-						</div>
-					</div>
-				</details>
+					</details>
 				</div>
 			</div>
 			<!--- Start of Search Fields --->
@@ -117,11 +116,12 @@
 
 
 
-			<div class="container-fluid shadow results-container pt-2">
+			<div class="container-fluid pt-2 px-0">
 				<!----Section Heading: Search Results ---->
-				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 p-0">
-					<!--- Nav Pills --->
-					<ul class="nav nav-pills pb-2 mb-2">
+				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 px-0">
+					<!--- Nav Breadcrumb --->
+					<nav aria-label="breadcrumb ">
+					<ul class="nav nav-pills pb-2 mb-2 pl-3">
 						<li class="font-xs font-weight-light mr-3">
 							<a class="inactive-pills" href="index.html">Index</a>
 						</li>
@@ -133,13 +133,13 @@
 							<a class="active-pills" href="resources.html">Resources - All</a>
 						</li>
 					</ul>
+				</nav>
 
 					<!----Start of Search Results Cards ---->
-
+					<div class="results-container" id="searchResults">
 					<!---Search Card 1 --->
-
 					<div class="mb-2">
-						<div class="card p-0">
+						<div class="card p-0 divInner">
 							<a href="#" class="card-link-text">
 								<div class="row no-gutters">
 									<div class="col-4 d-flex align-items-center ">
@@ -162,7 +162,7 @@
 
 					<!---Search Card 2 --->
 					<div class="mb-2">
-						<div class="card p-0  ">
+						<div class="card p-0 divInner  ">
 							<a href="#" class="card-link-text">
 								<div class="row no-gutters">
 									<div class="col-4 d-flex align-items-center ">
@@ -187,7 +187,7 @@
 
 					<!---Search Card 3 --->
 					<div class="mb-2">
-						<div class="card p-0">
+						<div class="card p-0 divInner">
 							<a href="#" class="card-link-text">
 								<div class="row no-gutters">
 									<div class="col-4 d-flex align-items-center">
@@ -210,12 +210,15 @@
 					</div>
 
 				</div>
-				<!---End of Search Results--->
-
 			</div>
+			<!---End of .results-container #searchResults Div--->
 
 		</div>
-		<!---End of nice scroll container-->
+		<!---End of search wrapper div-->
+
+	</div>
+	<!---End of nice scroll container-->
+
 	</div>
 	<!--------- End of Main Page Content Canvas ------>
 
@@ -248,7 +251,7 @@
 			<!----Section Headings---->
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 pb-1">
 				<div class="form-group rounded d-flex flex-row">
-					<input type="text" class="form-control" placeholder="Search all sailing resources">
+					<input type="text" id="searchInput" onkeyup="searchFunction()" class="form-control" placeholder="Search all sailing resources">
 					<button class="btn btn-md btn-primary-search font-weight-light font-xs"><i
 							class="fa fa-search"></i></button>
 				</div>
@@ -349,6 +352,27 @@
 
 	<!-- Custom JS-->
 	<script src="js/custom.js"></script>
+
+	<!---Search Filter --->
+	<script>
+		//Search Filter Function
+		function searchFunction() {
+			var input, filter, divOuter, divInner, a, i, txtValue;
+			input = document.getElementById("searchInput");
+			filter = input.value.toUpperCase();
+			divOuter = document.getElementById("searchResults");
+			divInner = divOuter.getElementsByClassName("divInner");
+			for (i = 0; i < divInner.length; i++) {
+				a = divInner[i].getElementsByTagName("a")[0];
+				txtValue = a.textContent || a.innerText;
+				if (txtValue.toUpperCase().indexOf(filter) > -1) {
+					divInner[i].style.display = "";
+				} else {
+					divInner[i].style.display = "none";
+				}
+			}
+		}
+	</script>
 
 
 </body>
