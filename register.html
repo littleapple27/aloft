@@ -4,7 +4,11 @@
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="description"
+		content="goALOFT: Comprehensive Resource for Tall Ship Sailors including Job listings, tall ship directory, and sailing resources for North America and beyond.">
+	<meta name="author" content="Andrea legleiter">
 	<!--- Manifest --->
 	<link rel="manifest" href="manifest.webmanifest">
 	<!-- include PWACompat _after_ your manifest -->
@@ -12,82 +16,13 @@
 		integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc" crossorigin="anonymous">
 	</script>
 
+	<title>Aloft: A Sailor's Resource Guide</title>
+
 	<!-- Turbolinks -->
 	<script src="js/turbolinks.js"></script>
 	<script>
 		var Turbolinks = require("turbolinks")
 		Turbolinks.start()
-	</script>
-
-	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
-	<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
-
-	<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
-	<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
-
-	<!-- Add Firebase products that you want to use -->
-	<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
-	<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
-
-	<script>
-		// Your web app's Firebase configuration
-		var firebaseConfig = {
-			apiKey: "AIzaSyCLypp0qg95yL-ur4fCtwVfx7iXIt-GIH4",
-			authDomain: "aloft-f0fc7.firebaseapp.com",
-			databaseURL: "https://aloft-f0fc7.firebaseio.com",
-			projectId: "aloft-f0fc7",
-			storageBucket: "aloft-f0fc7.appspot.com",
-			messagingSenderId: "540530902321",
-			appId: "1:540530902321:web:e9446aea3a4e7791bfdc10",
-			measurementId: "G-Y3628X4HLC"
-		};
-		// Initialize Firebase
-		firebase.initializeApp(firebaseConfig);
-		firebase.analytics();
-	</script>
-
-	<script src="https://cdn.firebase.com/libs/firebaseui/4.2.0/firebaseui.js"></script>
-	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.2.0/firebaseui.css" />
-	<script type="text/javascript">
-		initApp = function () {
-			firebase.auth().onAuthStateChanged(function (user) {
-				if (user) {
-					// User is signed in.
-					var displayName = user.displayName;
-					var email = user.email;
-					var emailVerified = user.emailVerified;
-					var photoURL = user.photoURL;
-					var uid = user.uid;
-					var phoneNumber = user.phoneNumber;
-					var providerData = user.providerData;
-					user.getIdToken().then(function (accessToken) {
-						document.getElementById('sign-in-status').textContent = 'Signed in';
-						document.getElementById('sign-in').textContent = 'Sign out';
-						document.getElementById('account-details').textContent = JSON.stringify({
-							displayName: displayName,
-							email: email,
-							emailVerified: emailVerified,
-							phoneNumber: phoneNumber,
-							photoURL: photoURL,
-							uid: uid,
-							accessToken: accessToken,
-							providerData: providerData
-						}, null, '  ');
-					});
-				} else {
-					// User is signed out.
-					document.getElementById('sign-in-status').textContent = 'Signed out';
-					document.getElementById('sign-in').textContent = 'Sign in';
-					document.getElementById('account-details').textContent = 'null';
-				}
-			}, function (error) {
-				console.log(error);
-			});
-		};
-
-		window.addEventListener('load', function () {
-			initApp();
-		});
 	</script>
 
 	<!-- Bootstrap CSS -->
@@ -108,56 +43,102 @@
 	<!---Slidebars CSS --->
 	<link rel="stylesheet" href="css/slidebars.min.css">
 
-	<title>Aloft: A Sailor's Resource Guide</title>
+		<!-- Insert these scripts at the bottom of the HTML, but before you use any Firebase services -->
+
+		<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+		<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+		<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+		<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+
+		<!-- Add Firebase products that you want to use -->
+		<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+		<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+
+		<!---- Initialize Firebase ---->
+		<script>
+			// Your web app's Firebase configuration
+			var firebaseConfig = {
+				apiKey: "AIzaSyCLypp0qg95yL-ur4fCtwVfx7iXIt-GIH4",
+				authDomain: "aloft-f0fc7.firebaseapp.com",
+				databaseURL: "https://aloft-f0fc7.firebaseio.com",
+				projectId: "aloft-f0fc7",
+				storageBucket: "aloft-f0fc7.appspot.com",
+				messagingSenderId: "540530902321",
+				appId: "1:540530902321:web:e9446aea3a4e7791bfdc10",
+				measurementId: "G-Y3628X4HLC"
+			};
+			// Initialize Firebase
+			firebase.initializeApp(firebaseConfig);
+			firebase.analytics();
+		</script>
+
+    <script src="https://cdn.firebase.com/libs/firebaseui/4.2.0/firebaseui.js"></script>
+    <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.2.0/firebaseui.css" />
+    <script type="text/javascript">
+      // FirebaseUI config.
+      var uiConfig = {
+        signInSuccessUrl: '<url-to-redirect-to-on-success>',
+        signInOptions: [
+          // Leave the lines as is for the providers you want to offer your users.
+          firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+          firebase.auth.FacebookAuthProvider.PROVIDER_ID,
+          firebase.auth.EmailAuthProvider.PROVIDER_ID,
+          firebaseui.auth.AnonymousAuthProvider.PROVIDER_ID
+        ],
+        // tosUrl and privacyPolicyUrl accept either url string or a callback
+        // function.
+        // Terms of service url/callback.
+        tosUrl: '<your-tos-url>',
+        // Privacy policy url/callback.
+        privacyPolicyUrl: function() {
+          window.location.assign('<your-privacy-policy-url>');
+        }
+      };
+
+      // Initialize the FirebaseUI Widget using Firebase.
+      var ui = new firebaseui.auth.AuthUI(firebase.auth());
+      // The start method will wait until the DOM is loaded.
+      ui.start('#firebaseui-auth-container', uiConfig);
+    </script>
 
 </head>
 
 
 
-<body>
+<body class="bg-blue">
+		
+	<div class="ml-0 bg-blue d-flex flex-column justify-content-center align-items-center side-shadow"
+		canvas="container" id="sign-in-slide-bg">
 
-	<div class="ml-0 d-flex flex-column justify-content-center align-items-center side-shadow" canvas="container"
-		id="index-slide-bg">
+
 		<div class="" id="index-main-box">
 			<!---Main Logo & Tagline--->
-			<div class="col-12 text-center pb-5">
+			<div class="col-12 text-center mb-5">
 				<img class="" src="img/aloft-logo.png" width="75" height="auto" />
 				<h1 class="display-4"><span class="font-weight-light font-lt-white mr-n2">go</span><span
 						class="text-white logo">ALOFT</span></h1>
 			</div>
 
-			
-
 			<!---Home Screen Navigation Buttons--->
 
-			<div class="d-flex flex-row pb-3">
-				<div class="col-6 pr-2 "><a href="listings.html"
-						class="btn btn-md btn-secondary btn-block py-2 h-100"><i class="fas fa-search"></i><br><span
-							class="font-weight-light">Job Listings</span></a></div>
-				<div class="col-6 pl-2"><a href="directory.html#google-map"
-						class="btn btn-md btn-secondary btn-block py-2 h-100"><i
-							class="fas fa-map-marked-alt"></i><br /><span class="font-weight-light">Explore
-							Map</span></a></div>
-			</div>
+			<div id="firebaseui-auth-container"></div>
 
-			<div class="pb-3">
-				<div class="col-12"><a href="directory.html"
-						class="btn btn-md btn-outline-secondary btn-block py-2 h-100"><i
-							class="fas fa-binoculars py-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
-							class="font-weight-light">Discover Tall Ships</span></a></div>
-			</div>
+	
 
-			<div class="">
-				<div class="col-12"><a href="resources.html" class="btn btn-md btn-outline-secondary btn-block py-2"><i
-							class="fas fa-book py-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
-							class="font-weight-light">Resources for Sailors</span></a></div>
-			</div>
 
 		</div>
 
 	</div>
+	<!---- End of Canvas Container ---->
+
+
+
 
 	<!--- Start of Footer Navigation --->
+
+
+
 	<footer class="navbar fixed-bottom navbar-dark bg-blue top-shadow" id="menu" canvas="">
 		<!--- Bottom Hamburger Toggle Icon --->
 		<button type="button" class="toggle-button btn btn-lg text-white" data-toggle="button" aria-pressed="false"
@@ -177,9 +158,8 @@
 			<div class="h-100 navbar-nav d-flex flex-column justify-content-between navbar-padding" id="">
 
 				<!-- <div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase active ">
-					<a class="nav-link disabled " href="#"><i class="fas fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
-							class="font-weight-light">Settings</span><span class="sr-only">(current)</span></a>
-				</div> -->
+						<a class="nav-link disabled " href="#"><i class="fas fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-weight-light">Settings</span><span class="sr-only">(current)</span></a>
+					</div> -->
 				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase">
 					<a class="nav-link disabled" href="#"><i class="fas fa-life-ring"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
 							class="font-weight-light">Help</span></a>
@@ -257,8 +237,7 @@
 							class="font-weight-light">Resources for Sailors</span></a></div>
 			</div>
 		</div>
-		</sectio>
-
+		</section>
 
 
 
@@ -280,12 +259,12 @@
 		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 		<script src="js/jquery.nicescroll.min.js"></script>
 
-
 		<!-- Custom JS-->
 		<script src="js/custom.js"></script>
 
-		<!--- Service Workder --->
-		<script src="sw.js"></script>
+
+		
+
 
 </body>
 

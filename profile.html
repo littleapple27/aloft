@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="en" manifest="cache.appcache">
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
@@ -51,18 +50,17 @@
 
 		<!----Top Page Jumbotron---->
 	
-
 	
-		<div class="container-fluid top-page-jumbo bg-light px-0 " id="pg-info-loads-here">
+<!-- 		<div class="container-fluid top-page-jumbo bg-light px-0 " id="pg-info-loads-here">
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2">
 				<h1 class="mb-0"><span class="font-weight-light font-green mr-n2">go</span><span
 						class="font-blue logo">ALOFT</span></h1>
 				<p class="mb-0 font-xs font-weight-light">A comprehensive resource for tall ship sailors.</p>
 			</div>
 		</div>
-		<div class="bg-blue"><br /></div>
+		<div class="bg-blue"><br /></div> -->
 
-		<div class="container-fluid py-5 notification-container mb-5">
+		<div class="container-fluid top-page-jumbo notification-container mb-5">
 			<!----Section Headings---->
 			<div class="h-100 col-lg-6 col-md-12 mx-auto">
 			<div class="mb-3 pb-3 text-center"><i class="fas fa-user-circle fa-5x"></i></div>
@@ -260,6 +258,9 @@
 
 	<!-- Custom JS-->
 	<script src="js/custom.js"></script>
+
+	<!--- Service Workder --->
+	<script src="sw.js"></script>
 
 
 </body>

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" manifest="cache.appcache">
 
 <head>
 	<!-- Required meta tags -->
@@ -12,12 +12,88 @@
 		integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc" crossorigin="anonymous">
 	</script>
 
-	<!-- Turbolinks -->
+	<title>Aloft: A Sailor's Resource Guide</title>
+
+	<!-- Turbolinks before Firebase!! -->
 	<script src="js/turbolinks.js"></script>
 	<script>
 		var Turbolinks = require("turbolinks")
 		Turbolinks.start()
 	</script>
+
+
+	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
+	<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
+
+	<!-- If you enabled Analytics in your project, add the Firebase SDK for Analytics -->
+	<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-analytics.js"></script>
+
+	<!-- Add Firebase products that you want to use -->
+	<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
+
+	<script>
+		// Your web app's Firebase configuration
+		var firebaseConfig = {
+			apiKey: "AIzaSyCLypp0qg95yL-ur4fCtwVfx7iXIt-GIH4",
+			authDomain: "aloft-f0fc7.firebaseapp.com",
+			databaseURL: "https://aloft-f0fc7.firebaseio.com",
+			projectId: "aloft-f0fc7",
+			storageBucket: "aloft-f0fc7.appspot.com",
+			messagingSenderId: "540530902321",
+			appId: "1:540530902321:web:e9446aea3a4e7791bfdc10",
+			measurementId: "G-Y3628X4HLC"
+		};
+		// Initialize Firebase
+		firebase.initializeApp(firebaseConfig);
+		firebase.analytics();
+	</script>
+
+	<script src="https://cdn.firebase.com/libs/firebaseui/4.2.0/firebaseui.js"></script>
+	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.2.0/firebaseui.css" />
+	<script type="text/javascript">
+			initApp = function () {
+				firebase.auth().onAuthStateChanged(function (user) {
+					if (user) {
+						// User is signed in.
+						var displayName = user.displayName;
+						var email = user.email;
+						var emailVerified = user.emailVerified;
+						var photoURL = user.photoURL;
+						var uid = user.uid;
+						var phoneNumber = user.phoneNumber;
+						var providerData = user.providerData;
+						user.getIdToken().then(function (accessToken) {
+							document.getElementById('sign-in-status').textContent = 'Signed in';
+							document.getElementById('sign-in').textContent = 'Sign out';
+							document.getElementById('account-details').textContent = JSON.stringify({
+								displayName: displayName,
+								email: email,
+								emailVerified: emailVerified,
+								phoneNumber: phoneNumber,
+								photoURL: photoURL,
+								uid: uid,
+								accessToken: accessToken,
+								providerData: providerData
+							}, null, '  ');
+						});
+					} else {
+						// User is signed out.
+						document.getElementById('sign-in-status').textContent = 'Signed out';
+						document.getElementById('sign-in').textContent = 'Sign in';
+						document.getElementById('account-details').textContent = 'null';
+					}
+				}, function (error) {
+					console.log(error);
+				});
+			};
+
+		window.addEventListener('load', function () {
+			initApp();
+		});
+	</script>
+
+
 
 
 	<!-- Bootstrap CSS -->
@@ -38,7 +114,7 @@
 	<!---Slidebars CSS --->
 	<link rel="stylesheet" href="css/slidebars.min.css">
 
-	<title>Aloft: A Sailor's Resource Guide</title>
+
 
 </head>
 
@@ -55,7 +131,7 @@
 					class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2 d-flex flex-row align-items-center justify-content-between">
 					<h1 class="mb-0"><span class="font-weight-light font-green mr-n2">go</span><span
 							class="font-blue logo">ALOFT</span></h1>
-					<p class="mb-0 font-blue font-weight-light">Recent Job Listings</p>
+							<div>Welcome Sailor</div>
 				</div>
 			</div>
 
@@ -478,7 +554,10 @@
 	<script src="js/jquery.nicescroll.min.js"></script>
 
 	<!-- Custom JS-->
-	<script src="js/custom.js"></script>
+	<script src="custom.js"></script>
+
+	<!--- Service Workder --->
+	<script src="js/sw.js"></script>
 
 	<!---Search Filter --->
 	<script>

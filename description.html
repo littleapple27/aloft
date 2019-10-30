@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" manifest="cache.appcache">
 
 <head>
 	<!-- Required meta tags -->
@@ -58,7 +58,8 @@
 		<!----Top Page Jumbotron---->
 		<div class="container-fluid top-page-jumbo-alt bg-blue pb-2" id="feature-listing">
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2">
-				<h1 class="display-4 font-white">Portland Schooner Co. <br /> <span class="font-lt-white">Portland, Maine</span></h1>
+				<h1 class="display-4 font-white">Portland Schooner Co.</h1>
+				<h2 class="font-lt-white font-weight-light">Portland, Maine</h2>
 				<p class="lead font-white">Portland Schooner Co. is now hiring deckhands for the 2020 sailing season. <a
 						class="paragraph-link" href="#jobdescription" role="button">Learn more...</a></p>
 			</div>
@@ -257,10 +258,10 @@
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 pb-1">
 		
 				<!-- <p class="font-lt-white font-weight-light mb-0 font-xs">Search All Job Listings</p> -->
-				<div class="form-group rounded d-flex flex-row">
+				<!-- <div class="form-group rounded d-flex flex-row">
 					<input type="text" class="form-control" placeholder="Search All Job Listings">
 					<button class="btn btn-md btn-primary-search font-weight-light font-xs"><i class="fa fa-search"></i></button>
-				</div>
+				</div> -->
 			</div>
 		</div>
 	</div>
@@ -359,9 +360,8 @@
 	<!-- Custom JS-->
 	<script src="js/custom.js"></script>
 
-
-	<!-- Custom JS-->
-	<script src="js/custom.js"></script>
+<!--- Service Workder --->
+	<script src="sw.js"></script>
 
 </body>
 

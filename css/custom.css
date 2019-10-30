@@ -75,6 +75,10 @@ p {
   background-color: #f9f9f9;
 }
 
+.bg-lt-white {
+  background-color: rgba(255, 255, 255, 0.9) !important;
+}
+
 .bg-blue {
   background-color: #154360;
 }
@@ -253,7 +257,7 @@ body {
 }
 
 .top-page-jumbo-alt {
-  padding-top: 10rem;
+  padding-top: 8.5rem;
 }
 
 .results-container {
@@ -452,6 +456,18 @@ select, input[type="text"],
 select:focus,
 input[type="text"]:focus {
   font-size: 16px;
+}
+
+.firebaseui-tos {
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: lighter;
+  direction: ltr;
+  font-size: 10px !important;
+  line-height: 16px;
+  padding: 0 24px;
+  margin-bottom: 24px;
+  margin-top: 24px !important;
+  text-align: center !important;
 }
 
 @media only screen and (min-width: 48em) {
