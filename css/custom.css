@@ -321,8 +321,18 @@ input:-moz-placeholder {
   padding: 0 0 3px 0;
 }
 
+.active-pills:hover, .active-pills:focus {
+  color: #45b39d;
+  border-bottom: 1px solid #45b39d;
+  padding: 0 0 3px 0;
+}
+
 .inactive-pills {
   color: rgba(21, 67, 96, 0.6);
+}
+
+.inactive-pills:hover, .inactive-pills:focus {
+  color: #45b39d;
 }
 
 #feature-tallship {
@@ -454,7 +464,7 @@ input:checked + .slider:before {
 
 select, input[type="text"],
 select:focus,
-input[type="text"]:focus {
+input[type="text"]:focus, select.form-control {
   font-size: 16px;
 }
 

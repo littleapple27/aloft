@@ -30,6 +30,11 @@ $(function() {
     background: "#f8f9fa"
     });
 
+    //Toggle favorite icon on click
+    $('#fav-click').click(function() {
+    $(this).toggleClass("far fas");
+});
+
 
 });//End doc ready
 
