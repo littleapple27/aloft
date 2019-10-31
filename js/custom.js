@@ -3,8 +3,6 @@ $(function() {
    
     ///Slidebars Navigation Slide out
     // Toggle button
-
-
     var controller = new slidebars();
     controller.init();
     $( '.toggle-button' ).on( 'click', function ( event ) {

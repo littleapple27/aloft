@@ -1,6 +1,14 @@
 CACHE MANIFEST
 # v1.0 : 10-02-2019 goAloft
 CACHE:
+#cdn
+//stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css
+//kit.fontawesome.com/bf44c917aa.js
+//code.jquery.com/jquery-3.4.1.min.js
+//cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js
+//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js
+//cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js
+
 # pages
 description.html
 directory.html
@@ -13,20 +21,14 @@ tallships.html
 # css
 css/custom.min.css
 css/slidebars.min.css
-css/bootstrap.min.css
 css/all.min.css
+
 #js
-js/jquery.min.js
 js/turbolinks.js
 js/slidebars.min.js
 js/jquery.nicescroll.min.js
-js/bootstrap.min.js
 js/custom.js
-js/lazyload.js
-js/popper.min.js
-js/pwacompat.min.js
 js/all.min.js
-
 
 # images 
 img/aloft-logo.png
