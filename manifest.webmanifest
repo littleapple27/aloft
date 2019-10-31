@@ -17,7 +17,7 @@
   ],
   "start_url": "/aloft/index.html",
   "background_color": "#154360",
-  "orientation": "portrait-primary",
+  "orientation": "portrait",
   "display": "fullscreen",
   "scope": "/aloft/",
   "theme_color": "#154360"
