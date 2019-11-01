@@ -30,11 +30,15 @@ $(function() {
     background: "#f8f9fa"
     });
 
-    //Toggle favorite icon on click
-    $('#fav-click').click(function() {
-    $(this).toggleClass("far fas");
-});
+    
+    //Mark favorite and notify icon 
+    $('#fav-icon').click(function(){
+            $(this).find('i').toggleClass('far fas')
+        });
 
+    $('#notify-icon').click(function(){
+            $(this).find('i').toggleClass('far fas')
+        });
 
 });//End doc ready
 
