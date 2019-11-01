@@ -28,6 +28,7 @@
             '/css/slidebars.min.css',
             '/css/all.min.css',
             '/css/bootstrap.min.css',
+            '/css/bootstrap.min.css.map',
             '/js/pwacompat.min.js',
             '/js/turbolinks.js',
             '/js/jquery.min.js',
