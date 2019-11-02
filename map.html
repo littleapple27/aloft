@@ -54,26 +54,16 @@
 					class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2 d-flex flex-row align-items-center justify-content-between">
 					<h1 class="mb-0"><span class="font-weight-light font-green mr-n2">go</span><span
 							class="font-blue logo">ALOFT</span></h1>
-					<p class="mb-0 font-blue font-weight-light">Tall Ship Directory</p>
+					<p class="mb-0 font-blue font-weight-light">Explore by Map Location</p>
 				</div>
 			</div>
 
 
 
-			<!----Featured Tall Ship---->
-			<div class="container-fluid shadow py-5" id="feature-tallship">
-				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
-					<h3 class="font-lt-white">Tall Ship Beacon</h3>
-					<h1 class="display-4 font-white">Schooner Appledore II</h1>
-					<p class="lead font-white">Appledore II is a traditional two-masted wooden schooner, currently
-						privately
-						owned and operated out of Camden, Maine and Key West, Florida. <a class="paragraph-link"
-							href="tallships.html" role="button">Learn more...</a></p>
-				</div>
-			</div>
+	
 
 			<!----Google Location Map---->
-			<div class="container-fluid bg-green shadow py-5" id="google-map">
+			<div class="container-fluid bg-blue shadow pt-3 results-container" id="google-map">
 				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto px-2 py-1">
 
 
@@ -98,7 +88,7 @@
 					<script>
 						var map;
 						var InforObj = [];
-						var centerCords = { //Geographical center of USA (Lebanon, KS)
+						var centerCords = {
 							lat: 39.810407,
 							lng: -98.556317
 						};
@@ -211,7 +201,7 @@
 
 						function addMarker() {
 							for (var i = 0; i < features.length; i++) {
-								var contentString = '<h5 class="mb-1">' + features[i].placeName + '</h5><p class="font-weight-light">' + features[i].cityState + '</p><a class="paragraph-link" href=' + '"tallships.html"' + '>Learn More</a>'
+								var contentString = '<a class="paragraph-link" href=' + '"tallships.html"' + '><p class="font-xs font-weight-light">' + features[i].placeName + '</p><p class="font-xs font-weight-light">' + features[i].cityState + '</p></a>'
 								;
 
 								const marker = new google.maps.Marker({
@@ -269,265 +259,17 @@
 						src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rtCFihDV7b_6WMPFkMnp4BqoA4woz5A&callback=initMap">
 					</script>
 
+				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-4">
+						<a href="directory.html"
+						class="btn btn-md btn-outline-secondary btn-block py-3 h-100"><i
+							class="fas fa-binoculars py-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">View Tall Ship Directory</span></a>
+				</div>	
+
 				</div>
 			</div>
 
 			<!--- API Key AIzaSyB9rtCFihDV7b_6WMPFkMnp4BqoA4woz5A --->
-
-
-
-
-
-			<div class="container-fluid bg-lt-blue-3 shadow search-container py-3">
-				<!----Section Headings---->
-				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
-
-					<details closed class="">
-						<summary class="font-blue font-weight-light">Filter Search Results</summary>
-
-						<div class="row">
-							<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
-								<span class="fa fa-anchor pr-3 font-green"></span>
-								<input type="text" class="form-control" placeholder="Vessel Name">
-							</div>
-
-							<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
-								<span class="fa fa-dharmachakra mr-1 pr-3 font-green"></span>
-								<select class="form-control" id="">
-									<option value="" disabled selected>Vessel Type</option>
-									<option>Schooner</option>
-									<option>Square Rig</option>
-								</select>
-							</div>
-						</div>
-
-						<div class="row">
-							<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
-								<span class="fa fa-ship pr-3 font-green"></span>
-								<select class=" form-control" id="">
-									<option value="" disabled selected>Hull Material</option>
-									<option>Wood</option>
-									<option>Fiberglass</option>
-									<option>Steel</option>
-
-								</select>
-							</div>
-							<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
-								<span class="fa fa-map pr-3 font-green"></span>
-								<select class="form-control" id="">
-									<option value="" disabled selected>Select Region</option>
-									<option>New England</option>
-									<option>Great Lakes</option>
-									<option>Mid-Atlantic</option>
-									<option>Florida - Atlantic</option>
-									<option>Florida - Gulf</option>
-									<option>Gulf of Mexico</option>
-									<option>West Coast / Pacific</option>
-									<option>Southern Carribean Islands</option>
-								</select>
-							</div>
-						</div>
-					</details>
-				</div>
-			</div>
-			<!--- Start of Search Fields --->
-
-
-
-
-			<div class="container-fluid pt-2 px-0">
-				<!----Section Heading: Search Results ---->
-				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 px-0">
-					<!--- Nav Pills --->
-					<nav class="breadcrumb-revised" aria-label="breadcrumb ">
-						<ul class="nav nav-pills pb-2 mb-2 pl-3">
-							<li class="font-xs font-weight-light mr-3">
-								<a class="inactive-pills" href="index.html">Index</a>
-							</li>
-							<li class="font-xs font-weight-light mr-3">
-								<span class="font-lt-green">/</span>
-							</li>
-
-							<li class="font-xs font-weight-light mr-3">
-								<a class="active-pills" href="directory.html">Directory - All</a>
-							</li>
-						</ul>
-					</nav>
-					<!----Start of Search Results Cards ---->
-
-					<div class="results-container" id="searchResults">
-						<!---Search Card 1 --->
-						<div class="mb-2">
-
-							<div class="card p-0 divInner">
-								<a href="tallships.html" class="card-link-text">
-									<div class="row no-gutters">
-										<div class="col-4 d-flex align-items-center ">
-											<img data-src="img/bagheera.png" class="img-fluid lazyload"
-												alt="schooner timberwind with portland schooner company">
-										</div>
-										<div class="col-8 pl-2">
-											<div class="pr-4 d-flex justify-content-between align-items-center">
-												<h3 class="mb-0 mt-1 font-blue">Bagheera</h3><span
-													class="font-weight-light font-blue font-xs"><i
-														class="fas fa-map-marker-alt px-1"></i>Portland, ME</span>
-											</div>
-											<h5 class="mb-2 font-weight-bold text-uppercase font-green">Portland
-												Schooner Co.
-												</h6>
-												<p class="font-weight-light">Bagheera is a wooden schooner and is an
-													Alden
-													design...</p>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-
-						<!---Search Card 2 --->
-						<div class="mb-2">
-
-							<div class="card p-0 divInner">
-								<a href="tallships.html" class="card-link-text">
-									<div class="row no-gutters">
-										<div class="col-4 d-flex align-items-center ">
-											<img src="timberwind.png" data-src="img/timberwind.png"
-												class="img-fluid lazyload"
-												alt="schooner timberwind with portland schooner company">
-										</div>
-										<div class="col-8 pl-2">
-											<div class="pr-4 d-flex justify-content-between align-items-center">
-												<h3 class="mb-0 mt-1 font-blue">Timberwind</h3><span
-													class="font-weight-light font-blue font-xs "><i
-														class="fas fa-map-marker-alt px-1"></i>Portland, ME</span>
-											</div>
-											<h5 class="mb-2 font-weight-bold text-uppercase font-green">Portland
-												Schooner Co.
-												</h6>
-												<p class="font-weight-light">Timberwind is the original portland
-													pilot...</p>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-
-						<!---Search Card 3 --->
-						<div class="mb-2">
-
-							<div class="card p-0 divInner">
-								<a href="tallships.html" class="card-link-text">
-									<div class="row no-gutters">
-										<div class="col-4 d-flex align-items-center ">
-											<img data-src="img/wendameen.png" class="img-fluid lazyload"
-												alt="schooner timberwind with portland schooner company">
-										</div>
-										<div class="col-8 pl-2">
-											<div class="pr-4 d-flex justify-content-between align-items-center">
-												<h3 class="mb-0 mt-1 font-blue">Wendameen</h3><span
-													class="font-weight-light font-blue font-xs "><i
-														class="fas fa-map-marker-alt px-1"></i>Portland, ME</span>
-											</div>
-											<h5 class="mb-2 font-weight-bold text-uppercase font-green">Portland
-												Schooner Co.
-												</h6>
-												<p class="font-weight-light">Wendameen is a wooden schooner and is an
-													Alden
-													design...</p>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-
-						<!---Search Card 4 --->
-						<div class="mb-2">
-
-							<div class="card p-0 divInner">
-								<a href="tallships.html" class="card-link-text">
-									<div class="row no-gutters">
-										<div class="col-4 d-flex align-items-center ">
-											<img data-src="img/haliematthew.png" class="img-fluid lazyload"
-												alt="schooner timberwind with portland schooner company">
-										</div>
-										<div class="col-8 pl-2">
-											<div class="pr-4 d-flex justify-content-between align-items-center">
-												<h3 class="mb-0 mt-1 font-blue">Halie & Matthew</h3><span
-													class="font-weight-light font-blue font-xs "><i
-														class="fas fa-map-marker-alt px-1"></i>Eastport, ME</span>
-											</div>
-											<h5 class="mb-2 font-weight-bold text-uppercase font-green">Maine Windjammer
-												LLC
-												</h6>
-
-												<p class="font-weight-light">Halie & Matthew is 118' LOA...</p>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-
-						<!---Search Card 5 --->
-						<div class="mb-2">
-
-							<div class="card p-0 divInner">
-								<a href="tallships.html" class="card-link-text">
-									<div class="row no-gutters">
-										<div class="col-4 d-flex align-items-center ">
-											<img data-src="img/libertyclipper.png" class="img-fluid lazyload"
-												alt="schooner timberwind with portland schooner company">
-										</div>
-										<div class="col-8 pl-2">
-											<div class="pr-4 d-flex justify-content-between align-items-center">
-												<h3 class="mb-0 mt-1 font-blue">Liberty Clipper</h3><span
-													class="font-weight-light font-blue font-xs "><i
-														class="fas fa-map-marker-alt px-1"></i>Boston, MA</span>
-											</div>
-											<h5 class="mb-2 font-weight-bold text-uppercase font-green">Liberty Fleet of
-												Tall Ships
-												</h6>
-												<p class="font-weight-light">Liberty Clipper is a steel hull schooner...
-												</p>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-
-						<!---Search Card 6 --->
-						<div class="mb-2">
-
-							<div class="card p-0 divInner">
-								<a href="tallships.html" class="card-link-text">
-									<div class="row no-gutters">
-										<div class="col-4 d-flex align-items-center ">
-											<img data-src="img/appledore2.png" class="img-fluid lazyload"
-												alt="schooner timberwind with portland schooner company">
-										</div>
-										<div class="col-8 pl-2">
-											<div class="pr-4 d-flex justify-content-between align-items-center">
-												<h3 class="mb-0 mt-1 font-blue">Appledore II</h3><span
-													class="font-weight-light font-blue font-xs"><i
-														class="fas fa-map-marker-alt px-1"></i>Key West, FL</span>
-											</div>
-											<h5 class="mb-2 font-weight-bold text-uppercase font-green">Liberty Fleet of
-												Tall Ships
-												</h6>
-												<p class="font-weight-light">Liberty Star is a wooden schooner and is an
-													Alden
-													design...</p>
-										</div>
-									</div>
-								</a>
-							</div>
-						</div>
-
-					</div>
-				</div>
-				<!---End of .results-container #searchResults Div--->
-
-			</div>
-			<!---End of search wrapper div-->
 
 		</div>
 		<!---End of nice scroll container-->
@@ -563,12 +305,7 @@
 		<div class="container-fluid bg-green shadow search-container">
 			<!----Section Headings---->
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 pb-1">
-				<div class="form-group rounded d-flex flex-row">
-					<input type="text" id="searchInput" onkeyup="searchFunction()" class="form-control"
-						placeholder="Search tall ship directory">
-					<button class="btn btn-md btn-primary-search font-weight-light font-xs"><i
-							class="fa fa-search"></i></button>
-				</div>
+				
 			</div>
 		</div>
 	</div>

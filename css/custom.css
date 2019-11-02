@@ -159,6 +159,14 @@ p {
   color: rgba(69, 179, 157, 0.7) !important;
 }
 
+#fav-icon {
+  color: #154360;
+}
+
+.fa-share-alt {
+  color: #154360;
+}
+
 .nav-hover:hover {
   background-color: #154360 !important;
   color: #f9f9f9 !important;
@@ -203,6 +211,16 @@ a:focus {
 
 a:hover {
   color: rgba(255, 255, 255, 0.7);
+  text-decoration: none;
+}
+
+.map-marker-content-a {
+  color: #154360;
+  text-decoration: none;
+}
+
+.map-marker-content-a:hover {
+  color: rgba(21, 67, 96, 0.6);
   text-decoration: none;
 }
 

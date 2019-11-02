@@ -27,7 +27,7 @@ $(function() {
     cursorwidth:"6px",
     zindex: "auto",
     autohidemode: true,
-    background: "#f8f9fa"
+    background: "#f8f9fa",
     });
 
     

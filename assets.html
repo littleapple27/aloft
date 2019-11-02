@@ -1,0 +1,380 @@
+<!doctype html>
+<html lang="en">
+
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<!--- Manifest --->
+	<link rel="manifest" href="manifest.webmanifest">
+	<!-- include PWACompat _after_ your manifest -->
+	<script async src="js/pwacompat.min.js"></script>
+
+	<!-- Turbolinks -->
+	<script src="js/turbolinks.js"></script>
+	<script>
+		//var Turbolinks = require("turbolinks")
+		Turbolinks.start()
+	</script>
+
+	<title>Aloft: A Sailor's Resource Guide</title>
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<!-- Custom CSS -->
+	<link rel="stylesheet" href="css/custom.css">
+
+	<!--- Google Fonts --->
+	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700|Roboto:300,500&display=swap"
+		rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=PT+Sans:700i&display=swap" rel="stylesheet">
+
+	<!--- Font Awesome --->
+	<link rel="stylesheet" href="css/all.min.css">
+
+	<!---Slidebars CSS --->
+	<link rel="stylesheet" href="css/slidebars.min.css">
+
+</head>
+
+
+<body class="bg-white">
+
+
+
+
+
+
+	<div class="side-shadow scroll-container" canvas="container">
+
+		<div class="nice-scroll">
+
+			<!----Top Page Jumbotron---->
+			<div class="container-fluid top-page-jumbo bg-light px-0" id="pg-info-loads-here">
+				<div
+					class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2 d-flex flex-row align-items-center justify-content-between">
+					<h1 class="mb-0"><span class="font-weight-light font-green mr-n2">go</span><span
+							class="font-blue logo">ALOFT</span></h1>
+					<p class="mb-0 font-blue font-weight-light">Sailing Resources</p>
+				</div>
+			</div>
+
+
+			<!----Featured Tall Ship---->
+			<div class="container-fluid bg-blue shadow py-5" id="feature-resource">
+				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
+					<h1 class="display-4 font-white">Hamilton Marine</h1>
+					<p class="lead font-white">Traditional marine hardware and supplies, boatbuilders discount, sailors,
+						pleasure boaters, commercial fishermen, lobster trap supplies. <a class="paragraph-link"
+							href="https://hamiltonmarine.com/" target="_blank" role="button">Learn more...</a></p>
+				</div>
+			</div>
+
+
+
+
+
+			<div class="container-fluid bg-lt-blue-3 shadow search-container py-3">
+				<!----Section Headings---->
+				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+
+					<details closed class="">
+						<summary class="font-blue font-weight-light">Filter Search Results</summary>
+
+						<div class="row">
+							<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
+								<span class="fa fa-anchor pr-3  font-green"></span>
+								<input type="text" class="form-control" placeholder="Resource Name">
+							</div>
+
+							<div class="col-md-6 col-sm-12 mb-2  d-flex align-items-center">
+								<span class="fa fa-map pr-3 font-green"></span>
+								<select class="form-control" id="">
+									<option value="" disabled selected>Select Region</option>
+									<option>New England</option>
+									<option>Great Lakes</option>
+									<option>Mid-Atlantic</option>
+									<option>Florida - Atlantic</option>
+									<option>Florida - Gulf</option>
+									<option>Gulf of Mexico</option>
+									<option>West Coast / Pacific</option>
+									<option>Southern Carribean Islands</option>
+								</select>
+							</div>
+						</div>
+					</details>
+				</div>
+			</div>
+			<!--- Start of Search Fields --->
+
+
+
+
+
+			<div class="container-fluid pt-2 px-0">
+				<!----Section Heading: Search Results ---->
+				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 px-0">
+					<!--- Nav Breadcrumb --->
+					<nav aria-label="breadcrumb ">
+					<ul class="nav nav-pills pb-2 mb-2 pl-3">
+						<li class="font-xs font-weight-light mr-3">
+							<a class="inactive-pills" href="index.html">Index</a>
+						</li>
+						<li class="font-xs font-weight-light mr-3">
+							<span class="font-lt-green">/</span>
+						</li>
+
+						<li class="font-xs font-weight-light mr-3">
+							<a class="active-pills" href="resources.html">Resources - All</a>
+						</li>
+					</ul>
+				</nav>
+
+					<!----Start of Search Results Cards ---->
+					<div class="results-container" id="searchResults">
+					<!---Search Card 1 --->
+					<div class="mb-2">
+						<div class="card p-0 divInner">
+							<a href="#" class="card-link-text">
+								<div class="row no-gutters">
+									<div class="col-4 d-flex align-items-center ">
+										<img src="img/placeholder.png" class="img-fluid lazy"
+											alt="schooner timberwind with portland schooner company">
+									</div>
+									<div class="col-8 pl-2 d-flex flex-column justify-content-center">
+										<h3 class="mb-0 mt-1 font-blue">Resource 1</h3>
+										<h5 class="mb-2 font-weight-bold text-uppercase font-green">Type of Resource
+											</h6>
+
+											<p class="font-weight-light">Portland Schooner Co. is now hiring deckhands
+												for
+												the 2020 sailing season.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+					<!---Search Card 2 --->
+					<div class="mb-2">
+						<div class="card p-0 divInner  ">
+							<a href="#" class="card-link-text">
+								<div class="row no-gutters">
+									<div class="col-4 d-flex align-items-center ">
+										<img src="img/placeholder.png" class="img-fluid lazy"
+											alt="schooner liberty clipper with liberty fleet of tall ships">
+									</div>
+									<div class="col-8 pl-2 d-flex flex-column justify-content-center">
+										<h3 class="mb-0 mt-1 font-blue">Resource 2</h3>
+										<h5 class="mb-2 font-weight-bold text-uppercase font-green">Type of Resource
+											</h6>
+											<p class="font-weight-light font-blue font-xs"><i
+													class="fas fa-map-marker-alt px-2"></i>Boston, ME</p>
+											<p class="font-weight-light ">Liberty Fleet of Tallships is now hiring a
+												captain
+												for the 2019-2020 Bahamas sailing season.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+
+					<!---Search Card 3 --->
+					<div class="mb-2">
+						<div class="card p-0 divInner">
+							<a href="#" class="card-link-text">
+								<div class="row no-gutters">
+									<div class="col-4 d-flex align-items-center">
+										<img src="img/placeholder.png" class="img-fluid lazy"
+											alt="placeholder img">
+									</div>
+									<div class="col-8 pl-2 d-flex flex-column justify-content-center">
+										<h3 class="mb-0 mt-1 font-blue">Resource 3</h3>
+										<h5 class="mb-2 font-weight-bold text-uppercase font-green">Type of Resource
+											</h6>
+
+											<p class="font-weight-light font-blue font-xs"><i
+													class="fas fa-map-marker-alt px-2"></i>Key West, FL</p>
+											<p class="font-weight-light ">Sebago Watersports is now hiring a first mate
+												aboard the Appledore II.</p>
+									</div>
+								</div>
+							</a>
+						</div>
+					</div>
+
+				</div>
+			</div>
+			<!---End of .results-container #searchResults Div--->
+
+		</div>
+		<!---End of search wrapper div-->
+
+	</div>
+	<!---End of nice scroll container-->
+
+	</div>
+	<!--------- End of Main Page Content Canvas ------>
+
+
+	<!--- Fixed Header and Search Container ***Moved to the bottom of the page and both footer and header maintain fixed position*** --->
+	<!---Page Heading --->
+	<div class="fixed-top" canvas="">
+		<div class="d-flex flex-row align-items-center px-3 py-1 bg-blue">
+			<div class="font-green d-flex flex-row">
+				<button class="btn btn-history font-weight-light font-small" type="button"
+					onclick="history.back(-1);"><i class="fas fa-arrow-left fa-1x"></i></button>
+			</div>
+
+			<div class="ml-auto">
+				<a href="profile.html" class="nav-link"><i class="fas fa-user-circle fa-2x"></i></a>
+			</div>
+
+			<div class="">
+				<a href="settings.html" class="nav-link"><i class="fas fa-cog fa-2x"></i></a>
+			</div>
+
+			<div class="font-green d-flex flex-row">
+				<button class="btn btn-history font-weight-light font-small" type="button"
+					onclick="history.forward(1);"><i class="fas fa-arrow-right fa-1x"></i></button>
+			</div>
+		</div>
+
+
+		<div class="container-fluid bg-green shadow search-container">
+			<!----Section Headings---->
+			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 pb-1">
+				<div class="form-group rounded d-flex flex-row">
+					<input type="text" id="searchInput" onkeyup="searchFunction()" class="form-control" placeholder="Search all sailing resources">
+					<button class="btn btn-md btn-primary-search font-weight-light font-xs"><i
+							class="fa fa-search"></i></button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!----------- End of Fixed Header Container ----------->
+	<!------ Fixed Footer Menu --------->
+	<footer class="navbar fixed-bottom navbar-dark bg-blue top-shadow" id="menu" canvas="">
+		<!--- Bottom Hamburger Toggle Icon --->
+		<button type="button" class="toggle-button btn btn-lg font-white" data-toggle="button" aria-pressed="false"
+			autocomplete="off">☰</button>
+
+		<!--- Bottom Navbar Icons --->
+		<a href="index.html" class="navlink"><i class="fas fa-home fa-2x"></i></a>
+		<div class=""><span class="font-weight-light font-lt-white mr-n1">go</span><span
+				class="font-white logo">ALOFT</span></div>
+		<a href="#" class="btm-nb-i"><i class="fas fa-bell fa-2x"></i></a>
+		<a href="signin.html" class="btm-nb-i"><i class="fas fa-sign-in-alt fa-2x"></i></a>
+	</footer>
+
+
+	<nav class="" id="navbar-main" off-canvas="left-nav left reveal">
+		<!--- Navbar Collapse Items --->
+		<div class="p-0" style="height: 100vh;">
+			<div class="h-100 navbar-nav d-flex flex-column justify-content-between navbar-padding" id="">
+
+				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase active ">
+					<a class="nav-link" href="settings.html"><i class="fas fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">Settings</span><span class="sr-only">(current)</span></a>
+				</div>
+				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase active ">
+					<a class="nav-link" href="profile.html"><i
+							class="fas fa-user-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">Profile</span><span class="sr-only">(current)</span></a>
+				</div>
+				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase">
+					<a class="nav-link disabled" href="#"><i class="fas fa-life-ring"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">Help</span></a>
+				</div>
+				<div class="pl-3 border-bottom d-flex align-items-center h-100 nav-item">
+					<a class="nav-link disabled" href="#"><span
+							class="font-weight-light mr-2 text-uppercase">About</span><span
+							class="font-weight-light font-lt-white mr-n1">go</span><span
+							class="font-white logo">ALOFT</span></a>
+				</div>
+
+				<div class="nav-hover pl-3 border-bottom d-flex align-items-center h-100 nav-item text-uppercase">
+					<a class="nav-link" href="resources.html"><i
+							class="fas fa-book pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-weight-light">Sailing
+							Resources</span></a>
+				</div>
+				<div class="nav-hover pl-3 border-bottom d-flex align-items-center h-100 nav-item text-uppercase">
+					<a class="nav-link" href="directory.html"><i
+							class="fas fa-binoculars pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">Discover Tall Ships</span></a>
+				</div>
+				<div class="nav-hover pl-3 border-bottom d-flex align-items-center h-100 nav-item text-uppercase">
+					<a class="nav-link" href="directory.html#google-map"><i
+							class="fas fa-map-marked pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">Explore Map</span></a>
+				</div>
+				<div class="nav-hover pl-3 border-bottom d-flex align-items-center h-100 nav-item text-uppercase">
+					<a class="nav-link" href="listings.html"><i
+							class="fas fa-search pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-weight-light">Job
+							Listings</span></a>
+				</div>
+				<div class="nav-hover pl-3 d-flex align-items-center h-100 nav-item text-uppercase">
+					<a class="nav-link" href="signin.html"><i
+							class="fas fa-sign-in-alt pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">Sign In</span></a>
+				</div>
+
+			</div>
+		</div>
+	</nav>
+
+
+
+
+
+
+
+		<!-- Optional JavaScript -->
+		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
+		<script src="js/jquery.min.js"></script>
+		<script src="js/popper.min.js">
+		</script>
+		<script src="js/bootstrap.min.js">
+		</script>
+
+		<!-- Plug-ins -->
+		<script src="js/slidebars.min.js"></script>
+		<script src="js/lazyload.min.js"></script>
+		<script src="js/jquery.nicescroll.min.js"></script>
+
+
+		<!-- Custom JS-->
+		<script src="js/custom.js"></script>
+
+		<!--- Service Workder --->
+		<script src="sw.js"></script>
+
+
+	<!---Search Filter --->
+	<script>
+		//Search Filter Function
+		function searchFunction() {
+			var input, filter, divOuter, divInner, a, i, txtValue;
+			input = document.getElementById("searchInput");
+			filter = input.value.toUpperCase();
+			divOuter = document.getElementById("searchResults");
+			divInner = divOuter.getElementsByClassName("divInner");
+			for (i = 0; i < divInner.length; i++) {
+				a = divInner[i].getElementsByTagName("a")[0];
+				txtValue = a.textContent || a.innerText;
+				if (txtValue.toUpperCase().indexOf(filter) > -1) {
+					divInner[i].style.display = "";
+				} else {
+					divInner[i].style.display = "none";
+				}
+			}
+		}
+	</script>
+
+
+</body>
+
+</html>

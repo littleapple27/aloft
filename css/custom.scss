@@ -173,6 +173,14 @@ $lt-green: rgba(69,179,157, 0.3);
   //text-transform: uppercase;
 }
 
+#fav-icon {
+  color: $blue; 
+}
+
+.fa-share-alt {
+  color: $blue;
+}
+
 
 
 
@@ -228,6 +236,15 @@ a:hover {
   text-decoration: none; 
 }
 
+	.map-marker-content-a{
+			color: $blue;
+    text-decoration: none; 
+		}
+
+.map-marker-content-a:hover {
+  color:  rgba(21,67,96,.6);
+  text-decoration: none; 
+}
 
 .paragraph-link,
 .paragraph-link:focus {
@@ -395,7 +412,6 @@ input:-moz-placeholder { /* Firefox 18- */
     background-position: bottom left;
     background-size: cover;
 }
-
 
 /////Lazy Img Load/////
 img.lazy {
