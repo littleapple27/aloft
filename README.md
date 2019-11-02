@@ -48,7 +48,7 @@ Job Listings, Tall Ship Directory, Sailing and Resources Page
 •	Fixed-top search bar
 •	Logo & page heading
 •	Feature Jumbotron
-•	Refine search results (not functional)
+•	Refine search results (functional)
 •	Search results / all listings
 •	Fixed-bottom nav bar
 
@@ -67,9 +67,10 @@ Job description and Individual tall ship page
 Page File Directory
 index.html >
 listings.html > description.html
+map.html (considering moving map.html to a seperate page)
 directory.html > tallships.html
-resources.html 
-signin.html
+resources.html > assets.html (still needs to be completed)
+signin.html (currently using firebase but needs programming) 
 profile.html
 settings.html
 
