@@ -237,24 +237,20 @@ a:hover {
 
 .card-link-text,
 .card-link-text:focus {
-  color: #666666;
+  color: #154360;
   text-decoration: none;
 }
 
 .card-link-text:hover {
-  color: #666666;
+  color: rgba(21, 67, 96, 0.6);
   text-decoration: none;
-  background-color: #f8f9fa;
-  -webkit-transition: background-color 1000ms linear;
-  -ms-transition: background-color 1000ms linear;
-  transition: background-color 1000ms linear;
 }
 
 /** Base structure **/
 body {
   overflow-x: hidden;
   font-family: 'Roboto', sans-serif;
-  color: #666666;
+  color: #154360;
   width: 100%;
 }
 
@@ -271,11 +267,11 @@ body {
 }
 
 .top-page-jumbo {
-  padding-top: 8.5rem;
+  padding-top: 8.75rem;
 }
 
 .top-page-jumbo-alt {
-  padding-top: 8.5rem;
+  padding-top: 5rem;
 }
 
 .results-container {

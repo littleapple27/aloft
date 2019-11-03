@@ -48,13 +48,14 @@
 
 		<div class="nice-scroll">
 
+
 			<!----Top Page Jumbotron---->
 			<div class="container-fluid top-page-jumbo bg-light px-0" id="pg-info-loads-here">
 				<div
 					class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2 d-flex flex-row align-items-center justify-content-between">
 					<h1 class="mb-0"><span class="font-weight-light font-green mr-n2">go</span><span
 							class="font-blue logo">ALOFT</span></h1>
-					<p class="mb-0 font-blue font-weight-light">Tall Ship Directory</p>
+					<p class="mb-0 font-blue font-weight-light">Welcome Sailor</p>
 				</div>
 			</div>
 
@@ -63,7 +64,7 @@
 			<!----Featured Tall Ship---->
 			<div class="container-fluid shadow py-5" id="feature-tallship">
 				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
-					<h3 class="font-lt-white">Tall Ship Beacon</h3>
+					<h3 class="font-lt-white">Beacon Tall Ship</h3>
 					<h1 class="display-4 font-white">Schooner Appledore II</h1>
 					<p class="lead font-white">Appledore II is a traditional two-masted wooden schooner, currently
 						privately
@@ -214,6 +215,7 @@
 								var contentString = '<h5 class="mb-1">' + features[i].placeName + '</h5><p class="font-weight-light">' + features[i].cityState + '</p><a class="paragraph-link" href=' + '"tallships.html"' + '>Learn More</a>'
 								;
 
+						
 								const marker = new google.maps.Marker({
 									position: features[i].LatLng[0],
 									icon: icons[features[i].type].icon,
@@ -242,6 +244,7 @@
 								 //});
 							}
 						}
+
 
 						function closeOtherInfo() {
 							if (InforObj.length > 0) {
@@ -553,10 +556,6 @@
 				<a href="settings.html" class="nav-link"><i class="fas fa-cog fa-2x"></i></a>
 			</div>
 
-			<div class="font-green d-flex flex-row">
-				<button class="btn btn-history font-weight-light font-small" type="button"
-					onclick="history.forward(1);"><i class="fas fa-arrow-right fa-1x"></i></button>
-			</div>
 		</div>
 
 
