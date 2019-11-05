@@ -1,6 +1,5 @@
 <!doctype html>
-<html lang="en">
-
+<html lang="en" manifest="cache.appcache">
 
 <head>
 	<!-- Required meta tags -->
@@ -9,19 +8,20 @@
 	<!--- Manifest --->
 	<link rel="manifest" href="manifest.webmanifest">
 	<!-- include PWACompat _after_ your manifest -->
-	<script async src="js/pwacompat.min.js"></script>
+	<script async src="https://cdn.jsdelivr.net/npm/pwacompat@2.0.9/pwacompat.min.js"
+		integrity="sha384-VcI6S+HIsE80FVM1jgbd6WDFhzKYA0PecD/LcIyMQpT4fMJdijBh0I7Iblaacawc" crossorigin="anonymous">
+	</script>
 
 	<!-- Turbolinks -->
 	<script src="js/turbolinks.js"></script>
 	<script>
-		//var Turbolinks = require("turbolinks")
+		var Turbolinks = require("turbolinks")
 		Turbolinks.start()
 	</script>
 
-	<title>Aloft: A Sailor's Resource Guide</title>
-
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<!-- Custom CSS -->
 	<link rel="stylesheet" href="css/custom.css">
@@ -32,11 +32,12 @@
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:700i&display=swap" rel="stylesheet">
 
 	<!--- Font Awesome --->
-	<link rel="stylesheet" href="css/all.min.css">
+	<script src="https://kit.fontawesome.com/bf44c917aa.js"></script>
 
 	<!---Slidebars CSS --->
 	<link rel="stylesheet" href="css/slidebars.min.css">
 
+	<title>Aloft: A Sailor's Resource Guide</title>
 
 </head>
 
@@ -48,14 +49,13 @@
 
 		<div class="nice-scroll">
 
-
 			<!----Top Page Jumbotron---->
 			<div class="container-fluid top-page-jumbo bg-light px-0" id="pg-info-loads-here">
 				<div
 					class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2 d-flex flex-row align-items-center justify-content-between">
 					<h1 class="mb-0"><span class="font-weight-light font-green mr-n2">go</span><span
 							class="font-blue logo">ALOFT</span></h1>
-					<p class="mb-0 font-blue font-weight-light">Welcome Sailor</p>
+					<p class="mb-0 font-blue font-weight-light">Tall Ship Directory</p>
 				</div>
 			</div>
 
@@ -64,19 +64,17 @@
 			<!----Featured Tall Ship---->
 			<div class="container-fluid shadow py-5" id="feature-tallship">
 				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto py-1">
-					<h3 class="font-lt-white">Beacon Tall Ship</h3>
 					<h1 class="display-4 font-white">Schooner Appledore II</h1>
 					<p class="lead font-white">Appledore II is a traditional two-masted wooden schooner, currently
-						privately owned and operated out of Camden, Maine and Key West, Florida. <a class="paragraph-link"
-							href="tallships.html" role="button">Learn more...</a></p>
+						privately
+						owned and operated out of Camden, Maine and Key West, Florida. <a class="paragraph-link"
+							href="#" role="button">Learn more...</a></p>
 				</div>
 			</div>
 
 			<!----Google Location Map---->
 			<div class="container-fluid bg-green shadow py-5" id="google-map">
-				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto px-2 py-1">
-
-
+				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto px-5 py-1">
 
 					<h2 class="display-4 font-white mb-0">Discover Tall Ships</h2>
 					<h2 class="font-white font-weight-light mb-0">Home Port</h2>
@@ -88,184 +86,92 @@
 
 
 					<!--The div element for the map -->
-
-			
-
-
-
 					<div id="map"></div>
 
 					<script>
-						var map;
-						var InforObj = [];
-						var centerCords = { //Geographical center of USA (Lebanon, KS)
-							lat: 39.810407,
-							lng: -98.556317
-						};
-
-						var iconBase =
-            				'img/';
-							
-							var icons = {
-							logo: {
-								icon: iconBase + 'map-marker-aloft.png'
-								}
-							}
-
-
-						var features = [{
-								placeName: "Timberwind",
-								type: 'logo',
-								cityState: 'Portland, ME',
-								LatLng: [{
-									lat: 43.655900,
-									lng: -70.248276
-								}]
-							},
-							{
-								placeName: "Bagheera",
-								type: 'logo',
-								cityState: 'Portland, ME',
-								LatLng: [{
-									lat: 43.656587,
-									lng: -70.248334
-								}]
-							},
-							{
-								placeName: "Wendameen",
-								type: 'logo',
-								cityState: 'Portland, ME',
-								LatLng: [{
-									lat: 43.656498,
-									lng: -70.248211
-								}]
-							},
-							{
-								placeName: "Appledore II (Winter)",
-								type: 'logo',
-								cityState: 'Key West, FL',
-								LatLng: [{
-									lat: 24.561135,
-									lng: -81.801849
-								}]
-							},
-							{
-								placeName: "Liberty Clipper",
-								type: 'logo',
-								cityState: 'Boston, MA',
-								LatLng: [{
-									lat: 42.359526,
-									lng: -71.048946
-								}]
-							},
-							{
-								placeName: "AJ Meerwald",
-								type: 'logo',
-								cityState: 'Bivalve, NJ',
-								LatLng: [{
-									lat: 39.233452,
-									lng: -75.033607
-								}]
-							},
-							{
-								placeName: "Liberty Star",
-								type: 'logo',
-								cityState: 'Boston, MA',
-								LatLng: [{
-									lat: 42.359543,
-									lng: -71.048615
-								}]
-							},
-							{
-								placeName: "Tallship Windy",
-								type: 'logo',
-								cityState: 'Navy Pier, Chicago, IL',
-								LatLng: [{
-									lat: 41.892190,
-									lng: -87.604969
-								}]
-							},
-							{
-								placeName: "Schooner Stephen Taber",
-								type: 'logo',
-								cityState: 'San Fransisco, CA',
-								LatLng: [{
-									lat: 37.800715,
-									lng: -122.396948
-								}]
-							},
-							{
-								placeName: "Appledore II (Summer)",
-								type: 'logo',
-								cityState: 'Camden, ME',
-								LatLng: [{
-									lat: 44.210332,
-									lng: -69.064164
-								}]
-							},
-						];
-
-						window.onload = function () {
-							initMap();
-						};
-
-						function addMarker() {
-							for (var i = 0; i < features.length; i++) {
-								var contentString = '<h5 class="mb-1">' + features[i].placeName + '</h5><p class="font-weight-light">' + features[i].cityState + '</p><a class="paragraph-link" href=' + '"tallships.html"' + '>Learn More</a>'
-								;
-
-						
-								const marker = new google.maps.Marker({
-									position: features[i].LatLng[0],
-									icon: icons[features[i].type].icon,
-									map: map
-								});
-
-								const infowindow = new google.maps.InfoWindow({
-									content: contentString,
-									maxWidth: 200
-								});
-
-								marker.addListener('click', function () {
-									closeOtherInfo();
-									infowindow.open(marker.get('map'), marker);
-									InforObj[0] = infowindow;
-								});
-								marker.addListener('mouseover', function () {
-									closeOtherInfo();
-								     infowindow.open(marker.get('map'), marker);
-								     InforObj[0] = infowindow;
-								 });
-								 //marker.addListener('mouseout', function () {
-								     //closeOtherInfo();
-								    //infowindow.close();
-								     //InforObj[0] = infowindow;
-								 //});
-							}
-						}
-
-
-						function closeOtherInfo() {
-							if (InforObj.length > 0) {
-								/* detach the info-window from the marker ... undocumented in the API docs */
-								InforObj[0].set("marker", null);
-								/* and close it */
-								InforObj[0].close();
-								/* blank the array */
-								InforObj.length = 0;
-							}
-						}
-
 						function initMap() {
-							map = new google.maps.Map(document.getElementById('map'), {
+
+							var map = new google.maps.Map(document.getElementById('map'), {
 								zoom: 3,
-								center: centerCords
+								center: {
+									lat: 36.618748,
+									lng: -76.029100
+								} //Virginia Beach for centering purposes only 
 							});
-							addMarker();
+
+							// Create an array of alphabetical characters used to label the markers.
+							var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
+
+							// Add some markers to the map.
+							// Note: The code uses the JavaScript Array.prototype.map() method to
+							// create an array of markers based on a given "locations" array.
+							// The map() method here has nothing to do with the Google Maps API.
+							var markers = locations.map(function (location, i) {
+								return new google.maps.Marker({
+									position: location,
+									label: labels[i % labels.length]
+								});
+							});
+
+							// Add a marker clusterer to manage the markers.
+							var markerCluster = new MarkerClusterer(map, markers, {
+								imagePath: 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/m'
+							});
 						}
+						var locations = [{
+								lat: 43.655900,
+								lng: -70.248276
+							}, //Timberwind
+							{
+								lat: 43.656587,
+								lng: -70.248334
+							}, //Bagheera
+							{
+								lat: 43.656498,
+								lng: -70.248211
+							}, //Wendameen
+							{
+								lat: 24.561135,
+								lng: -81.801849
+							}, //Appledore (Key West)
+							{
+								lat: 42.359526,
+								lng: -71.048946
+							}, //Liberty Clipper
+							{
+								lat: 39.233452,
+								lng: -75.033607
+							}, //AJ Meerwald
+							{
+								lat: 42.359543,
+								lng: -71.048615
+							}, //Liberty Star
+							{
+								lat: 41.892190,
+								lng: -87.604969
+							}, //Navy Pier, Chicago
+							{
+								lat: 37.800715,
+								lng: -122.396948
+							}, //San Fransisco
+							{
+								lat: 44.210332,
+								lng: -69.064164
+							}, //Camden, ME
+
+
+						]
 					</script>
 
+					<script
+						src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+					</script>
 
+					<!--Load the API from the specified URL
+						* The async attribute allows the browser to render the page while the API loads
+						* The key parameter will contain your own API key (which is not needed for this tutorial)
+						* The callback parameter executes the initMap() function
+						-->
 
 					<script async defer
 						src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rtCFihDV7b_6WMPFkMnp4BqoA4woz5A&callback=initMap">
@@ -341,7 +247,7 @@
 				<!----Section Heading: Search Results ---->
 				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 px-0">
 					<!--- Nav Pills --->
-					<nav class="breadcrumb-revised" aria-label="breadcrumb ">
+					<nav aria-label="breadcrumb ">
 						<ul class="nav nav-pills pb-2 mb-2 pl-3">
 							<li class="font-xs font-weight-light mr-3">
 								<a class="inactive-pills" href="index.html">Index</a>
@@ -555,6 +461,10 @@
 				<a href="settings.html" class="nav-link"><i class="fas fa-cog fa-2x"></i></a>
 			</div>
 
+			<div class="font-green d-flex flex-row">
+				<button class="btn btn-history font-weight-light font-small" type="button"
+					onclick="history.forward(1);"><i class="fas fa-arrow-right fa-1x"></i></button>
+			</div>
 		</div>
 
 
@@ -562,8 +472,7 @@
 			<!----Section Headings---->
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 pb-1">
 				<div class="form-group rounded d-flex flex-row">
-					<input type="text" id="searchInput" onkeyup="searchFunction()" class="form-control"
-						placeholder="Search tall ship directory">
+					<input type="text" id="searchInput" onkeyup="searchFunction()" class="form-control" placeholder="Search tall ship directory">
 					<button class="btn btn-md btn-primary-search font-weight-light font-xs"><i
 							class="fa fa-search"></i></button>
 				</div>
@@ -648,27 +557,27 @@
 
 
 
-
 	<!-- Optional JavaScript -->
 	<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-	<script src="js/jquery.min.js"></script>
-	<script src="js/popper.min.js">
+	<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+		integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+		integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
 	</script>
-	<script src="js/bootstrap.min.js">
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+		integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 	</script>
 
 	<!-- Plug-ins -->
 	<script src="js/slidebars.min.js"></script>
-	<script src="js/lazyload.min.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 	<script src="js/jquery.nicescroll.min.js"></script>
-
 
 	<!-- Custom JS-->
 	<script src="js/custom.js"></script>
 
 	<!--- Service Workder --->
 	<script src="sw.js"></script>
-
 
 	<!---Search Filter --->
 	<script>

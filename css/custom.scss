@@ -400,13 +400,15 @@ input:-moz-placeholder { /* Firefox 18- */
     background-size: cover;
 }
 
-#feature-crew {
-    background-image: -moz-linear-gradient(45deg, rgba(21,67,96,.8) 25%, rgba(21,67,96,.8) 100%), url("../img/crew.png");
-    background-image: -webkit-linear-gradient(45deg,rgba(21,67,96,.8) 25%,rgba(21,67,96,.8) 100%), url("../img/crew.png");
-    background-image: linear-gradient(45deg, rgba(21,67,96,.8) 25%,rgba(21,67,96,.96) 100%), url("../img/crew.png");
-    background-position: bottom left;
+#feature-company {
+    background-image: -moz-linear-gradient(45deg, rgba(21,67,96,.8) 25%, rgba(21,67,96,.8) 100%), url("../img/neropes-img.png");
+    background-image: -webkit-linear-gradient(45deg,rgba(21,67,96,.8) 25%,rgba(21,67,96,.8) 100%), url("../img/neropes-img.png");
+    background-image: linear-gradient(45deg, rgba(21,67,96,.8) 25%,rgba(21,67,96,.96) 100%), url("../img/neropes-img.png");
+    background-position: center center;
     background-size: cover;
 }
+
+
 
 /////Lazy Img Load/////
 img.lazy {
