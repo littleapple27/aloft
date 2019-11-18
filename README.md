@@ -1,79 +1,106 @@
-# aloft
-INF 654: Mobile Application Final Project - ALOFT 
-
-Application Instructions
-
-Initial Launch
-1)	To launch the application, click on index.html
-2)	To view job listings page, click on index page ‘job listings’ button and redirect to listings.html
-3)	To view map, click on the index page ‘explore map’ button to access and redirect to map.html
-4)	To view tall ship directly, click on the index page ‘discover tall ships’ button and redirect to directory.html
-5)	To view sailing resources, click on the index page ‘resources for sailors’ button and redirect to resources.html
-
-Alternatively, access all of the above features by clicking on the menu icon located in the bottom left corner of the application.  This will trigger a left side slide-out menu.
-
-Sign-In
-1)	To ‘sign-in’ to the application, click on the sign-in icon located in the bottom right corner of the screen and redirect to signin.html
-
-Alternatively, sign-in to the application by accessing the sign-in option by clicking on the menu icon and choosing the sign-in option from the left side slide-out menu.   (This feature is not fully functional).  
-
-
-Bottom Navigation Bar (from left to right)
-•	Main application menu 
-•	Home ‘index.html’ icon
-•	Logo
-•	Notification icon (not active)
-•	Sign-in icon 
-
-Top Navigation Bar (from left to right)
-•	Left arrow – directs users to -1 history
-•	User profile icon* – directs users to user profile page
-•	Cog icon* – directs users to application settings page
-•	Right arrow – directs users to +1 history 
-
-Application Menu (top to bottom)
-•	Application settings*
-•	User profile*
-•	Help (not active)
-•	About (not active)
-•	Sailing Resources
-•	Discover Tall Ships
-•	Explore Map
-•	Job Listings
-•	Sign-in
-
-Job Listings, Tall Ship Directory, Sailing and Resources Page 
-(top to bottom)
-•	Fixed-top nav bar
-•	Fixed-top search bar
-•	Logo & page heading
-•	Feature Jumbotron
-•	Refine search results (functional)
-•	Search results / all listings
-•	Fixed-bottom nav bar
-
-Job description and Individual tall ship page
-(top to bottom)
-•	Fixed-top nav bar
-•	Fixed-top search bar
-•	Feature Jumbotron
-•	Feature carousel image slider
-•	Description
-•	Apply now button (option triggers modal that asks users if they would like to submit profile, only available on job description page)
-•	Now Hiring button (button link redirects users to active job listing, only available on tall ship description page)
-•	Star icon – save to favorites list
-•	Share icon – share to others 
-
-Page File Directory
-index.html >
-listings.html > description.html
-map.html (considering moving map.html to a seperate page)
-directory.html > tallships.html
-resources.html > assets.html (still needs to be completed)
-signin.html (currently using firebase but needs programming) 
-profile.html
-settings.html
 
 
 
 
+
+
+
+
+ 
+
+
+
+Andrea Legleiter
+INF 654: Mobile Web Development
+Final Project
+
+
+
+
+
+
+
+
+
+
+
+ 
+How to Access Application
+1.	Visit https://littleapple27.github.io/aloft to access the application.
+2.	You will be prompted to login using Google, Facebook or email (Firebase).  
+
+
+
+
+
+
+
+
+Application Docking Page  
+3.	You  will be redirected to the docking page upon successful login. (dock.html)
+4.	You will be met with a short greeting message which verifies login.  You must login in order to view the docking page.
+5.	You will be able to navigate to application supporting content from here.  
+
+
+
+
+Application Supporting Pages  
+6.	Job Listings (listings.html) >> Comprehensive list of all job postings with short introductory description that links to full job listing description (description.html), search/filter functions, and feature  job listing at top of page.  
+
+
+
+
+7.	Explore Map (map.html) >> Interactive Google Map showing the location of each tall ship listed in the directory quick stats popover and link (tallships.html).  Also includes button link to access Tall Ship directory (directory.html). 
+
+
+
+
+
+
+
+
+
+8.	Discover Tall Ships (directory.html) >> Comprehensive tall ship list with short introductory description that links to full vessel description (tallships.html), search/filter function, and beacon tall ship at the top of the page.  
+
+
+
+
+
+
+9.	Resources for Sailors (resources.html) >> Comprehensive sailing resources list with short introductory description that links to full asset description (assets.html), search/filter function, and spotlight resource at the top of the page.  
+Application Navigation 
+10.	After logging in, you gain access to the bottom navigation icons.  This is accessible on all pages of the application.  
+•	   >> Main Application Menu  >> Triggers left side slide out menu 
+•	   >>  Redirects users to dock.html
+•	   >>   Signs user out of the application and redirects back to application login screen (index.html)
+
+
+
+11.	The left side slide out menu is accessible by clicking on the     icon and is accessible on all pages of the application.  The following is a list of choices available on the slide out menu.  
+  Settings >> Click to access application settings
+  Profile >> Click to access user profile 
+  Help >> Click to access application help (not active)
+About goALOFT  >> Click to learn more about application (not active)
+  Sailing Resources >> Click to access sailing resources page (resources.html)
+  Discover Tall Ships >> Click to access Tall Ship Directory (directory.html)
+  Explore Map >> Click to access interactive Google Map (map.html)
+  Job Listings >> Click to access job listings page (listings.html)
+  Sign Out >> Click to sign out of application and redirect to index.html
+Application Frameworks & Dependencies
+Here is a list of the application’s unique features
+12.	manifest.webmanifest (Web Manifest)
+13.	sw.js (Service Worker)
+14.	js/bootstrap.min.js
+15.	js/jquery.min.js 
+16.	js/lazyload.js
+17.	js/slidebars.js
+18.	js/lazyload.min.js
+19.	js/jquery.nicescroll.min.js 
+20.	js/custom.js
+21.	js/turbolinks.js 
+22.	js/pwacompat.min.js 
+23.	css/slidebars.min.css
+24.	css/custom.min.css
+25.	css/all.min.css (Font Awesome) 
+26.	 Google Fonts 
+27.	Firebase
