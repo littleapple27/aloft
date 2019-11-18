@@ -24,7 +24,7 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="css/custom.css">
+	<link rel="stylesheet" href="css/custom.min.css">
 
 	<!--- Google Fonts --->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700|Roboto:300,500&display=swap"
@@ -37,24 +37,20 @@
 	<!---Slidebars CSS --->
 	<link rel="stylesheet" href="css/slidebars.min.css">
 
+
 </head>
 
 
+
 <body class="bg-white">
-
-
-
-
-
 
 	<div class="side-shadow scroll-container" canvas="container">
 
 		<div class="nice-scroll">
 
 			<!----Top Page Jumbotron---->
-			<div class="container-fluid top-page-jumbo-alt bg-light px-0" id="pg-info-loads-here">
-				<div
-					class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2 d-flex flex-row align-items-center justify-content-between">
+			<div class="container-fluid top-page-jumbo-alt bg-light px-0" id="">
+				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2 d-flex flex-row align-items-center justify-content-between">
 					<h1 class="mb-0"><span class="font-weight-light font-green mr-n2">go</span><span
 							class="font-blue logo">ALOFT</span></h1>
 					<p class="mb-0 font-blue font-weight-light">Welcome Sailor</p>
@@ -62,135 +58,215 @@
 			</div>
 
 
-			<!----Company Jumbo---->
-			<div class="container-fluid bg-blue shadow py-5" id="feature-company">
-				
-				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2">
-				<h3 class="font-lt-white">Resource Profile</h3>
-				<h1 class="display-4 font-white">New England Ropes</h1>
-				<p class="lead font-white">Largest porfolio of marine ropes worldwide.</p>
-			</div>
-			</div>
+
+
+
+			<!----Google Location Map---->
+			<div class="container-fluid bg-blue pt-3 results-container" id="google-map">
+				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto px-2 py-1">
+
+
+
+					<h2 class="display-4 font-white mb-0">Discover Tall Ships</h2>
+					<h2 class="font-white font-weight-light mb-0">Home Port</h2>
+
+
+					<p class="font-weight-light font-lt-white mb-2">Click<i class="fas fa-map-marker-alt px-2"></i> to
+						view
+						Quick Stats</p>
+
+
+					<!--The div element for the map -->
 
 
 
 
 
-			<div class="container-fluid bg-lt-blue-3 shadow search-container py-3">
-				<!----Section Headings---->
-				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto">
+					<div id="map"></div>
 
-					<div class="d-flex flex-row align-items-center"><a href="https://www.neropes.com"
-							class="card-link-text target=_blank"><i
-								class="fas fa-external-link-alt fa-2x "></i>&nbsp;&nbsp;&nbsp;&nbsp;https://www.neropes.com/</a>
+					<script>
+						var map;
+						var InforObj = [];
+						var centerCords = {
+							lat: 39.810407,
+							lng: -98.556317
+						};
+
+						var iconBase =
+							'img/';
+
+						var icons = {
+							logo: {
+								icon: iconBase + 'map-marker-aloft.png'
+							}
+						}
+
+
+						var features = [{
+								placeName: "Timberwind",
+								type: 'logo',
+								cityState: 'Portland, ME',
+								LatLng: [{
+									lat: 43.655900,
+									lng: -70.248276
+								}]
+							},
+							{
+								placeName: "Bagheera",
+								type: 'logo',
+								cityState: 'Portland, ME',
+								LatLng: [{
+									lat: 43.656587,
+									lng: -70.248334
+								}]
+							},
+							{
+								placeName: "Wendameen",
+								type: 'logo',
+								cityState: 'Portland, ME',
+								LatLng: [{
+									lat: 43.656498,
+									lng: -70.248211
+								}]
+							},
+							{
+								placeName: "Appledore II (Winter)",
+								type: 'logo',
+								cityState: 'Key West, FL',
+								LatLng: [{
+									lat: 24.561135,
+									lng: -81.801849
+								}]
+							},
+							{
+								placeName: "Liberty Clipper",
+								type: 'logo',
+								cityState: 'Boston, MA',
+								LatLng: [{
+									lat: 42.359526,
+									lng: -71.048946
+								}]
+							},
+							{
+								placeName: "AJ Meerwald",
+								type: 'logo',
+								cityState: 'Bivalve, NJ',
+								LatLng: [{
+									lat: 39.233452,
+									lng: -75.033607
+								}]
+							},
+							{
+								placeName: "Liberty Star",
+								type: 'logo',
+								cityState: 'Boston, MA',
+								LatLng: [{
+									lat: 42.359543,
+									lng: -71.048615
+								}]
+							},
+							{
+								placeName: "Tallship Windy",
+								type: 'logo',
+								cityState: 'Navy Pier, Chicago, IL',
+								LatLng: [{
+									lat: 41.892190,
+									lng: -87.604969
+								}]
+							},
+							{
+								placeName: "Schooner Stephen Taber",
+								type: 'logo',
+								cityState: 'San Fransisco, CA',
+								LatLng: [{
+									lat: 37.800715,
+									lng: -122.396948
+								}]
+							},
+							{
+								placeName: "Appledore II (Summer)",
+								type: 'logo',
+								cityState: 'Camden, ME',
+								LatLng: [{
+									lat: 44.210332,
+									lng: -69.064164
+								}]
+							},
+						];
+
+						window.onload = function () {
+							initMap();
+						};
+
+						function addMarker() {
+							for (var i = 0; i < features.length; i++) {
+								var contentString = '<h5 class="mb-1">' + features[i].placeName + '</h5><p class="font-weight-light">' + features[i].cityState + '</p><a class="paragraph-link" href=' + '"tallships.html"' + '>Learn More</a>';
+
+								const marker = new google.maps.Marker({
+									position: features[i].LatLng[0],
+									icon: icons[features[i].type].icon,
+									map: map
+								});
+
+								const infowindow = new google.maps.InfoWindow({
+									content: contentString,
+									maxWidth: 200
+								});
+
+								marker.addListener('click', function () {
+									closeOtherInfo();
+									infowindow.open(marker.get('map'), marker);
+									InforObj[0] = infowindow;
+								});
+								marker.addListener('mouseover', function () {
+									closeOtherInfo();
+									infowindow.open(marker.get('map'), marker);
+									InforObj[0] = infowindow;
+								});
+								//marker.addListener('mouseout', function () {
+								//closeOtherInfo();
+								//infowindow.close();
+								//InforObj[0] = infowindow;
+								//});
+							}
+						}
+
+						function closeOtherInfo() {
+							if (InforObj.length > 0) {
+								/* detach the info-window from the marker ... undocumented in the API docs */
+								InforObj[0].set("marker", null);
+								/* and close it */
+								InforObj[0].close();
+								/* blank the array */
+								InforObj.length = 0;
+							}
+						}
+
+						function initMap() {
+							map = new google.maps.Map(document.getElementById('map'), {
+								zoom: 3,
+								center: centerCords
+							});
+							addMarker();
+						}
+					</script>
+
+
+
+					<script async defer
+						src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDxCWVMKRaE2s8rWexc3CW_sCUvcBLKLdQ&callback=initMap">
+					</script>
+
+					<div class="col-12 px-0 py-4 text-right">
+						<a href="directory.html" class="btn btn-md btn-secondary btn py-3 h-100"><i
+								class="fas fa-binoculars py-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+								class="font-weight-light">View Tall Ship Directory</span></a>
 					</div>
 
 				</div>
 			</div>
-			<!--- Start of Search Fields --->
 
-
-
-
-
-			<div class="container-fluid pt-2 px-0">
-				<!----Section Heading: Search Results ---->
-				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 px-0">
-					<!--- Nav Breadcrumb --->
-					<nav aria-label="breadcrumb ">
-						<ul class="nav nav-pills pb-2 mb-2 pl-3">
-							<li class="font-xs font-weight-light mr-3">
-								<a class="inactive-pills" href="resources.html">Resources - All</a>
-							</li>
-
-							<li class="font-xs font-weight-light mr-3">
-								<span class="font-lt-green">/</span>
-							</li>
-
-							<li class="font-xs font-weight-light mr-3">
-								<a class="active-pills" href="company.html">Company</a>
-							</li>
-						</ul>
-					</nav>
-
-					<!----Start of Search Results Cards ---->
-					<div class="results-container font-blue px-3" id="fullcompany">
-
-						<div class="row mb-4">
-							<div class="col-12">
-								<h2>Services</h2>
-								<div class="row">
-									<div class="col-4">
-										<img src="img/neropes-logo.png" alt="new england ropes logo"
-						style="background: #f9f9f9;" class="p-3 img-thumbnail" />
-									</div>
-
-									<div class="col-8">
-								<p class="font-weight-light">What is an exciting brand for Pleasure Marine today,
-									started 1967 in New Bedford, MA: New England Ropes.</p>
-						
-								<p class="font-weight-light">Back then it was making its signature product at the time,
-									3-strand premium nylon. The same product is produced today to the same exacting
-									standards. A half century later, the brand is still committed to quality, innovation
-									and continuous improvement.</p>
-							</div>
-							</div>
-						</div>
-						</div>
-
-						<div class="row mb-4 no-gutters">
-							<div class="col-12">
-								<h2>Featured Products</h2>
-							</div>
-
-							<div class="col-6 px-1">
-								<div class="card">
-									<img class="card-img-top" src="img/placeholder.png" alt="Card image cap">
-									<div class="card-body">
-										<p class="card-text">Some quick example text to build on the card title and make
-											up the bulk of the card's content.</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-6 px-1">
-								<div class="card">
-									<img class="card-img-top" src="img/placeholder.png" alt="Card image cap">
-									<div class="card-body">
-										<p class="card-text">Some quick example text to build on the card title and make
-											up the bulk of the card's content.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-
-						<div class="row no-gutters">
-							<div class="col-6 px-1">
-								<div class="card">
-									<img class="card-img-top" src="img/placeholder.png" alt="Card image cap">
-									<div class="card-body">
-										<p class="card-text">Some quick example text to build on the card title and make
-											up the bulk of the card's content.</p>
-									</div>
-								</div>
-							</div>
-
-							<div class="col-6 px-1">
-								<div class="card">
-									<img class="card-img-top" src="img/placeholder.png" alt="Card image cap">
-									<div class="card-body">
-										<p class="card-text">Some quick example text to build on the card title and make
-											up the bulk of the card's content.</p>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!---End of .results-container #searchResults Div--->
-
-			</div>
-			<!---End of search wrapper div-->
+			<!--- API Key AIzaSyDxCWVMKRaE2s8rWexc3CW_sCUvcBLKLdQ --->
 
 		</div>
 		<!---End of nice scroll container-->
@@ -222,10 +298,13 @@
 		<div class="container-fluid bg-green shadow search-container">
 			<!----Section Headings---->
 			<div class="col-lg-8 col-md-10 col-sm-12 mx-auto pt-3 pb-1">
+
 			</div>
 		</div>
 	</div>
 	<!----------- End of Fixed Header Container ----------->
+
+
 	<!------ Fixed Footer Menu --------->
 	<footer class="navbar fixed-bottom navbar-dark bg-blue top-shadow" id="menu" canvas="">
 		<!--- Bottom Hamburger Toggle Icon --->
@@ -289,7 +368,7 @@
 				<div class="nav-hover pl-3 d-flex align-items-center h-100 nav-item text-uppercase">
 					<a class="nav-link" href="index.html"><i
 							class="fas fa-sign-out-alt pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
-							class="font-weight-light">Sign In</span></a>
+							class="font-weight-light">Sign Out</span></a>
 				</div>
 
 			</div>
@@ -321,28 +400,6 @@
 
 	<!--- Service Workder --->
 	<script src="sw.js"></script>
-
-
-	<!---Search Filter --->
-	<script>
-		//Search Filter Function
-		function searchFunction() {
-			var input, filter, divOuter, divInner, a, i, txtValue;
-			input = document.getElementById("searchInput");
-			filter = input.value.toUpperCase();
-			divOuter = document.getElementById("searchResults");
-			divInner = divOuter.getElementsByClassName("divInner");
-			for (i = 0; i < divInner.length; i++) {
-				a = divInner[i].getElementsByTagName("a")[0];
-				txtValue = a.textContent || a.innerText;
-				if (txtValue.toUpperCase().indexOf(filter) > -1) {
-					divInner[i].style.display = "";
-				} else {
-					divInner[i].style.display = "none";
-				}
-			}
-		}
-	</script>
 
 
 </body>

@@ -29,6 +29,7 @@
             '/settings.html',
             '/tallships.html',
             '/css/custom.min.css',
+            '/css/custom.css',
             '/css/slidebars.min.css',
             '/css/all.min.css',
             '/css/bootstrap.min.css',

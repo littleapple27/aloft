@@ -72,213 +72,6 @@
 				</div>
 			</div>
 
-			<!----Google Location Map---->
-			<div class="container-fluid bg-green shadow py-5" id="google-map">
-				<div class="col-lg-8 col-md-10 col-sm-12 mx-auto px-2 py-1">
-
-
-
-					<h2 class="display-4 font-white mb-0">Discover Tall Ships</h2>
-					<h2 class="font-white font-weight-light mb-0">Home Port</h2>
-
-
-					<p class="font-weight-light font-lt-white mb-2">Click<i class="fas fa-map-marker-alt px-2"></i> to
-						view
-						Quick Stats</p>
-
-
-					<!--The div element for the map -->
-
-			
-
-
-
-					<div id="map"></div>
-
-					<script>
-						var map;
-						var InforObj = [];
-						var centerCords = { //Geographical center of USA (Lebanon, KS)
-							lat: 39.810407,
-							lng: -98.556317
-						};
-
-						var iconBase =
-            				'img/';
-							
-							var icons = {
-							logo: {
-								icon: iconBase + 'map-marker-aloft.png'
-								}
-							}
-
-
-						var features = [{
-								placeName: "Timberwind",
-								type: 'logo',
-								cityState: 'Portland, ME',
-								LatLng: [{
-									lat: 43.655900,
-									lng: -70.248276
-								}]
-							},
-							{
-								placeName: "Bagheera",
-								type: 'logo',
-								cityState: 'Portland, ME',
-								LatLng: [{
-									lat: 43.656587,
-									lng: -70.248334
-								}]
-							},
-							{
-								placeName: "Wendameen",
-								type: 'logo',
-								cityState: 'Portland, ME',
-								LatLng: [{
-									lat: 43.656498,
-									lng: -70.248211
-								}]
-							},
-							{
-								placeName: "Appledore II (Winter)",
-								type: 'logo',
-								cityState: 'Key West, FL',
-								LatLng: [{
-									lat: 24.561135,
-									lng: -81.801849
-								}]
-							},
-							{
-								placeName: "Liberty Clipper",
-								type: 'logo',
-								cityState: 'Boston, MA',
-								LatLng: [{
-									lat: 42.359526,
-									lng: -71.048946
-								}]
-							},
-							{
-								placeName: "AJ Meerwald",
-								type: 'logo',
-								cityState: 'Bivalve, NJ',
-								LatLng: [{
-									lat: 39.233452,
-									lng: -75.033607
-								}]
-							},
-							{
-								placeName: "Liberty Star",
-								type: 'logo',
-								cityState: 'Boston, MA',
-								LatLng: [{
-									lat: 42.359543,
-									lng: -71.048615
-								}]
-							},
-							{
-								placeName: "Tallship Windy",
-								type: 'logo',
-								cityState: 'Navy Pier, Chicago, IL',
-								LatLng: [{
-									lat: 41.892190,
-									lng: -87.604969
-								}]
-							},
-							{
-								placeName: "Schooner Stephen Taber",
-								type: 'logo',
-								cityState: 'San Fransisco, CA',
-								LatLng: [{
-									lat: 37.800715,
-									lng: -122.396948
-								}]
-							},
-							{
-								placeName: "Appledore II (Summer)",
-								type: 'logo',
-								cityState: 'Camden, ME',
-								LatLng: [{
-									lat: 44.210332,
-									lng: -69.064164
-								}]
-							},
-						];
-
-						window.onload = function () {
-							initMap();
-						};
-
-						function addMarker() {
-							for (var i = 0; i < features.length; i++) {
-								var contentString = '<h5 class="mb-1">' + features[i].placeName + '</h5><p class="font-weight-light">' + features[i].cityState + '</p><a class="paragraph-link" href=' + '"tallships.html"' + '>Learn More</a>'
-								;
-
-						
-								const marker = new google.maps.Marker({
-									position: features[i].LatLng[0],
-									icon: icons[features[i].type].icon,
-									map: map
-								});
-
-								const infowindow = new google.maps.InfoWindow({
-									content: contentString,
-									maxWidth: 200
-								});
-
-								marker.addListener('click', function () {
-									closeOtherInfo();
-									infowindow.open(marker.get('map'), marker);
-									InforObj[0] = infowindow;
-								});
-								marker.addListener('mouseover', function () {
-									closeOtherInfo();
-								     infowindow.open(marker.get('map'), marker);
-								     InforObj[0] = infowindow;
-								 });
-								 //marker.addListener('mouseout', function () {
-								     //closeOtherInfo();
-								    //infowindow.close();
-								     //InforObj[0] = infowindow;
-								 //});
-							}
-						}
-
-
-						function closeOtherInfo() {
-							if (InforObj.length > 0) {
-								/* detach the info-window from the marker ... undocumented in the API docs */
-								InforObj[0].set("marker", null);
-								/* and close it */
-								InforObj[0].close();
-								/* blank the array */
-								InforObj.length = 0;
-							}
-						}
-
-						function initMap() {
-							map = new google.maps.Map(document.getElementById('map'), {
-								zoom: 3,
-								center: centerCords
-							});
-							addMarker();
-						}
-					</script>
-
-
-
-					<script async defer
-						src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB9rtCFihDV7b_6WMPFkMnp4BqoA4woz5A&callback=initMap">
-					</script>
-
-				</div>
-			</div>
-
-			<!--- API Key AIzaSyB9rtCFihDV7b_6WMPFkMnp4BqoA4woz5A --->
-
-
-
-
 
 			<div class="container-fluid bg-lt-blue-3 shadow search-container py-3">
 				<!----Section Headings---->
@@ -344,7 +137,7 @@
 					<nav class="breadcrumb-revised" aria-label="breadcrumb ">
 						<ul class="nav nav-pills pb-2 mb-2 pl-3">
 							<li class="font-xs font-weight-light mr-3">
-								<a class="inactive-pills" href="index.html">Index</a>
+								<a class="inactive-pills" href="dock.html">Index</a>
 							</li>
 							<li class="font-xs font-weight-light mr-3">
 								<span class="font-lt-green">/</span>
@@ -580,11 +373,11 @@
 			autocomplete="off">☰</button>
 
 		<!--- Bottom Navbar Icons --->
-		<a href="index.html" class="navlink"><i class="fas fa-home fa-2x"></i></a>
+		<a href="dock.html" class="navlink"><i class="fas fa-home fa-2x"></i></a>
 		<div class=""><span class="font-weight-light font-lt-white mr-n1">go</span><span
 				class="font-white logo">ALOFT</span></div>
 		<a href="#" class="btm-nb-i"><i class="fas fa-bell fa-2x"></i></a>
-		<a href="signin.html" class="btm-nb-i"><i class="fas fa-sign-in-alt fa-2x"></i></a>
+		<a href="index.html" class="btm-nb-i"><i class="fas fa-sign-out-alt fa-2x"></i></a>
 	</footer>
 
 
@@ -624,7 +417,7 @@
 							class="font-weight-light">Discover Tall Ships</span></a>
 				</div>
 				<div class="nav-hover pl-3 border-bottom d-flex align-items-center h-100 nav-item text-uppercase">
-					<a class="nav-link" href="directory.html#google-map"><i
+					<a class="nav-link" href="map.html"><i
 							class="fas fa-map-marked pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
 							class="font-weight-light">Explore Map</span></a>
 				</div>
@@ -634,9 +427,9 @@
 							Listings</span></a>
 				</div>
 				<div class="nav-hover pl-3 d-flex align-items-center h-100 nav-item text-uppercase">
-					<a class="nav-link" href="signin.html"><i
-							class="fas fa-sign-in-alt pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
-							class="font-weight-light">Sign In</span></a>
+					<a class="nav-link" href="index.html"><i
+							class="fas fa-sign-out-alt pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">Sign Out</span></a>
 				</div>
 
 			</div>

@@ -6,6 +6,7 @@
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+	<meta name="turbolinks-visit-control" content="reload">
 	<!--- Manifest --->
 	<link rel="manifest" href="manifest.webmanifest">
 	<!-- include PWACompat _after_ your manifest -->
@@ -50,47 +51,44 @@
 	<script src="https://cdn.firebase.com/libs/firebaseui/4.2.0/firebaseui.js"></script>
 	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.2.0/firebaseui.css" />
 	<script type="text/javascript">
-			initApp = function () {
-				firebase.auth().onAuthStateChanged(function (user) {
-					if (user) {
-						// User is signed in.
-						var displayName = user.displayName;
-						var email = user.email;
-						var emailVerified = user.emailVerified;
-						var photoURL = user.photoURL;
-						var uid = user.uid;
-						var phoneNumber = user.phoneNumber;
-						var providerData = user.providerData;
-						user.getIdToken().then(function (accessToken) {
-							document.getElementById('sign-in-status').textContent = 'Signed in';
-							document.getElementById('sign-in').textContent = 'Sign out';
-							document.getElementById('account-details').textContent = JSON.stringify({
-								displayName: displayName,
-								email: email,
-								emailVerified: emailVerified,
-								phoneNumber: phoneNumber,
-								photoURL: photoURL,
-								uid: uid,
-								accessToken: accessToken,
-								providerData: providerData
-							}, null, '  ');
-						});
-					} else {
-						// User is signed out.
-						document.getElementById('sign-in-status').textContent = 'Signed out';
-						document.getElementById('sign-in').textContent = 'Sign in';
-						document.getElementById('account-details').textContent = 'null';
-					}
-				}, function (error) {
-					console.log(error);
-				});
-			};
+		initApp = function () {
+			var currentUid = null;  
+			firebase.auth().onAuthStateChanged(function (user) {
+				if (user && user.uid != currentUid) {
+					// User is signed in.
+					var displayName = user.displayName;
+					var email = user.email;
+					var emailVerified = user.emailVerified;
+					currentUid = user.uid;
+					var providerData = user.providerData;
+					user.getIdToken().then(function (accessToken) {
+						document.getElementById('sign-in-status').textContent = 'Welcome, ' + user.displayName + '!';
+						document.getElementById('sign-in').textContent = 'Sign out';
+						document.getElementById('account-details').textContent = JSON.stringify({
+							displayName: displayName,
+							email: email,
+							emailVerified: emailVerified,
+							photoURL: photoURL,
+							uid: uid,
+							accessToken: accessToken,
+							providerData: providerData
+						}, null, '  ');
+					});
+				} else {
+					currentUid = null; 
+					// User is signed out.
+					document.getElementById('sign-in-status').textContent = 'Signed out';
+					document.getElementById('sign-in').textContent = 'Sign in';
+				}
+			}, function (error) {
+				console.log(error);
+			});
+		};
 
-		window.addEventListener('load', function () {
+	window.addEventListener('load', function () {
 			initApp();
 		});
 	</script>
-
 
 
 	<!-- Bootstrap CSS -->
@@ -125,7 +123,7 @@
 					class="col-lg-8 col-md-10 col-sm-12 mx-auto mb-0 py-2 d-flex flex-row align-items-center justify-content-between">
 					<h1 class="mb-0"><span class="font-weight-light font-green mr-n2">go</span><span
 							class="font-blue logo">ALOFT</span></h1>
-							<p class="mb-0 font-blue font-weight-light">Welcome Sailor</p>
+							<p class="mb-0 font-blue font-weight-light" id="sign-in-status"></p>
 				</div>
 			</div>
 
@@ -217,7 +215,7 @@
 					<nav class="breadcrumb-revised"aria-label="breadcrumb">
 						<ul class="nav nav-pills pb-2 mb-2 pl-3">
 							<li class="font-xs font-weight-light mr-3">
-								<a class="inactive-pills" href="index.html">Home</a>
+								<a class="inactive-pills" href="dock.html">Home</a>
 							</li>
 							<li class="font-xs font-weight-light mr-3">
 								<span class="font-lt-green">/</span>
@@ -424,12 +422,12 @@
 			</div>
 
 			<div class="ml-auto">
-				<a href="profile.html" data-turbolinks-action="replace" class="nav-link"><i
+				<a href="profile.html"   class="nav-link"><i
 						class="fas fa-user-circle fa-2x"></i></a>
 			</div>
 
 			<div class="">
-				<a href="settings.html" data-turbolinks-action="replace" class="nav-link"><i
+				<a href="settings.html"   class="nav-link"><i
 						class="fas fa-cog fa-2x"></i></a>
 			</div>
 
@@ -457,12 +455,12 @@
 			autocomplete="off">☰</button>
 
 		<!--- Bottom Navbar Icons --->
-		<a href="index.html" data-turbolinks-action="replace" class="navlink"><i class="fas fa-home fa-2x"></i></a>
+		<a href="dock.html" class="navlink"><i class="fas fa-home fa-2x"></i></a>
 		<div class=""><span class="font-weight-light font-lt-white mr-n1">go</span><span
 				class="font-white logo">ALOFT</span></div>
-		<a href="#" data-turbolinks-action="replace" class="btm-nb-i"><i class="fas fa-bell fa-2x"></i></a>
-		<a href="signin.html" data-turbolinks-action="replace" class="btm-nb-i"><i
-				class="fas fa-sign-in-alt fa-2x"></i></a>
+		<a href="#" class="btm-nb-i"><i class="fas fa-bell fa-2x"></i></a>
+		<a href="#" class="btm-nb-i sign-out"><i
+				class="fas fa-sign-out-alt fa-2x"></i></a>
 	</footer>
 
 
@@ -472,51 +470,51 @@
 			<div class="h-100 navbar-nav d-flex flex-column justify-content-between navbar-padding" id="">
 
 				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase active ">
-					<a class="nav-link" href="settings.html" data-turbolinks-action="replace"><i
+					<a class="nav-link" href="settings.html" ><i
 							class="fas fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
 							class="font-weight-light">Settings</span><span class="sr-only">(current)</span></a>
 				</div>
 				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase active ">
-					<a class="nav-link" href="profile.html" data-turbolinks-action="replace"><i
+					<a class="nav-link" href="profile.html"  ><i
 							class="fas fa-user-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
 							class="font-weight-light">Profile</span><span class="sr-only">(current)</span></a>
 				</div>
 				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase">
-					<a class="nav-link disabled" href="#" data-turbolinks-action="replace"><i
+					<a class="nav-link disabled" href="#"  ><i
 							class="fas fa-life-ring"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
 							class="font-weight-light">Help</span></a>
 				</div>
 				<div class="pl-3 border-bottom d-flex align-items-center h-100 nav-item">
-					<a class="nav-link disabled" href="#" data-turbolinks-action="replace"><span
+					<a class="nav-link disabled" href="#"  ><span
 							class="font-weight-light mr-2 text-uppercase">About</span><span
 							class="font-weight-light font-lt-white mr-n1">go</span><span
 							class="font-white logo">ALOFT</span></a>
 				</div>
 
 				<div class="nav-hover pl-3 border-bottom d-flex align-items-center h-100 nav-item text-uppercase">
-					<a class="nav-link" href="resources.html" data-turbolinks-action="replace"><i
+					<a class="nav-link" href="resources.html"  ><i
 							class="fas fa-book pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-weight-light">Sailing
 							Resources</span></a>
 				</div>
 				<div class="nav-hover pl-3 border-bottom d-flex align-items-center h-100 nav-item text-uppercase">
-					<a class="nav-link" href="directory.html" data-turbolinks-action="replace"><i
+					<a class="nav-link" href="directory.html"  ><i
 							class="fas fa-binoculars pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
 							class="font-weight-light">Discover Tall Ships</span></a>
 				</div>
 				<div class="nav-hover pl-3 border-bottom d-flex align-items-center h-100 nav-item text-uppercase">
-					<a class="nav-link" href="directory.html#google-map" data-turbolinks-action="replace"><i
+					<a class="nav-link" href="map.html"  ><i
 							class="fas fa-map-marked pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
 							class="font-weight-light">Explore Map</span></a>
 				</div>
 				<div class="nav-hover pl-3 border-bottom d-flex align-items-center h-100 nav-item text-uppercase">
-					<a class="nav-link" href="listings.html" data-turbolinks-action="replace"><i
+					<a class="nav-link" href="listings.html"  ><i
 							class="fas fa-search pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-weight-light">Job
 							Listings</span></a>
 				</div>
 				<div class="nav-hover pl-3 d-flex align-items-center h-100 nav-item text-uppercase">
-					<a class="nav-link" href="signin.html" data-turbolinks-action="replace"><i
-							class="fas fa-sign-in-alt pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
-							class="font-weight-light">Sign In</span></a>
+					<a href="#" class="nav-link sign-out"><i
+							class="fas fa-sign-out-alt pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">Sign Out</span></a>
 				</div>
 
 			</div>

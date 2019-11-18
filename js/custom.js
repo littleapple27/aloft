@@ -40,5 +40,19 @@ $(function() {
             $(this).find('i').toggleClass('far fas')
         });
 
+
+    //Log out of firebase on button click 
+
+    $('.sign-out').click(function(){
+        firebase.auth().signOut().then(function() {
+            console.log('User signed out. Begin redirect to sign-in page.')
+            location.replace("index.html");
+        }).catch(function(error) {
+        alert('An error occurred.  Please try again.')
+        });
+    });
+
+
+
 });//End doc ready
 

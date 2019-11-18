@@ -1,7 +1,6 @@
 <!doctype html>
 <html lang="en">
 
-
 <head>
 	<!-- Required meta tags -->
 	<meta charset="utf-8">
@@ -19,8 +18,6 @@
 		Turbolinks.start()
 	</script>
 
-	<title>Aloft: A Sailor's Resource Guide</title>
-
 	<!-- Firebase App (the core Firebase SDK) is always required and must be listed first -->
 	<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-app.js"></script>
 
@@ -31,7 +28,6 @@
 	<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-auth.js"></script>
 	<script src="https://www.gstatic.com/firebasejs/7.2.2/firebase-firestore.js"></script>
 
-	<!---- Initialize Firebase ---->
 	<script>
 		// Your web app's Firebase configuration
 		var firebaseConfig = {
@@ -52,40 +48,51 @@
 	<script src="https://cdn.firebase.com/libs/firebaseui/4.2.0/firebaseui.js"></script>
 	<link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/4.2.0/firebaseui.css" />
 	<script type="text/javascript">
-		// FirebaseUI config.
-		
-		var uiConfig = {
-			signInSuccessUrl: 'dock.html',
-			signInOptions: [
-				// Leave the lines as is for the providers you want to offer your users.
-				firebase.auth.GoogleAuthProvider.PROVIDER_ID,
-				firebase.auth.FacebookAuthProvider.PROVIDER_ID,
-				firebase.auth.EmailAuthProvider.PROVIDER_ID
-			],
-			// tosUrl and privacyPolicyUrl accept either url string or a callback
-			// function.
-			// Terms of service url/callback.
-			tosUrl: '<your-tos-url>',
-			// Privacy policy url/callback.
-			privacyPolicyUrl: function () {
-				window.location.assign('<your-privacy-policy-url>');
-			}
+		initApp = function () {
+			var currentUid = null;  
+			firebase.auth().onAuthStateChanged(function (user) {
+				if (user && user.uid != currentUid) {
+					// User is signed in.
+					var displayName = user.displayName;
+					var email = user.email;
+					var emailVerified = user.emailVerified;
+					var uid = user.uid;
+					var providerData = user.providerData;
+					user.getIdToken().then(function (accessToken) {
+						document.getElementById('sign-in-status').textContent = 'Welcome, ' + user.displayName + '!';
+						document.getElementById('sign-in').textContent = 'Sign out';
+						document.getElementById('account-details').textContent = JSON.stringify({
+							displayName: displayName,
+							email: email,
+							emailVerified: emailVerified,
+							photoURL: photoURL,
+							uid: uid,
+							accessToken: accessToken,
+							providerData: providerData
+						}, null, '  ');
+					});
+				} else {
+					currentUid = null; 
+					// User is signed out.
+					document.getElementById('sign-in-status').textContent = 'Signed out';
+					document.getElementById('sign-in').textContent = 'Sign in';
+				}
+			}, function (error) {
+				console.log(error);
+			});
 		};
-	
-		// Initialize the FirebaseUI Widget using Firebase.
-		var ui = new firebaseui.auth.AuthUI(firebase.auth());
-		// The start method will wait until the DOM is loaded.
-		// The start method will wait until the DOM is loaded.
-		ui.start('#firebaseui-auth-container', uiConfig);
+
+		window.addEventListener('load', function () {
+			initApp();
+		});
 	</script>
 
-
-
 	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+		integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 	<!-- Custom CSS -->
-	<link rel="stylesheet" href="css/custom.min.css">
+	<link rel="stylesheet" href="css/custom.css">
 
 	<!--- Google Fonts --->
 	<link href="https://fonts.googleapis.com/css?family=Roboto+Condensed:300,700|Roboto:300,500&display=swap"
@@ -93,46 +100,64 @@
 	<link href="https://fonts.googleapis.com/css?family=PT+Sans:700i&display=swap" rel="stylesheet">
 
 	<!--- Font Awesome --->
-	<link rel="stylesheet" href="css/all.min.css">
+	<script src="https://kit.fontawesome.com/bf44c917aa.js"></script>
 
 	<!---Slidebars CSS --->
 	<link rel="stylesheet" href="css/slidebars.min.css">
+
+	<title>Aloft: A Sailor's Resource Guide</title>
 
 </head>
 
 
 
-<body class="bg-blue">
+<body>
 
-	<div class="ml-0 bg-blue d-flex flex-column justify-content-center align-items-center side-shadow"
-		canvas="container" id="sign-in-slide-bg">
-
-
+	<div class="ml-0 d-flex flex-column justify-content-center align-items-center side-shadow" canvas="container"
+		id="index-slide-bg">
 		<div class="" id="index-main-box">
 			<!---Main Logo & Tagline--->
-			<div class="col-12 text-center mb-5">
+			<div class="col-12 text-center pb-5">
 				<img class="" src="img/aloft-logo.png" width="75" height="auto" />
 				<h1 class="display-4"><span class="font-weight-light font-lt-white mr-n2">go</span><span
-						class="text-white logo">ALOFT</span></h1>
+				class="text-white logo">ALOFT</span></h1>
+				
+				<div class="text-white" id="sign-in-status"></div>
+				<div id="account-details"></div>
 			</div>
 
+			
+
 			<!---Home Screen Navigation Buttons--->
-			<div class="p-2">
-				<div id="firebaseui-auth-container"></div>
+
+			<div class="d-flex flex-row pb-3">
+				<div class="col-6 pr-2 "><a href="listings.html"
+						class="btn btn-md btn-secondary btn-block py-2 h-100"><i class="fas fa-search"></i><br><span
+							class="font-weight-light">Job Listings</span></a></div>
+				<div class="col-6 pl-2"><a href=" map.html"
+						class="btn btn-md btn-secondary btn-block py-2 h-100"><i
+							class="fas fa-map-marked-alt"></i><br /><span class="font-weight-light">Explore
+							Map</span></a></div>
+			</div>
+
+			<div class="pb-3">
+				<div class="col-12"><a href="directory.html"
+						class="btn btn-md btn-outline-secondary btn-block py-2 h-100"><i
+							class="fas fa-binoculars py-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">Discover Tall Ships</span></a></div>
+			</div>
+
+			<div class="">
+				<div class="col-12"><a href="resources.html" class="btn btn-md btn-outline-secondary btn-block py-2"><i
+							class="fas fa-book py-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">Resources for Sailors</span></a></div>
 			</div>
 
 		</div>
 
 	</div>
-	<!---- End of Canvas Container ---->
-
-
-
 
 	<!--- Start of Footer Navigation --->
-
-
-
 	<footer class="navbar fixed-bottom navbar-dark bg-blue top-shadow" id="menu" canvas="">
 		<!--- Bottom Hamburger Toggle Icon --->
 		<button type="button" class="toggle-button btn btn-lg text-white" data-toggle="button" aria-pressed="false"
@@ -142,31 +167,36 @@
 		<a href="dock.html" class="navlink"><i class="fas fa-home fa-2x"></i></a>
 		<div class=""><span class="font-weight-light font-lt-white mr-n1">go</span><span
 				class="text-white logo">ALOFT</span></div>
-		<a href="index.html" class="btm-nb-i"><i class="fas fa-sign-in-alt fa-2x"></i></a>
+		<a href="#" class="btm-nb-i sign-out"><i class="fas fa-sign-out-alt fa-2x"></i></a>
 	</footer>
 
 
 	<nav class="" id="navbar-main" off-canvas="left-nav left reveal">
 		<!--- Navbar Collapse Items --->
 		<div class="p-0" style="height: 100vh;">
-			<div class="h-100 navbar-nav d-flex flex-column justify-content-end navbar-padding" id="">
+			<div class="h-100 navbar-nav d-flex flex-column justify-content-between navbar-padding" id="">
 
-				<!-- <div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase active ">
-						<a class="nav-link disabled " href="#"><i class="fas fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-weight-light">Settings</span><span class="sr-only">(current)</span></a>
-					</div> -->
-			<!-- 	<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase">
+			<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase active ">
+					<a class="nav-link" href="settings.html"><i class="fas fa-cog"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">Settings</span><span class="sr-only">(current)</span></a>
+				</div>
+				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase active ">
+					<a class="nav-link" href="profile.html"><i
+							class="fas fa-user-circle"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">Profile</span><span class="sr-only">(current)</span></a>
+				</div>
+				<div class="pl-3 border-bottom nav-item d-flex align-items-center h-100 text-uppercase">
 					<a class="nav-link disabled" href="#"><i class="fas fa-life-ring"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
 							class="font-weight-light">Help</span></a>
-				</div> -->
-				<div class="pl-3 border-bottom d-flex align-items-center h-50 nav-item">
+				</div>
+				<div class="pl-3 border-bottom d-flex align-items-center h-100 nav-item">
 					<a class="nav-link disabled" href="#"><span
 							class="font-weight-light mr-2 text-uppercase">About</span><span
 							class="font-weight-light font-lt-white mr-n1">go</span><span
-							class="text-white logo">ALOFT</span></a>
+							class="font-white logo">ALOFT</span></a>
 				</div>
 
-				<!--- ///// COMMENT OUT THE FOLLOWING SECTION FOR SIGN IN SCREEN - USERS MUST BE LOGGED IN IN ORDER TO ACCESS /////-->
-				<!-- <div class="nav-hover pl-3 border-bottom d-flex align-items-center h-100 nav-item text-uppercase">
+				<div class="nav-hover pl-3 border-bottom d-flex align-items-center h-100 nav-item text-uppercase">
 					<a class="nav-link" href="resources.html"><i
 							class="fas fa-book pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-weight-light">Sailing
 							Resources</span></a>
@@ -185,11 +215,11 @@
 					<a class="nav-link" href="listings.html"><i
 							class="fas fa-search pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span class="font-weight-light">Job
 							Listings</span></a>
-				</div> -->
-				<div class="nav-hover pl-3 d-flex align-items-center h-50 nav-item text-uppercase">
-					<a class="nav-link" href="index.html"><i
-							class="fas fa-sign-in-alt pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
-							class="font-weight-light">Sign In</span></a>
+				</div>
+				<div class="nav-hover pl-3 d-flex align-items-center h-100 nav-item text-uppercase">
+					<a href="#" class="nav-link sign-out"><i
+							class="fas fa-sign-out-alt pl-2"></i>&nbsp;&nbsp;&nbsp;&nbsp;<span
+							class="font-weight-light">Sign Out</span></a>
 				</div>
 
 			</div>
@@ -232,7 +262,7 @@
 							class="font-weight-light">Resources for Sailors</span></a></div>
 			</div>
 		</div>
-		</sectio>
+		</section>
 
 
 
@@ -241,15 +271,18 @@
 
 		<!-- Optional JavaScript -->
 		<!-- jQuery first, then Popper.js, then Bootstrap JS -->
-		<script src="js/jquery.min.js"></script>
-		<script src="js/popper.min.js">
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"
+			integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+			integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous">
 		</script>
-		<script src="js/bootstrap.min.js">
+		<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+			integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous">
 		</script>
 
 		<!-- Plug-ins -->
 		<script src="js/slidebars.min.js"></script>
-		<script src="js/lazyload.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/lazyload@2.0.0-rc.2/lazyload.js"></script>
 		<script src="js/jquery.nicescroll.min.js"></script>
 
 
